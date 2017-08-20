@@ -14,15 +14,13 @@
 <body>
 {{--    {!! $scripts->after_open_field !!}--}}
 
-    <div class="wrapper">
-        @include('front.header')
-        @yield('header')
+    @include('front.header')
+    @yield('header')
 
-        @yield('content')
+    @yield('content')
 
-        @include('front.footer')
-        @yield('footer')
-    </div>
+    @include('front.footer')
+    @yield('footer')
 
     <div class="hide">
         @include('front.popups.sponsor_form')
