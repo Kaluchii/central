@@ -80,13 +80,13 @@
             <div class="feedback__title">Понравился наш комплекс?</div>
             <div class="feedback__sub-title">Оставьте ваши контакты, и наши менеджеры ответят на все ваши вопросы.</div>
             <div class="feedback__input-rows">
-                <div class="feedback__input-wrapper">
-                    <label class="feedback__label feedback__label--name">Имя</label>
-                    <input type="text" class="feedback__input">
+                <div class="feedback__input-wrapper feedback-input">
+                    <label class="feedback-input__label feedback-input__label--name">Имя</label>
+                    <input type="text" class="feedback-input__input">
                 </div>
-                <div class="feedback__input-wrapper">
-                    <label class="feedback__label feedback__label--tel">+7</label>
-                    <input type="tel" class="feedback__input">
+                <div class="feedback__input-wrapper feedback-input">
+                    <label class="feedback-input__label feedback-input__label--tel">+7</label>
+                    <input type="tel" class="feedback-input__input">
                 </div>
                 <div class="feedback__input-wrapper feedback__input-wrapper--btn">
                     <div class="feedback__btn button">Перезвонить мне</div>
@@ -96,12 +96,32 @@
     </section>
     <section class="flats">
         <div class="flats__wrapper wrapper-1140">
-            <div class="flats__layout-choice layout-choice"></div>
+            <div class="flats__layout-choice layout-choice">
+                <h2 class="layout-choice__title">КВАРТИРЫ</h2>
+                <div class="layout-choice__wrap">
+                    <div class="layout-choice__nav"></div>
+                    <div class="layout-choice__layout-view-wrap">
+                        <div class="layout-choice__layout-view"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="flats__feedback-wrapper feedback-row">
             <div class="feedback-row__wrapper wrapper-1140">
                 <p class="feedback-row__text">Свяжитесь с нашим менеджером и узнайте цены на квартиры</p>
-                <div class="feedback-row__inputs-wrapper"></div>
+                <div class="feedback-row__inputs-wrapper">
+                    <div class="feedback-row__input-wrapper feedback-input">
+                        <label class="feedback-input__label feedback-input__label--name">Имя</label>
+                        <input type="text" class="feedback-input__input">
+                    </div>
+                    <div class="feedback-row__input-wrapper feedback-input">
+                        <label class="feedback-input__label feedback-input__label--tel">+7</label>
+                        <input type="tel" class="feedback-input__input">
+                    </div>
+                    <div class="feedback-row__input-wrapper">
+                        <a class="feedback-row__cal-me button">Перезвонить мне</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
