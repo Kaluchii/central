@@ -1,5 +1,16 @@
 @extends('front.layout')
 @section('content')
+    <section class="title-block">
+        <header class="title-block__header header">
+            <div class="header__nav-wrap"></div>
+            <div class="header__logo-wrap"></div>
+            <div class="header__feedback-wrap"></div>
+        </header>
+        <div class="title-block__text-wrap">
+            <h1 class="title-block__title">КОГДА ВСЕ ДОРОГИ ВЕДУТ В ЦЕНТР</h1>
+            <p class="title-block__text"></p>
+        </div>
+    </section>
     <section class="about">
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
