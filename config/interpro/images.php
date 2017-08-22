@@ -12,9 +12,9 @@ return [
         'crops' => ['crop400x300']
     ],
 
-    'group_bird_class.foto' => [
-        'resizes' => ['res100x100', 'res400', 'res800', 'res1000'],
-        'crops' => ['crop800x600']
-    ]
+//    'group_bird_class.foto' => [
+//        'resizes' => ['res100x100', 'res400', 'res800', 'res1000'],
+//        'crops' => ['crop800x600']
+//    ]
 
 ];

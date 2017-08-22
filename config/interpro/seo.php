@@ -9,9 +9,9 @@ return [
         ],
     'owners'=>
         [
-            'group_bird_type',
-            'group_bird_area',
-            'group_bird_class',
-            'block_birds'
+            'main_block',
+//            'group_bird_area',
+//            'group_bird_class',
+//            'block_birds'
         ]
 ];
