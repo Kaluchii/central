@@ -37,7 +37,11 @@
                     <i class="fa fa-globe"></i> <span>Мета данные и скрипты</span>
                 </a>
             </li>
-
+            <li>
+                <a href="/adm/mails">
+                    <i class="fa fa-send-o"></i> <span>Почта</span>
+                </a>
+            </li>
 
             {{--<li>--}}
                 {{--<a href="reg">--}}

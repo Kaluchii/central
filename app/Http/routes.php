@@ -29,6 +29,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/contacts',          'AdminController@getContacts');
     Route::get('/course',            'AdminController@getCourse');
     Route::get('/meta',              'AdminController@getMeta');
+    Route::get('/mails',             'AdminController@getMails');
 
 
 
