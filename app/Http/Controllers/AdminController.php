@@ -12,16 +12,62 @@ class AdminController extends Controller
     private $extract;
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
+        $this->extract->tuneSelection('slider')->sortBy('id','DESC');
     }
 
     public function getIndex(){
         return view('back.layout');
     }
 
-    public function getExample(){
-        $block = $this->extract->getBlock('example');
-        return view('back.blocks.example', [
-            'block' => $block
+    public function getMain(){
+        $main_block= $this->extract->getBlock('main_block');
+        return view('back.blocks.main_block', [
+            'main_block' => $main_block
         ]);
     }
+
+    public function getAbout(){
+        $about = $this->extract->getBlock('about');
+        return view('back.blocks.about', [
+            'about' => $about
+        ]);
+    }
+
+    public function getGallery(){
+        $gallery = $this->extract->getBlock('gallery');
+        return view('back.blocks.gallery', [
+            'gallery' => $gallery
+        ]);
+    }
+
+    public function getFlats(){
+        $flats = $this->extract->getBlock('flats');
+        return view('back.blocks.flats', [
+            'flats' => $flats
+        ]);
+    }
+
+    public function getContacts(){
+        $contacts = $this->extract->getBlock('contacts');
+        return view('back.blocks.contacts', [
+            'contacts' => $contacts
+        ]);
+    }
+
+    public function getCourse(){
+        $course = $this->extract->getBlock('prices');
+        return view('back.blocks.prices', [
+            'course' => $course
+        ]);
+    }
+
+    public function getMeta(){
+        $meta = $this->extract->getBlock('main_block');
+        $scripts = $this->extract->getBlock('scripts');
+        return view('back.blocks.meta', [
+            'meta' => $meta,
+            'scripts' => $scripts
+        ]);
+    }
+
 }

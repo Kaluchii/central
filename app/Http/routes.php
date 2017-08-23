@@ -21,7 +21,14 @@ Route::post('/feedback/mail',    'Back\MailController@send');
 Route::auth();
 Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
 
-    Route::get('/',         'AdminController@getIndex');
+    Route::get('/',                  'AdminController@getIndex');
+    Route::get('/main',              'AdminController@getMain');
+    Route::get('/about',             'AdminController@getAbout');
+    Route::get('/gallery',           'AdminController@getGallery');
+    Route::get('/flats',             'AdminController@getFlats');
+    Route::get('/contacts',          'AdminController@getContacts');
+    Route::get('/course',            'AdminController@getCourse');
+    Route::get('/meta',              'AdminController@getMeta');
 
 
 
