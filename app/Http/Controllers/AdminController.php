@@ -13,6 +13,7 @@ class AdminController extends Controller
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
         $this->extract->tuneSelection('slider')->sortBy('id','DESC');
+        $this->extract->tuneSelection('layout')->sortBy('id','DESC');
     }
 
     public function getIndex(){
@@ -47,6 +48,13 @@ class AdminController extends Controller
         ]);
     }
 
+    public function getFlatsItem( $id ){
+        $flat_item = $this->extract->getGroupItem('dom_flat', $id);
+        return view('back.groups.dom_flat.dom_flat', [
+            'item' => $flat_item
+        ]);
+    }
+
     public function getContacts(){
         $contacts = $this->extract->getBlock('contacts');
         return view('back.blocks.contacts', [
@@ -67,6 +75,13 @@ class AdminController extends Controller
         return view('back.blocks.meta', [
             'meta' => $meta,
             'scripts' => $scripts
+        ]);
+    }
+
+    public function getMails(){
+        $call = $this->extract->getBlock('call');
+        return view('back.blocks.mails', [
+            'call' => $call
         ]);
     }
 

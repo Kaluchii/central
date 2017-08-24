@@ -18,19 +18,17 @@ return [
     ],
 
     'flats' => [
+        'string' => ['block_title'],
         'groups' => [
             'dom_flat' => [
-                'string' => ['block_title']
+                'string' => ['dom_flat_name']
             ],
             'layout' => [
                 'string' => ['layout_name'],
                 'image' => ['layout_scheme'],
-                'dom_flat' => ['superior']
-            ],
-            'area_list' => [
                 'float' => ['area'],
-                'layout' => ['superior']
-            ],
+                'dom_flat' => ['superior']
+            ]
         ]
     ],
 

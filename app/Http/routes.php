@@ -26,6 +26,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/about',             'AdminController@getAbout');
     Route::get('/gallery',           'AdminController@getGallery');
     Route::get('/flats',             'AdminController@getFlats');
+    Route::get('/flats/{id}',        'AdminController@getFlatsItem');
     Route::get('/contacts',          'AdminController@getContacts');
     Route::get('/course',            'AdminController@getCourse');
     Route::get('/meta',              'AdminController@getMeta');
