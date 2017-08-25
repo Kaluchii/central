@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0e0cdaa1548320191f0a9d6a11510980",
-    "content-hash": "6c83af3ed515fdf62932720a0dbf376f",
+    "hash": "86f79e55b5275a2b92a3a10de0c71d83",
+    "content-hash": "c0e29bcf0f74b89a73a00310437179c9",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2457,6 +2457,55 @@
     ],
     "packages-dev": [
         {
+            "name": "coderockr/php-query",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Coderockr/phpQuery.git",
+                "reference": "942dff329b484bcadedce5255dab2ea01c9b8d6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Coderockr/phpQuery/zipball/942dff329b484bcadedce5255dab2ea01c9b8d6a",
+                "reference": "942dff329b484bcadedce5255dab2ea01c9b8d6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "phpQuery": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Mit"
+            ],
+            "authors": [
+                {
+                    "name": "Duvanmonsa",
+                    "email": "duvanmonsa@gmail.com",
+                    "homepage": "https://github.com/duvanmonsa",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Elton Minetto",
+                    "email": "eminetto@coderockr.com",
+                    "homepage": "https://github.com/eminetto",
+                    "role": "Developer"
+                }
+            ],
+            "description": "phpQuery",
+            "homepage": "https://github.com/coderockr/phpQuery",
+            "keywords": [
+                "lib",
+                "phpQuery"
+            ],
+            "time": "2016-02-05 16:04:06"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
             "source": {
@@ -3844,7 +3893,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "coderockr/php-query": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

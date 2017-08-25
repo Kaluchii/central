@@ -40,18 +40,14 @@ class UpdateCourse extends Command
      */
     public function handle()
     {
-        $url = "https://www.bankrbk.kz/api/currency/json/";
+        $url = "https://www.bcc.kz/about/kursy-valyut/";
 
-        $dataObj = json_decode(file_get_contents($url), true);
-        if ($dataObj) {
-            foreach ($dataObj['transfer']['date']['branch']['sell']['currency'] as $item) {
-                if ($item['attributes']['dst'] == 'KZT' && $item['attributes']['src'] == 'USD') {
-                    $this->updateAgent->update('prices', 0, ['dollar' => $item['attributes']['amount']]);
-                    echo('Course success update. USD to KZT course value = ' . $item['attributes']['amount']."\n");
-                    break;
-                }
-            }
-        }
+        $html = file_get_contents( $url );
+        $doc = \phpQuery::newDocumentHTML( $html, 'windows-1251' );
+        $price = $doc->find('.bcc_full .s_table_over:nth-child(4) tbody tr:nth-child(3) td:nth-child(3)')->text();
+
+        $this->updateAgent->update('prices', 0, ['dollar' => $price]);
+        echo('Course success update. USD to KZT course value = ' . $price."\n");
     }
 
 }

@@ -4,25 +4,37 @@
 
 
                                       Пример подключения шрифтов
-
+*/
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto Light'), local('RobotoLight'), url('../fonts/Roboto/Robotolight.woff2') format('woff2'), url('../fonts/Roboto/Robotolight.woff') format('woff'), url('../fonts/Roboto/Robotolight.ttf') format('truetype');
+  font-family: 'Gilroy';
+  src: local('Roboto Light'), local('GilroyNormal'), url('../fonts/gilroy-300-normal.woff2') format('woff2'), url('../fonts/gilroy-300-normal.woff') format('woff'), url('../fonts/gilroy-300-normal.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), local('RobotoRegular'), url('../fonts/Roboto/Roboto.woff2') format('woff2'), url('../fonts/Roboto/Roboto.woff') format('woff'), url('../fonts/Roboto/Roboto.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Gilroy';
+  src: local('Roboto'), local('GilroyBold'), url('../fonts/gilroy-800-normal.woff2') format('woff2'), url('../fonts/gilroy-800-normal.woff') format('woff'), url('../fonts/gilroy-800-normal.ttf') format('truetype');
+  font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto Black'), local('RobotoBlack'), url('../fonts/Roboto/Robotoblack.woff2') format('woff2'), url('../fonts/Roboto/Robotoblack.woff') format('woff'), url('../fonts/Roboto/Robotoblack.ttf') format('truetype');
-  font-weight: 900;
+  font-family: 'AvenirNext';
+  src: local('Roboto Black'), local('AvenirNext'), url('../fonts/AvenirNext-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-}*/
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Light'), local('LatoLight'), url('../fonts/lato-300-normal.woff2') format('woff2'), url('../fonts/lato-300-normal.woff') format('woff'), url('../fonts/lato-300-normal.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansCyrilic';
+  src: local('Roboto Black'), local('MuseoSansCyrilic'), url('../fonts/museosanscyrl-500-normal.woff2') format('woff2'), url('../fonts/museosanscyrl-500-normal.woff') format('woff'), url('../fonts/museosanscyrl-500-normal.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 
 .link{
   .link(@link-color,@link-border,@hover-color,@hover-border);
@@ -37,4 +49,13 @@
 .no-br{
   white-space: nowrap;
   font-size: inherit;
+}
+
+.button{
+  box-sizing: border-box;
+  height: 46px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
 }

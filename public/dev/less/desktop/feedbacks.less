@@ -1,0 +1,67 @@
+.feedbacks{
+  background-color: #e6d082;
+  margin: 0 auto;
+  text-align: center;
+
+  &__wrapper{
+    &--btn{}
+  }
+  &__title{
+    font-size: 56px;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1;
+  }
+  &__sub-title{
+    max-width: 390px;
+    margin: 25px auto 0;
+  }
+  &__input-rows{
+    margin-top: 40px;
+  }
+  &__input-wrapper{
+    margin-top: 15px;
+  }
+  &__btn{
+    margin-top: 25px;
+  }
+}
+
+
+.feedbacks-input{
+  position: relative;
+
+  &__label{
+    background-color: transparent;
+    font-size: 16px;
+    position: absolute;
+    height: 46px;
+    width: 50px;
+
+    &--name{}
+
+    &--tel{
+      border-right: 1px solid rgba(204, 204, 204, 0.5);;
+    }
+  }
+
+  &__label-text{
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  &__input{
+    background-color: #f9f7f4;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    padding-left: 70px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 46px;
+    width: 290px;
+    border-radius: 20px;
+  }
+}
