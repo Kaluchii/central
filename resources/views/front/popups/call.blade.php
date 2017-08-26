@@ -1,7 +1,13 @@
 <div class="white-popup mfp-with-anim mfp-hide form-id" id="call">
     <div class="white-popup__wrap">
-        <h4 class="white-popup__title">МЫ С РАДОСТЬЮ ВАМ ПЕРЕЗВОНИМ</h4>
-        <p class="white-popup__sub-title">Оставьте ваши контакты, и наши менеджеры
+        <div class="white-popup__top">
+            <div class="white-popup__logo-wrap">
+                <img src="/img/dark_logo.png" alt="Жилой комплекс Центральный" class="white-popup__logo">
+            </div>
+        </div>
+        <p class="white-popup__tel-number"><a href="tel:+77273466370" class="white-popup__tel-link">+ 7 (727) 346-63-70</a></p>
+        <h4 class="white-popup__title">МЫ С РАДОСТЬЮ<br> ВАМ ПЕРЕЗВОНИМ</h4>
+        <p class="white-popup__sub-title">Оставьте ваши контакты, и&nbsp;наши менеджеры
             ответят на все ваши вопросы.</p>
         <div class="white-popup__form feedback-form">
             {{--Передача Названия формы--}}

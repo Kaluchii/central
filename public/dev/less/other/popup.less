@@ -24,6 +24,45 @@
     margin: 0 auto;
   }
 
+  &__top{
+    padding: 15px 0 20px;
+    border-bottom: 1px solid #ccbe7a;
+    display: none;
+  }
+
+  &__logo-wrap{
+    text-align: center;
+    font-size: 0;
+  }
+
+  &__logo{
+    display: inline-block;
+  }
+
+  &__tel-number{
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+  }
+
+  &__tel-link{
+    color: #201306;
+    font-size: 16px;
+    line-height: 1.4;
+    background: -moz-linear-gradient(to to left, #897c4d 4px, transparent 2px);
+    background: -ms-linear-gradient(to left, #897c4d 4px, transparent 2px);
+    background: -o-linear-gradient(to left, #897c4d 4px, transparent 2px);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#897c4d), color-stop(0.6, #897c4d), color-stop(0.6, transparent));
+    background: -webkit-linear-gradient(to left, #897c4d 4px, transparent 2px);
+    background: linear-gradient(to left, #897c4d 4px, transparent 2px);
+    background-position: 0 100%;
+    background-size: 6px 1px;
+    background-repeat: repeat-x;
+    display: inline-block;
+    font-family: "Gilroy";
+    font-weight: 800;
+  }
+
   &--send-status {
     max-width: 360px;
     padding: 30px 20px;
@@ -287,26 +326,77 @@
   }
 }
 
+@media screen and (max-width: 810px){
+  .white-popup{
+    &__wrap{
+      position: relative;
+      top: 0;
+      transform: none;
+    }
+
+    &__title{
+      margin-top: 30px;
+    }
+
+    &__top{
+      display: block;
+    }
+
+    &__tel-number{
+      display: block;
+    }
+  }
+
+  .mfp-close{
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    background: #fff url("/img/close_small.png") no-repeat center;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .white-popup{
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
+@media screen and (max-width: 550px){
+  .white-popup{
+    &__title {
+      font-size: 38px;
+    }
+
+    &__sub-title{
+      font-size: 16px;
+      max-width: 230px;
+    }
+
+    &__form{
+      margin-top: 30px;
+    }
+  }
+}
+
 @media screen and (max-width: 420px){
   .white-popup{
-    padding: 15px 10px 25px;
-
     &__title {
-      font-size: 32px;
+      margin-top: 20px;
+      font-size: 30px;
+    }
+
+    &__sub-title {
+      margin-top: 10px;
+    }
+
+    &__form{
+      margin-top: 20px;
     }
 
     &--send-status {
       margin: 20px;
-    }
-
-    &__form{
-      max-width: 270px;
-    }
-  }
-
-  .form-row{
-    &__input{
-      max-width: 242px;
     }
   }
 }

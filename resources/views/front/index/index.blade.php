@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    <section class="title-block">
+    {{--<section class="title-block">
         <div class="title-block__wrapper">
             <header class="title-block__header title-header">
                 <nav class="title-header__nav-wrap">
@@ -24,8 +24,8 @@
                 <p class="title-block__text">Современный жилой комплекс, продуманный до мелочей, помещенный с хирургической тонкостью в один из самых уютных уголков центра Алматы</p>
             </div>
         </div>
-    </section>
-    {{--<section class="about">
+    </section>--}}
+    {{--<section class="about"> Закона РК «О долевом участии в жилищном строительстве».
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">О КОМПЛЕКСЕ</h2>
@@ -150,5 +150,17 @@
             </div>
         </div>
     </section>--}}
+    <section class="contacts">
+        <div class="contacts__wrapper">
+            <div class="contacts__contact-block">
+                <h3 class="contacts__title">КОНТАКТЫ</h3>
+                <p class="contacts__phone">+7 (727) 346-63-70</p>
+                <p class="contacts__address">Алматы, ул. Курмангазы,<br>уг. ул. Амангельды</p>
+            </div>
+            <div class="contacts__map-wrapper">
+                <div class="contacts__map" id="map"></div>
+            </div>
+        </div>
+    </section>
     @include('front.index.meta')
 @endsection
