@@ -1,12 +1,31 @@
 @extends('front.layout')
 @section('content')
-{{--    <section class="title-block">
-        <div class="title-block__text-wrap">
-            <h1 class="title-block__title">КОГДА ВСЕ ДОРОГИ ВЕДУТ В ЦЕНТР</h1>
-            <p class="title-block__text">Современный жилой комплекс, продуманный до мелочей, помещенный с хирургической тонкостью в один из самых уютных уголков центра Алматы</p>
+    <section class="title-block">
+        <div class="title-block__wrapper">
+            <header class="title-block__header title-header">
+                <nav class="title-header__nav-wrap">
+                    <ul class="title-header__nav-list">
+                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">О КОМПЛЕКСЕ</a></li>
+                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КВАРТИРЫ</a></li>
+                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">ГАЛЕРЕЯ</a></li>
+                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="title-header__logo-wrap">
+                    <img src="/img/logo.png" alt="Жилой комплекс Центральный" class="title-header__logo">
+                </div>
+                <div class="title-header__feedback-wrap">
+                    <p class="title-header__phone-number">+7 (727) 346-63-70</p>
+                    <a href="#call" class="title-header__order-call button order_call_btn"><i class="phone"></i>Заказать звонок</a>
+                </div>
+            </header>
+            <div class="title-block__text-wrap">
+                <h1 class="title-block__title">КОГДА ВСЕ ДОРОГИ ВЕДУТ В ЦЕНТР</h1>
+                <p class="title-block__text">Современный жилой комплекс, продуманный до мелочей, помещенный с хирургической тонкостью в один из самых уютных уголков центра Алматы</p>
+            </div>
         </div>
     </section>
-    <section class="about">
+    {{--<section class="about">
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">О КОМПЛЕКСЕ</h2>
@@ -81,7 +100,7 @@
             </div>
         </div>
     </section>--}}
-    <section class="feedbacks">
+{{--    <section class="feedbacks">
         <div class="feedbacks__wrapper wrapper-1140">
             <div class="feedbacks__title">Вам понравился ЖК Центральный?</div>
             <div class="feedbacks__sub-title">Оставьте ваши контакты, и наши менеджеры ответят на все ваши вопросы.</div>
@@ -99,7 +118,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 {{--    <section class="flats">
         <div class="flats__wrapper wrapper-1140">
             <div class="flats__layout-choice layout-choice">

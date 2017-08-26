@@ -23,7 +23,7 @@
     @yield('footer')
 
     <div class="hide">
-        @include('front.popups.sponsor_form')
+        @include('front.popups.call')
         @include('front.popups.thank')
         <a href="#thanks" class="thank"></a>
     </div>
