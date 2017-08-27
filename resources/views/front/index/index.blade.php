@@ -1,28 +1,30 @@
 @extends('front.layout')
 @section('content')
     <section class="title-block">
-        <div class="title-block__wrapper">
-            <header class="title-block__header title-header">
-                <nav class="title-header__nav-wrap">
-                    <ul class="title-header__nav-list">
-                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">О КОМПЛЕКСЕ</a></li>
-                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КВАРТИРЫ</a></li>
-                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">ГАЛЕРЕЯ</a></li>
-                        <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КОНТАКТЫ</a></li>
-                    </ul>
-                </nav>
-                <div class="title-header__logo-wrap">
-                    <img src="/img/logo.png" alt="Жилой комплекс Центральный" class="title-header__logo">
+        <header class="title-block__header title-header">
+            <div class="title-block__menu-button js_menu"></div>
+            <nav class="title-header__nav-wrap">
+                <div class="title-header__menu-logo-wrap">
+                    <img src="/img/dark_logo.png" alt="Жилой комплекс Центральный" class="title-header__menu-logo">
                 </div>
-                <div class="title-header__feedback-wrap">
-                    <p class="title-header__phone-number">+7 (727) 346-63-70</p>
-                    <a href="#call" class="title-header__order-call button order_call_btn"><i class="phone"></i>Заказать звонок</a>
-                </div>
-            </header>
-            <div class="title-block__text-wrap">
-                <h1 class="title-block__title">КОГДА ВСЕ ДОРОГИ ВЕДУТ В ЦЕНТР</h1>
-                <p class="title-block__text">Современный жилой комплекс, продуманный до мелочей, помещенный с хирургической тонкостью в один из самых уютных уголков центра Алматы</p>
+                <ul class="title-header__nav-list">
+                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link is-active">О КОМПЛЕКСЕ</a></li>
+                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">ГАЛЕРЕЯ</a></li>
+                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КВАРТИРЫ</a></li>
+                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+            <div class="title-header__logo-wrap">
+                <img src="/img/logo.png" alt="Жилой комплекс Центральный" class="title-header__logo">
             </div>
+            <div class="title-header__feedback-wrap">
+                <p class="title-header__phone-number">+ 7 (727) 346-63-70</p>
+                <a href="#call" class="title-header__order-call button order_call_btn button"><span class="title-header__btn-text">Заказать звонок</span></a>
+            </div>
+        </header>
+        <div class="title-block__text-wrap">
+            <h1 class="title-block__title">КОГДА ВСЕ ДОРОГИ<br>ВЕДУТ В ЦЕНТР</h1>
+            <p class="title-block__text">Новый современный жилой комплекс комфорт-класса, расположенный в самом центре Алматы. На сегодняшний день район улиц Курмангазы&nbsp;/&nbsp;Амангельды по праву считается одним из самых уютных уголков центра города.</p>
         </div>
     </section>
     {{--<section class="about"> Закона РК «О долевом участии в жилищном строительстве».

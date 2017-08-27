@@ -5,6 +5,10 @@ $(document).ready(function(){
         callbacks: {
             beforeOpen: function() {
                 this.st.mainClass ='mfp-zoom-in';
+                history.replaceState(null, null, '/thanks');
+            },
+            afterClose: function () {
+                history.replaceState(null, null, '/');
             }
         },
         midClick: true
@@ -194,8 +198,10 @@ $(document).ready(function(){
                     $('.thank').click();
                 } else {
                     $('.white-popup__thanks-message').fadeIn();
+                    history.replaceState(null, null, '/thanks');
                     setTimeout(function () {
-                        $('.white-popup__thanks-message').fadeOut(1000)
+                        $('.white-popup__thanks-message').fadeOut(1000);
+                        history.replaceState(null, null, '/');
                     }, 5000);
                 }
                 clearFields( selector );

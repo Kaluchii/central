@@ -5,6 +5,10 @@ $(document).ready(function(){
         callbacks: {
             beforeOpen: function() {
                 this.st.mainClass ='mfp-zoom-in';
+                history.pushState(null, null, '/thanks');
+            },
+            afterClose: function () {
+                history.back();
             }
         },
         midClick: true
@@ -125,7 +129,7 @@ $(document).ready(function(){
         );
     }
 
-    window.onSubmitReCaptcha = function (token) {
+/*    window.onSubmitReCaptcha = function (token) {
         active = false;
         sendButton.addClass('load');
 
@@ -150,11 +154,12 @@ $(document).ready(function(){
             sendButton.removeClass('load');
             active = true;
         });
-    };
+    };*/
 
 
     var unical, sendButton, selector;
     var active = true;
+    var thanks_show = false;
 
     function finalValidation() {
         if( active ){
@@ -165,8 +170,14 @@ $(document).ready(function(){
             var validForm  = fieldsCheck( selector );
 
             if ( validForm ){
-                grecaptcha.reset();
-                grecaptcha.execute();
+                /*grecaptcha.reset();
+                 grecaptcha.execute();*/
+                active = false;
+                if (unical == 'feedback_call'){
+                    thanks_show = true;
+                }
+                sendButton.addClass('load');
+                sendForm();
             }
         }
     }
@@ -183,9 +194,17 @@ $(document).ready(function(){
         var response = ajaxDataSend('POST', '/feedback/mail', dataobj);
         response.success(function(data){
             if(!data.error){
-                $('.thank').click();
+                if (thanks_show){
+                    $('.thank').click();
+                } else {
+                    $('.white-popup__thanks-message').fadeIn();
+                    setTimeout(function () {
+                        $('.white-popup__thanks-message').fadeOut(1000)
+                    }, 5000);
+                }
                 clearFields( selector );
             }
+            thanks_show = false;
             sendButton.removeClass('load');
             active = true;
         });
@@ -193,6 +212,7 @@ $(document).ready(function(){
             console.log(data);
             sendButton.removeClass('load');
             active = true;
+            thanks_show = false;
         });
     }
 });

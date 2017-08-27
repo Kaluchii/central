@@ -6,6 +6,10 @@ $(document).ready(function () {
         callbacks: {
             beforeOpen: function () {
                 this.st.mainClass = 'mfp-zoom-in';
+                history.replaceState(null, null, '/call-me');
+            },
+            afterClose: function () {
+                history.replaceState(null, null, '/');
             }
         },
         midClick: true
@@ -67,4 +71,10 @@ jQuery('.nav-scroll-btn--prev').click(function () {
 });
 jQuery('.nav-scroll-btn--next').click(function () {
     fotorama.show('>');
+});
+
+
+$('.js_menu').on('click', function () {
+    $(this).toggleClass('is-open');
+    $('.title-header__nav-wrap').toggleClass('is-open').slideToggle();
 });
