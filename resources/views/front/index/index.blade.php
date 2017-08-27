@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    {{--<section class="title-block">
+    <section class="title-block">
         <div class="title-block__wrapper">
             <header class="title-block__header title-header">
                 <nav class="title-header__nav-wrap">
@@ -24,7 +24,7 @@
                 <p class="title-block__text">Современный жилой комплекс, продуманный до мелочей, помещенный с хирургической тонкостью в один из самых уютных уголков центра Алматы</p>
             </div>
         </div>
-    </section>--}}
+    </section>
     {{--<section class="about"> Закона РК «О долевом участии в жилищном строительстве».
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
@@ -100,25 +100,6 @@
             </div>
         </div>
     </section>--}}
-{{--    <section class="feedbacks">
-        <div class="feedbacks__wrapper wrapper-1140">
-            <div class="feedbacks__title">Вам понравился ЖК Центральный?</div>
-            <div class="feedbacks__sub-title">Оставьте ваши контакты, и наши менеджеры ответят на все ваши вопросы.</div>
-            <div class="feedbacks__input-rows">
-                <div class="feedbacks__input-wrapper feedbacks-input">
-                    <label class="feedbacks-input__label feedbacks-input__label--name"><span class="feedbacks-input__label-text">Имя</span></label>
-                    <input type="text" class="feedbacks-input__input">
-                </div>
-                <div class="feedbacks__input-wrapper feedbacks-input">
-                    <label class="feedbacks-input__label feedbacks-input__label--tel"><span class="feedbacks-input__label-text">+7</span></label>
-                    <input type="tel" class="feedbacks-input__input">
-                </div>
-                <div class="feedbacks__input-wrapper feedbacks__input-wrapper--btn">
-                    <div class="feedbacks__btn button">Перезвонить мне</div>
-                </div>
-            </div>
-        </div>
-    </section>--}}
 {{--    <section class="flats">
         <div class="flats__wrapper wrapper-1140">
             <div class="flats__layout-choice layout-choice">
@@ -150,10 +131,61 @@
             </div>
         </div>
     </section>--}}
+    <section class="gallery">
+        <div class="gallery__wrapper">
+            <h2 class="gallery__title">ГАЛЕРЕЯ</h2>
+            <div class="gallery__fotorama-wrap">
+                <div class="fotorama"  data-auto="false" data-ratio="1140/510"
+                     data-nav="thumbs" data-allowfullscreen="true"
+                     data-thumbmargin="15" data-loop="true"
+                     data-thumbwidth="110" data-thumbheight="100" data-transition="crossfade">
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                    <a href="/img/1140x510.jpg" class=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedbacks">
+        <div class="feedbacks__wrapper">
+            <h2 class="feedbacks__title">Вам понравился<br>ЖК Центральный?</h2>
+            <div class="feedbacks__sub-title">Оставьте ваши контакты, и наши менеджеры ответят на все ваши вопросы.</div>
+            <div class="feedbacks__input-rows form-id" id="feedback_call">
+                <input type="hidden" name="form" class="form-input" value="call">
+                <div class="feedback-form__row form-row">
+                    <div class="form-row__validation-wrap feedbacks-input">
+                        <label class="feedbacks-input__label feedbacks-input__label--name"><span class="feedbacks-input__label-text">Имя</span></label>
+                        <input type="text" name="client_name" required class="form-row__input form-input feedbacks-input__input">
+                        <div class="form-row__tooltip-wrap form-row__tooltip-wrap--popup-none"><p class="form-row__tooltip form-row__tooltip--border">Как к вам обращаться</p></div>
+                    </div>
+                </div>
+
+                <div class="feedback-form__row form-row">
+                    <div class="form-row__validation-wrap feedbacks-input">
+                        <label class="feedbacks-input__label feedbacks-input__label--tel"><span class="feedbacks-input__label-text">+7</span></label>
+                        <input type="tel" class="form-row__input form-input feedbacks-input__input" maxlength="25" name="phone">
+                        <div class="form-row__tooltip-wrap form-row__tooltip-wrap--popup-none"><p class="form-row__tooltip form-row__tooltip--border">Телефонный номер для связи</p></div>
+                    </div>
+                </div>
+                <div class="feedbacks__input-wrapper feedbacks__input-wrapper--btn">
+                    <input type="submit" value="Перезвонить мне" class="feedbacks__btn form-row__send-form button send-form">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contacts">
         <div class="contacts__wrapper">
             <div class="contacts__contact-block">
-                <h3 class="contacts__title">КОНТАКТЫ</h3>
+                <h2 class="contacts__title">КОНТАКТЫ</h2>
                 <p class="contacts__phone">+7 (727) 346-63-70</p>
                 <p class="contacts__address">Алматы, ул. Курмангазы,<br>уг. ул. Амангельды</p>
             </div>

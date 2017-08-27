@@ -24,9 +24,29 @@
     margin: 0 auto;
   }
 
+  &__main-con-wrap{
+    position: relative;
+  }
+
+  &__thanks-message{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #f3e694;
+    display: none;
+
+    &--show{
+      display: block;
+    }
+  }
+
   &__top{
     padding: 15px 0 20px;
     border-bottom: 1px solid #ccbe7a;
+    position: relative;
+    z-index: 9;
     display: none;
   }
 
@@ -43,6 +63,8 @@
     margin-top: 30px;
     text-align: center;
     display: none;
+    position: relative;
+    z-index: 9;
   }
 
   &__tel-link{
@@ -64,9 +86,12 @@
   }
 
   &--send-status {
-    max-width: 360px;
     padding: 30px 20px;
     text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    max-height: 200px;
+    box-shadow: 0 0 120px #f3e694;
   }
 
   &__title {
@@ -106,6 +131,7 @@
 .feedback-form{
   &__row{
     margin-top: 15px;
+    text-align: left;
 
     &--center-flag{
       margin-top: 35px;
@@ -197,6 +223,10 @@
     transform: translateY(-50%);
     max-width: 270px;
     width: 100%;
+
+    &--popup-none{
+      left: 315px;
+    }
   }
 
   &__tooltip{
@@ -255,7 +285,7 @@
   }
 
   &__send-form{
-    border: 1px solid #201306;
+    border: 1px solid rgba(32, 19, 6, 0.5);
     color: #2f2013;
     cursor: pointer;
     background-color: transparent;
@@ -271,7 +301,8 @@
     }
 
     &.load {
-      background: url(../img/default.svg) center center no-repeat, rgba(170, 170, 170, 0.8);
+      background: url(../img/default.svg) center center no-repeat, rgba(170, 170, 170, 0.5);
+      border-color: rgba(170, 170, 170, 0.8);
       background-size: 28px 28px;
       color: transparent;
       cursor: default;

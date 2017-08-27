@@ -1,0 +1,119 @@
+.gallery{
+  background-image: url("/img/gallery_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 110px 135px;
+  }
+
+  &__title{
+    color: #ffffff;
+  }
+
+  &__fotorama-wrap{
+    margin-top: 65px;
+  }
+}
+
+.custom-control{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background: rgba(226, 200, 124, 0.7);
+  position: absolute;
+  top: 45%;
+  z-index: -1;
+  transition: 0.3s;
+
+  &:hover{
+    background: rgba(226, 200, 124, 1);
+  }
+
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 62px;
+    width: 9px;
+    height: 17px;
+  }
+
+  &--next{
+    right: -70px;
+
+    &:after{
+      right: 35px;
+      background: url("/img/arrow_next.png") no-repeat;
+    }
+  }
+
+  &--prev{
+    left: -70px;
+
+    &:after{
+      left: 35px;
+      background: url("/img/arrow.png") no-repeat;
+    }
+  }
+}
+.fullscreen{
+  .nav-scroll-btn, .custom-control{
+    display: none;
+  }
+
+  .fotorama__nav-wrap{
+    background: transparent;
+  }
+}
+
+.nav-scroll-btn{
+  height: 130px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover{
+    background-color: rgba(226, 200, 124, 0.4);
+  }
+
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 53px;
+    width: 9px;
+    height: 17px;
+  }
+
+  &--next{
+    right: 0;
+
+    &:hover{
+      box-shadow: -10px 0 10px rgba(226, 200, 124, 0.3);
+    }
+
+    &:after{
+      right: 24px;
+      background: url("/img/arrow_next.png") no-repeat;
+    }
+  }
+
+  &--prev{
+    left: 0;
+
+    &:hover{
+      box-shadow: 10px 0 10px rgba(226, 200, 124, 0.3);
+    }
+
+    &:after{
+      left: 24px;
+      background: url("/img/arrow.png") no-repeat;
+    }
+  }
+}

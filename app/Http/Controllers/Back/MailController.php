@@ -25,7 +25,7 @@ class MailController extends Controller
         $this->feedback = $feedback;
         // Объявляем все шаблоны писем для форм
 
-        $this->feedback->setBodyTemplate('sponsor_form', 'back/mail/sponsor_form_mail');
+        $this->feedback->setBodyTemplate('call', 'back/mail/call_mail');
 
     }
 
