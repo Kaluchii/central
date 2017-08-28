@@ -155,20 +155,55 @@
     </section>
 
     <section class="flats" id="flats">
-        <div class="flats__wrapper wrapper-1140">
+        <div class="flats__wrapper">
             <div class="flats__layout-choice layout-choice">
                 <h2 class="layout-choice__title">ПОДБЕРИТЕ ПЛАНИРОВКУ</h2>
                 <div class="layout-choice__wrap">
-                    <div class="layout-choice__nav"></div>
+                    <div class="layout-choice__nav">
+                        <div class="layout-choice__section">
+                            <p class="layout-choice__section-title">ВЫБЕРИТЕ КОЛИЧЕСТВО КОМНАТ</p>
+                            <ul class="layout-choice__list">
+                                <li class="layout-choice__item"><button class="layout-choice__button">1-комнатные</button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">2-комнатные</button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">3-комнатные</button></li>
+                            </ul>
+                        </div>
+                        <div class="layout-choice__section">
+                            <p class="layout-choice__section-title">ВЫБЕРИТЕ ПЛОЩАДЬ</p>
+                            <ul class="layout-choice__list">
+                                <li class="layout-choice__item"><button class="layout-choice__button">112 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">64 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">26 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">211 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">165 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">89 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">90 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">54 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">111 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">79 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button">87 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                            </ul>
+                        </div>
+                        <div class="layout-choice__section">
+                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ</p>
+                            <p class="layout-choice__price">37 520 000</p>
+                        </div>
+                    </div>
                     <div class="layout-choice__layout-view-wrap">
-                        <div class="layout-choice__layout-view"></div>
+                        <div class="layout-choice__layout-view">
+                            <img src="/img/layout1.png" alt="" class="layout-choice__img">
+                            <div class="layout-choice__descr-wrap">
+                                <p class="layout-choice__name">2-комнатная квартира</p>
+                                <p class="layout-choice__area">112 м<sup class="layout-choice__area-sup">2</sup></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="flats__feedback-wrapper feedback-row">
-            <div class="feedback-row__wrapper wrapper-1140">
-                <p class="feedback-row__text">Понравилась планировка?<br>Свяжитесь с нашим менеджером и обсудите все детали</p>
+            <div class="feedback-row__wrapper">
+                <p class="feedback-row__text">Понравилась планировка?<br>Свяжитесь с нашим менеджером и обсудите все детали.</p>
                 <div class="feedback-row__inputs-wrapper">
                     <div class="feedback-row__input-wrapper feedback-input">
                         <label class="feedback-input__label feedback-input__label--name">Имя</label>

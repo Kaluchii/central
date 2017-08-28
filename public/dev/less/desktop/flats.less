@@ -1,0 +1,116 @@
+.flats{
+  background-image: url("/img/flats_backg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 40px 0;
+  }
+
+  &__layout-choice{}
+
+  &__feedback-wrapper{
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+
+.layout-choice{
+  &__title{
+    color: #ffffff;
+  }
+
+  &__wrap{
+    margin-top: 60px;
+    display: flex;
+  }
+
+  &__nav{
+    max-width: 295px;
+  }
+
+  &__section{}
+
+  &__section-title{
+    color: #ffffff;
+    font-family: "Roboto";
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    margin: 10px 10px 0 0;
+  }
+
+  &__button{
+    font-size: 14px;
+    color: #4d3d34;
+  }
+
+  &__btn-sup{
+    font-size: 10px;
+    color: #4d3d34;
+  }
+
+  &__price{
+    display: inline-block;
+    font-size: 48px;
+    color: #ebd989;
+    font-family: "Gilroy";
+    font-weight: 800;
+    position: relative;
+    line-height: 1;
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 19px;
+      height: 22px;
+      background: url("/img/t.png");
+      bottom: 10px;
+      right: -25px;
+    }
+  }
+
+  &__layout-view-wrap{
+    margin-left: 35px;
+  }
+
+  &__layout-view{
+    background: #ffffff;
+    padding: 70px 160px 60px;
+    position: relative;
+  }
+
+  &__img{}
+
+  &__descr-wrap{
+    position: absolute;
+    top: 20px;
+  }
+
+  &__name{
+    font-size: 24px;
+    color: #201306;
+  }
+
+  &__area{
+    font-size: 30px;
+    color: #201306;
+    font-family: "Gilroy";
+    font-weight: 800;
+  }
+
+  &__area-sup{
+    font-size: 20px;
+    color: #201306;
+    font-family: "Gilroy";
+    font-weight: 800;
+  }
+}
