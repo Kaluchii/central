@@ -133,7 +133,7 @@
             </div>
         </div>
     </section>--}}
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
             <h2 class="gallery__title">ГАЛЕРЕЯ</h2>
             <div class="gallery__fotorama-wrap">
@@ -184,7 +184,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
             <div class="contacts__contact-block">
                 <h2 class="contacts__title">КОНТАКТЫ</h2>

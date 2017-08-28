@@ -44,6 +44,8 @@
       top: -576px;
       background: url("/img/title_elipses.png") no-repeat;
       background-size: cover;
+      animation: wave 1.5s ease-in infinite;
+      -webkit-animation: wave 1.5s ease-in infinite;
     }
 
     &::after{
@@ -63,12 +65,14 @@
       background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
       background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+      animation: flash 1.5s ease-in infinite;
+      -webkit-animation: flash 1.5s ease-in infinite;
     }
   }
 
   &__title{
     letter-spacing: .023em;
-    line-height: 1.1;
+    line-height: 1.2;
     color: #ffffff;
     position: relative;
   }
@@ -83,6 +87,53 @@
     position: relative;
   }
 }
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.005);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.005);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flash {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .title-header{
   display: flex;
