@@ -1,0 +1,144 @@
+.fixed-header{
+  display: none;
+  padding: 0 40px;
+  background: #ffffff;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 -2px 7px 1px #362912;
+
+  &__wrapper{
+    max-width: 1140px;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu-button{
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: #f3e694 url("/img/menu_black.png") center no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+    transition: .3s;
+
+    &.is-open{
+      transform: rotate(90deg);
+      background: #ffffff url("/img/menu_black.png") center no-repeat;
+    }
+  }
+
+  &__nav-wrap{
+    position: relative;
+    z-index: 10;
+    max-width: 490px;
+    flex-grow: 1;
+  }
+
+  &__menu-logo-wrap{
+    padding: 15px 0 20px;
+    border-bottom: 1px solid #ccbe7a;
+    position: relative;
+    z-index: 9;
+    display: none;
+    text-align: center;
+    font-size: 0;
+  }
+
+  &__top-link{}
+
+  &__menu-logo{
+    display: inline-block;
+  }
+
+  &__nav-list{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-item{}
+
+  &__nav-link{
+    font-size: 13px;
+    font-family: "Gilroy";
+    font-weight: 800;
+    letter-spacing: .2em;
+    color: #2f2013;
+    position: relative;
+    white-space: nowrap;
+
+    &::before{
+      content: '';
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      z-index: -1;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      border-radius: 50%;
+      transition: .6s;
+    }
+
+    /*&.is-active, */&:hover{
+      &::before{
+        background: #f0e08f;
+      }
+    }
+  }
+
+  &__logo-wrap{
+    position: relative;
+    z-index: 9;
+    flex-shrink: 0;
+  }
+
+  &__logo{
+    display: block;
+  }
+
+  &__feedback-wrap{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+  }
+
+  &__phone-number{
+    padding: 4px 15px 0 0;
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: 800;
+    letter-spacing: .05em;
+    color: #2f2013;
+  }
+
+  &__order-call{
+    height: 38px;
+    padding: 7px 17px 6px 36px;
+    border: none;
+    background: rgba(247,236,153,1) url("/img/phone_black.png") no-repeat;
+    background: url("/img/phone_black.png") no-repeat 14px 50%, -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: url("/img/phone_black.png") no-repeat 14px 50%, -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
+    background: url("/img/phone_black.png") no-repeat 14px 50%, -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: url("/img/phone_black.png") no-repeat 14px 50%, -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: url("/img/phone_black.png") no-repeat 14px 50%, -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: url("/img/phone_black.png") no-repeat 14px 50%, linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+    transition: .3s;
+  }
+
+  &__btn-text{
+    font-size: 14px;
+    letter-spacing: .05em;
+    color: #2f2013;
+    font-family: 'MuseoSansCyrl-500';
+  }
+}

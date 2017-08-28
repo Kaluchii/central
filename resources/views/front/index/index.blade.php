@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    <section class="title-block">
+    <section class="title-block" id="title">
         <header class="title-block__header title-header">
             <div class="title-block__menu-button js_menu"></div>
             <nav class="title-header__nav-wrap">
@@ -8,10 +8,10 @@
                     <img src="/img/dark_logo.png" alt="Жилой комплекс Центральный" class="title-header__menu-logo">
                 </div>
                 <ul class="title-header__nav-list">
-                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link is-active">О КОМПЛЕКСЕ</a></li>
-                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">ГАЛЕРЕЯ</a></li>
-                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КВАРТИРЫ</a></li>
-                    <li class="title-header__nav-item"><a href="#" class="title-header__nav-link">КОНТАКТЫ</a></li>
+                    <li class="title-header__nav-item"><a href="#about" class="js_goto_anchor title-header__nav-link">О КОМПЛЕКСЕ</a></li>
+                    <li class="title-header__nav-item"><a href="#gallery" class="js_goto_anchor title-header__nav-link">ГАЛЕРЕЯ</a></li>
+                    <li class="title-header__nav-item"><a href="#flats" class="js_goto_anchor title-header__nav-link">КВАРТИРЫ</a></li>
+                    <li class="title-header__nav-item"><a href="#contacts" class="js_goto_anchor title-header__nav-link">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             <div class="title-header__logo-wrap">
@@ -27,7 +27,7 @@
             <p class="title-block__text">Новый современный жилой комплекс комфорт-класса, расположенный в самом центре Алматы. На сегодняшний день район улиц Курмангазы&nbsp;/&nbsp;Амангельды по праву считается одним из самых уютных уголков центра города.</p>
         </div>
     </section>
-    {{--<section class="about"> Закона РК «О долевом участии в жилищном строительстве».
+    {{--<section class="about" id="about"> Закона РК «О долевом участии в жилищном строительстве».
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">О КОМПЛЕКСЕ</h2>
@@ -102,37 +102,6 @@
             </div>
         </div>
     </section>--}}
-{{--    <section class="flats">
-        <div class="flats__wrapper wrapper-1140">
-            <div class="flats__layout-choice layout-choice">
-                <h2 class="layout-choice__title">ПОДБЕРИТЕ ПЛАНИРОВКУ</h2>
-                <div class="layout-choice__wrap">
-                    <div class="layout-choice__nav"></div>
-                    <div class="layout-choice__layout-view-wrap">
-                        <div class="layout-choice__layout-view"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="flats__feedback-wrapper feedback-row">
-            <div class="feedback-row__wrapper wrapper-1140">
-                <p class="feedback-row__text">Понравилась планировка?<br>Свяжитесь с нашим менеджером и обсудите все детали</p>
-                <div class="feedback-row__inputs-wrapper">
-                    <div class="feedback-row__input-wrapper feedback-input">
-                        <label class="feedback-input__label feedback-input__label--name">Имя</label>
-                        <input type="text" class="feedback-input__input">
-                    </div>
-                    <div class="feedback-row__input-wrapper feedback-input">
-                        <label class="feedback-input__label feedback-input__label--tel">+7</label>
-                        <input type="tel" class="feedback-input__input">
-                    </div>
-                    <div class="feedback-row__input-wrapper">
-                        <a class="feedback-row__cal-me button">Перезвонить мне</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>--}}
     <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
             <h2 class="gallery__title">ГАЛЕРЕЯ</h2>
@@ -184,6 +153,39 @@
             </div>
         </div>
     </section>
+
+    <section class="flats" id="flats">
+        <div class="flats__wrapper wrapper-1140">
+            <div class="flats__layout-choice layout-choice">
+                <h2 class="layout-choice__title">ПОДБЕРИТЕ ПЛАНИРОВКУ</h2>
+                <div class="layout-choice__wrap">
+                    <div class="layout-choice__nav"></div>
+                    <div class="layout-choice__layout-view-wrap">
+                        <div class="layout-choice__layout-view"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flats__feedback-wrapper feedback-row">
+            <div class="feedback-row__wrapper wrapper-1140">
+                <p class="feedback-row__text">Понравилась планировка?<br>Свяжитесь с нашим менеджером и обсудите все детали</p>
+                <div class="feedback-row__inputs-wrapper">
+                    <div class="feedback-row__input-wrapper feedback-input">
+                        <label class="feedback-input__label feedback-input__label--name">Имя</label>
+                        <input type="text" class="feedback-input__input">
+                    </div>
+                    <div class="feedback-row__input-wrapper feedback-input">
+                        <label class="feedback-input__label feedback-input__label--tel">+7</label>
+                        <input type="tel" class="feedback-input__input">
+                    </div>
+                    <div class="feedback-row__input-wrapper">
+                        <a class="feedback-row__cal-me button">Перезвонить мне</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
             <div class="contacts__contact-block">
