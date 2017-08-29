@@ -26,7 +26,7 @@ $(document).ready(function () {
             // shadowAnchor: [49, 73]
         });
         map = DG.map('map', {
-            center: [43.2595, 76.92738],
+            center: [43.244562, 76.931334],
             zoom: 16,
             dragging : false,
             boxZoom: false,
@@ -34,7 +34,7 @@ $(document).ready(function () {
             zoomControl: false,
             fullscreenControl: false
         });
-        DG.marker([43.259505, 76.92738], {icon: mainIcon, riseOnHover: true}).addTo(map);
+        DG.marker([43.244562, 76.931334], {icon: mainIcon, riseOnHover: true}).addTo(map);
     });
 
 
