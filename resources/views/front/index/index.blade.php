@@ -179,7 +179,7 @@
         </div>
     </section>
 
-    {{--<section class="flats" id="flats">
+    <section class="flats" id="flats">
         <div class="flats__wrapper">
             <div class="flats__layout-choice layout-choice">
                 <h2 class="layout-choice__title">ПОДБЕРИТЕ ПЛАНИРОВКУ</h2>
@@ -188,7 +188,7 @@
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">ВЫБЕРИТЕ КОЛИЧЕСТВО КОМНАТ</p>
                             <ul class="layout-choice__list">
-                                <li class="layout-choice__item"><button class="layout-choice__button">1-комнатные</button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button is-active">1-комнатные</button></li>
                                 <li class="layout-choice__item"><button class="layout-choice__button">2-комнатные</button></li>
                                 <li class="layout-choice__item"><button class="layout-choice__button">3-комнатные</button></li>
                             </ul>
@@ -196,17 +196,17 @@
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">ВЫБЕРИТЕ ПЛОЩАДЬ</p>
                             <ul class="layout-choice__list">
-                                <li class="layout-choice__item"><button class="layout-choice__button">112 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">64 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">26 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">211 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">165 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">89 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">90 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">54 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">111 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">79 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">87 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">112 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">64 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">26 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">211 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">165 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">89 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">90 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">54 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">111 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">79 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">87 м<sup class="layout-choice__btn-sup">2</sup></button></li>
                             </ul>
                         </div>
                         <div class="layout-choice__section">
@@ -219,7 +219,7 @@
                             <img src="/img/layout1.png" alt="" class="layout-choice__img">
                             <div class="layout-choice__descr-wrap">
                                 <p class="layout-choice__name">2-комнатная квартира</p>
-                                <p class="layout-choice__area">112 м<sup class="layout-choice__area-sup">2</sup></p>
+                                <p class="layout-choice__area">112м<sup class="layout-choice__area-sup">2</sup></p>
                             </div>
                         </div>
                     </div>
@@ -244,7 +244,7 @@
                 </div>
             </div>
         </div>
-    </section>--}}
+    </section>
 
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
