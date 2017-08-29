@@ -111,7 +111,37 @@
 @media screen and (max-width: 620px) {
   .gallery{
     &__wrapper{
-      padding: 100px 50px 135px;
+      padding: 60px 25px 55px;
     }
+
+    &__title{
+      margin-left: 10px;
+    }
+
+    &__fotorama-wrap{
+      position: absolute;
+      left: -9999px;
+    }
+
+    &__mobile-gallery{
+      display: flex;
+      margin-top: 15px;
+    }
+  }
+
+  .fotorama__fullscreen-icon{
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .gallery {
+    &__wrapper {
+      padding: 35px 15px 35px;
+    }
+  }
+
+  .mobile-gallery{
+    height: 390px;
   }
 }

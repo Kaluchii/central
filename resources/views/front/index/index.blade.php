@@ -110,18 +110,46 @@
                      data-nav="thumbs" data-allowfullscreen="true"
                      data-thumbmargin="15" data-loop="true"
                      data-thumbwidth="110" data-thumbheight="100" data-transition="crossfade">
+                    <a href="/img/a1.jpg" class=""></a>
+                    <a href="/img/a2.jpg" class=""></a>
+                    <a href="/img/a3.jpg" class=""></a>
+                    <a href="/img/a4.jpg" class=""></a>
+                    <a href="/img/a5.jpg" class=""></a>
+                    <a href="/img/a6.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
+                </div>
+            </div>
+            <div class="gallery__mobile-gallery mobile-gallery">
+                <div class="mobile-gallery__top-row">
+                    <div class="mobile-gallery__col">
+                        <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--left-big">
+                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="1" style="background-image: url('/img/a1.jpg')"></div>
+                        </div>
+                        <div class="mobile-gallery__small-row">
+                            <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--left-small">
+                                <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="2" style="background-image: url('/img/a2.jpg')"></div>
+                            </div>
+                            <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--left-small">
+                                <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="3" style="background-image: url('/img/a3.jpg')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-gallery__col">
+                        <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--right-small">
+                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="4" style="background-image: url('/img/a4.jpg')"></div>
+                        </div>
+                        <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--right-big">
+                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="5" style="background-image: url('/img/a5.jpg')"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-gallery__big-img-wrap">
+                    <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="6" style="background-image: url('/img/a6.jpg')"></div>
                 </div>
             </div>
         </div>
@@ -154,7 +182,7 @@
         </div>
     </section>
 
-    <section class="flats" id="flats">
+    {{--<section class="flats" id="flats">
         <div class="flats__wrapper">
             <div class="flats__layout-choice layout-choice">
                 <h2 class="layout-choice__title">ПОДБЕРИТЕ ПЛАНИРОВКУ</h2>
@@ -219,7 +247,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">

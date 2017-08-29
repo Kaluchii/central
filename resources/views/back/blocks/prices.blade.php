@@ -7,16 +7,6 @@
         </div>
         <div class="box-body">
             <div class="form-group">
-                <label>Стоимость 1 м² площади квартиры в долларах</label>
-                <input class="form-control float"
-                       type="text" placeholder=""
-                       value="{{$course->meter_cost_field}}"
-                       data-name="meter_cost"
-                       data-type="float"
-                       data-block="prices"
-                       data-id="0">
-            </div>
-            <div class="form-group">
                 <label>Курс доллара на сегодня</label>
                 <input class="form-control float"
                        type="text" placeholder=""
