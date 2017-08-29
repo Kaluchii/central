@@ -171,7 +171,8 @@
           }
 
           outline: none;
-          border: 1px solid #cc0000;
+          background: rgba(255, 0, 0, 0.06);
+          border: 1px solid #d65137;
         }
       }
       .form-row__input {
@@ -271,10 +272,10 @@
     }
 
     &--border{
-      border: 2px solid #cc0000;
+      border: 2px solid #d65137;
 
       &::before, &::after{
-        border: 2px solid #cc0000;
+        border: 2px solid #d65137;
       }
 
       &::before{
@@ -286,7 +287,7 @@
   }
 
   &__send-form{
-    border: 1px solid rgba(32, 19, 6, 0.5);
+    border: 1px solid rgba(32, 19, 6, 0.3);
     color: #2f2013;
     cursor: pointer;
     background-color: transparent;
@@ -296,9 +297,13 @@
     height: 46px;
     font-size: 14px;
     font-family: "MuseoSansCyrl-500";
+    transition: .3s;
 
-    &:hover {
-      outline: none;
+    &--popup{
+      &:hover {
+        outline: none;
+        border: 1px solid rgba(32, 19, 6, 1);
+      }
     }
 
     &.load {

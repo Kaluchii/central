@@ -192,6 +192,12 @@
     background-repeat: repeat-x;
     display: inline-block;
     padding: 0 2px;
+    transition: color .3s;
+
+    &:hover{
+      color: #e3ca7d;
+      background: none;
+    }
   }
 
   &__logo-wrap{
@@ -223,7 +229,6 @@
     height: 38px;
     padding: 7px 17px 6px 36px;
     border: none;
-    box-shadow: 0 0 60px #f7ec99;
     background: rgba(247,236,153,1) url("/img/phone_black.png") no-repeat;
     background: url("/img/phone_black.png") no-repeat 14px 50%, -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
     background: url("/img/phone_black.png") no-repeat 14px 50%, -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
@@ -233,6 +238,11 @@
     background: url("/img/phone_black.png") no-repeat 14px 50%, linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
     transition: .3s;
+    position: relative;
+
+    &:hover{
+      box-shadow: 0 0 25px 3px #f7ec99;
+    }
   }
 
   &__btn-text{

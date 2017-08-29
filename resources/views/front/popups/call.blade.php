@@ -35,7 +35,7 @@
                      data-callback="onSubmitReCaptcha"></div>--}}
 
                 <div class="feedback-form__row form-row feedback-form__row--center-flag">
-                    <input type="submit" value="Перезвонить мне" class="form-row__send-form send-form">
+                    <input type="submit" value="Перезвонить мне" class="form-row__send-form form-row__send-form--popup send-form">
                 </div>
             </div>
             <div class="white-popup__thanks-message">

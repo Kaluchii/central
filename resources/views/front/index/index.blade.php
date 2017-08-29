@@ -119,9 +119,6 @@
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
                     <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
                 </div>
             </div>
             <div class="gallery__mobile-gallery mobile-gallery">
