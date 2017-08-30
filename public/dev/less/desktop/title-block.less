@@ -44,8 +44,9 @@
       top: -576px;
       background: url("/img/title_elipses.png") no-repeat;
       background-size: cover;
-      animation: wave 1.5s ease-in infinite;
-      -webkit-animation: wave 1.5s ease-in infinite;
+      animation: wave 4s ease-in infinite;
+      -webkit-animation: wave 4s ease-in infinite;
+      opacity: 0;
     }
 
     &::after{
@@ -66,7 +67,7 @@
       background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
       animation: flash 1.5s ease-in infinite;
-      -webkit-animation: flash 1.5s ease-in infinite;
+      -webkit-animation: flash 4s ease-in infinite;
     }
   }
 
@@ -90,24 +91,26 @@
 
 @keyframes wave {
   0% {
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0.4);
   }
   55% {
-    transform: scale(1.005);
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.4);
   }
 }
 @-webkit-keyframes wave {
   0% {
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0.4);
   }
   55% {
-    transform: scale(1.005);
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.4);
   }
 }
 
@@ -115,7 +118,7 @@
   0% {
     transform: scale(1);
   }
-  40% {
+  35% {
     transform: scale(1.2);
   }
   100% {
@@ -126,7 +129,7 @@
   0% {
     transform: scale(1);
   }
-  40% {
+  35% {
     transform: scale(1.2);
   }
   100% {

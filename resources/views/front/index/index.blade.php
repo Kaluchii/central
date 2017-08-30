@@ -27,12 +27,12 @@
             <p class="title-block__text">{{ $main_block->text_field  }}</p>
         </div>
     </section>
-    <section class="about" id="about">
-        <div class="about__wrapper wrapper-1140">
+    {{--<section class="about" id="about">
+        <div class="about__wrapper">
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
-                <address class="text-col__address">{!! $contacts->address_field !!}</address>
+                <address class="text-col__address">Алматы, Курмангазы /&nbsp;Амангельды</address>
             </div>
             <div class="about__facts-col facts">
                 <ul class="facts__list">
@@ -58,50 +58,11 @@
                 <h3 class="about__in-detail__title">ПРЕИМУЩЕСТВА В ДЕТАЛЯХ</h3>
                 <div class="about__in-detail-wrapper in-detail">
                     <div class="in-detail__col1">
-                        <div class="in-detail__item">
-                            <img src="" alt="" class="in-detail__img">
-                            <div class="in-detail__text-wrap">
-                                <h4 class="in-detail__item-title">АРХИТЕКТУРНЫЙ СТИЛЬ</h4>
-                                <p class="in-detail__text"></p>
-                            </div>
-                        </div>
-                        <div class="in-detail__item">
-                            <img src="" alt="" class="in-detail__img">
-                            <div class="in-detail__text-wrap">
-                                <h4 class="in-detail__item-title">ПРОДУМАННЫЕ КОММЕРЧЕСКИЕ ПОМЕЩЕНИЯ</h4>
-                                <p class="in-detail__text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="in-detail__col2">
-                        <div class="in-detail__item">
-                            <img src="" alt="" class="in-detail__img">
-                            <div class="in-detail__text-wrap">
-                                <h4 class="in-detail__item-title">СЕЙСМОСТОЙКОСТЬ</h4>
-                                <p class="in-detail__text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="in-detail__col3">
-                        <div class="in-detail__item">
-                            <img src="" alt="" class="in-detail__img">
-                            <div class="in-detail__text-wrap">
-                                <h4 class="in-detail__item-title">УЮТНЫЙ И БЕЗОПАСНЫЙ ДВОР</h4>
-                                <p class="in-detail__text"></p>
-                            </div>
-                        </div>
-                        <div class="in-detail__item">
-                            <img src="" alt="" class="in-detail__img">
-                            <div class="in-detail__text-wrap">
-                                <h4 class="in-detail__item-title">ИНФРАСТРУКТУРА, ОТЛАЖЕННАЯ ДЕСЯТИЛЕТИЯМИ</h4>
-                                <p class="in-detail__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iste, voluptates! A ex laborum modi molestiae totam. Aliquam nobis placeat qui temporibus.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
     <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
             <h2 class="gallery__title">{{ $gallery->block_title_field }}</h2>
