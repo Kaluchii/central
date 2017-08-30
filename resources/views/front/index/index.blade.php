@@ -27,7 +27,7 @@
             <p class="title-block__text">{{ $main_block->text_field  }}</p>
         </div>
     </section>
-    {{--<section class="about" id="about">
+    <section class="about" id="about">
         <div class="about__wrapper">
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
@@ -46,11 +46,11 @@
                     </li>
                     <li class="facts__item facts__item--kindergarten-places fact">
                         <p class="fact__count">60</p>
-                        <p class="fact__text">МЕСТ В ДЕТСКОМ САДУ</p>
+                        <p class="fact__text">МЕСТ<br>В ДЕТСКОМ САДУ</p>
                     </li>
                     <li class="facts__item facts__item--parking-places fact">
                         <p class="fact__count">189</p>
-                        <p class="fact__text">ПАРКОВОЧНЫХ МЕСТ</p>
+                        <p class="fact__text">ПАРКОВОЧНЫХ<br>МЕСТ</p>
                     </li>
                 </ul>
             </div>
@@ -58,11 +58,53 @@
                 <h3 class="about__in-detail__title">ПРЕИМУЩЕСТВА В ДЕТАЛЯХ</h3>
                 <div class="about__in-detail-wrapper in-detail">
                     <div class="in-detail__col1">
+                        <div class="in-detail__wrapper in-detail__wrapper--col">
+                            <div class="in-detail__item in-detail__item--left-top">
+                                <div class="in-detail__text-wrapper">
+                                    <p class="in-detail__item-title">{!! $about->title1_field !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text1_field !!}</p>
+                                </div>
+                            </div>
+                            <div class="in-detail__item in-detail__item--left-bottom">
+                                <div class="in-detail__text-wrapper">
+                                    <p class="in-detail__item-title">{!! $about->title2_field !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text2_field !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="in-detail__item in-detail__item--middle">
+                            <div class="in-detail__text-wrapper">
+                                <p class="in-detail__item-title">{!! $about->title3_field !!}</p>
+                                <p class="in-detail__item-text">{!! $about->text3_field !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-detail__col2">
+                        <div class="in-detail__wrapper in-detail__wrapper--row">
+                            <div class="in-detail__item in-detail__item--right1">
+                                <div class="in-detail__text-wrapper">
+                                    <p class="in-detail__item-title">{!! $about->title4_field !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text4_field !!}</p>
+                                </div>
+                            </div>
+                            <div class="in-detail__item in-detail__item--right2">
+                                <div class="in-detail__text-wrapper">
+                                    <p class="in-detail__item-title">{!! $about->title5_field !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text5_field !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="in-detail__item in-detail__item--bottom-right">
+                            <div class="in-detail__text-wrapper">
+                                <p class="in-detail__item-title">{!! $about->title6_field !!}</p>
+                                <p class="in-detail__item-text">{!! $about->text6_field !!}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>--}}
+    </section>
     <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
             <h2 class="gallery__title">{{ $gallery->block_title_field }}</h2>

@@ -1,36 +1,319 @@
 .about{
-  &__wrapper{}
+  overflow: hidden;
 
-  &__text-col{}
+  &__wrapper{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 155px 40px 95px;
+    position: relative;
+
+    &::before{
+      content: '';
+      z-index: -1;
+      position: absolute;
+      left: -825px;
+      top: 595px;
+      border-radius: 50%;
+      width: 1380px;
+      height: 1380px;
+      background: rgba(247,236,153,1);
+      background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
+      background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+    }
+  }
+
+  &__text-col{
+    max-width: 570px;
+    width: ~'calc(100% - 570px)';
+  }
 
   &__facts-col{}
+
+  &__in-detail{
+    margin-top: 120px;
+  }
+
+  &__in-detail__title{
+    font-size: 24px;
+    font-family: "Gilroy";
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: #2f2013;
+  }
+
+  &__in-detail-wrapper{
+    margin-top: 40px;
+  }
 }
 
 .text-col{
-  &__title{}
+  &__title{
+    position: relative;
+    color: #201306;
+  }
 
-  &__text{}
+  &__text{
+    margin-top: 30px;
+  }
 
-  &__address{}
+  &__address{
+    margin: 20px 0 0 45px;
+    font-size: 18px;
+    color: #34261b;
+    font-style: normal;
+    position: relative;
+    letter-spacing: 0.04em;
+
+    &::before{
+      content: '';
+      width: 26px;
+      height: 36px;
+      position: absolute;
+      left: -45px;
+      top: -5px;
+      background: url("/img/location_about.png");
+    }
+  }
 }
 
 
 .facts{
-  &__list{}
+  position: absolute;
+  right: 0;
+  top: 150px;
+
+  &__list{
+    position: relative;
+
+    &::before{
+      content: '';
+      width: 181px;
+      height: 486px;
+      top: -20px;
+      left: -260px;
+      position: absolute;
+      background: url("/img/about_elipses.png") no-repeat 100%;
+    }
+  }
 
   &__item{
-    &--floor{}
+    position: relative;
 
-    &--flats{}
+    &::before{
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      background: rgba(247,236,153,1);
+      background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
+      background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+    }
 
-    &--kindergarten-places{}
+    &--floor{
+      top: 70px;
+      left: -255px;
 
-    &--parking-places{}
+      &::before{
+        width: 120px;
+        height: 120px;
+        left: 27px;
+        top: 20px;
+      }
+    }
+
+    &--flats{
+      top: -65px;
+      left: -55px;
+
+      &::before{
+        width: 170px;
+        height: 170px;
+        left: 6px;
+        top: -28px;
+      }
+    }
+
+    &--kindergarten-places{
+      top: -15px;
+      left: -315px;
+
+      &::before{
+        width: 150px;
+        height: 150px;
+        left: 13px;
+        top: 5px;
+      }
+    }
+
+    &--parking-places{
+      top: -150px;
+      left: -75px;
+
+      &::before{
+        width: 190px;
+        height: 190px;
+        left: -9px;
+        top: -6px;
+      }
+    }
   }
 }
 
 .fact{
-  &__count{}
+  text-align: center;
 
-  &__text{}
+  &__count{
+    font-family: "Gilroy";
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 1;
+    color: #2f2013;
+    letter-spacing: 0.05em;
+  }
+
+  &__text{
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-size: 18px;
+    color: #2f2013;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+
+  }
+}
+
+.in-detail{
+  height: 560px;
+  display: flex;
+  justify-content: space-between;
+
+  &__col1{
+    display: flex;
+    justify-content: space-between;
+    width: ~'calc(50% - 10px)';
+  }
+
+  &__col2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: ~'calc(50% - 10px)';
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+
+    &--col{
+      flex-direction: column;
+      width: ~'calc(50% - 10px)';
+      height: 100%;
+    }
+
+    &--row{
+      height: ~'calc(50% - 10px)';
+      width: 100%;
+    }
+  }
+
+  &__item{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: -2px 2px 4px rgba(54, 41, 18, 0.37);
+
+    &::before{
+      content: '';
+      position: absolute;
+      left: -500%;
+      top: -500%;
+      border-radius: 50%;
+      width: 170%;
+      height: 170%;
+      background: rgba(243, 229, 148, 0.8);
+      transition: .4s;
+    }
+    
+    &:hover{
+      &::before{
+        left: -65%;
+        top: -60%;
+      }
+
+      .in-detail__item-text{
+        opacity: 1;
+      }
+    }
+
+    &--left-top{
+      background: url("/img/left_top.jpg");
+      height: ~'calc(50% - 10px)';
+      width: 100%;
+    }
+
+    &--left-bottom{
+      background: url("/img/left_bottom.jpg");
+      height: ~'calc(50% - 10px)';
+      width: 100%;
+    }
+
+    &--middle{
+      background: url("/img/middle.jpg");
+      width: ~'calc(50% - 10px)';
+      height: 100%;
+    }
+
+    &--right1{
+      background: url("/img/right_top1.jpg");
+      width: ~'calc(50% - 10px)';
+      height: 100%;
+    }
+
+    &--right2{
+      background: url("/img/right_top2.jpg");
+      width: ~'calc(50% - 10px)';
+      height: 100%;
+    }
+
+    &--bottom-right{
+      background: url("/img/right_bottom.jpg");
+      width: 100%;
+      height: ~'calc(50% - 10px)';
+    }
+  }
+
+  &__text-wrapper{
+    position: absolute;
+    padding-right: 25px;
+    left: 25px;
+    top: 25px;
+  }
+
+  &__item-title{
+    font-family: "Gilroy";
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    font-weight: 800;
+    font-size: 14px;
+    color: #2f2013;
+  }
+
+  &__item-text{
+    margin-top: 10px;
+    color: #2f2013;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: 1.4s .2s;
+  }
 }
