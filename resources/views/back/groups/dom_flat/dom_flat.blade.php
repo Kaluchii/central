@@ -10,7 +10,7 @@
 
         <div class="box-body">
             <div class="form-group">
-                <label>Название типа квартир</label>
+                <label>Название квартир</label>
                 <input class="form-control string"
                        type="text" placeholder=""
                        value="{{$item->dom_flat_name_field}}"
@@ -19,7 +19,19 @@
                        data-block="dom_flat"
                        data-id="{{$item->id_field}}">
             </div>
+
+            <div class="form-group">
+                <label>Название квартиры в единственном числе</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$item->singularly_field}}"
+                       data-name="singularly"
+                       data-type="string"
+                       data-block="dom_flat"
+                       data-id="{{$item->id_field}}">
+            </div>
         </div>
+
     </div>
 
     <div class="box box-info group-item-widget"

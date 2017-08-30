@@ -226,20 +226,29 @@
                 </div>
             </div>
         </div>
+        <hr class="flats__hr">
         <div class="flats__feedback-wrapper feedback-row">
-            <div class="feedback-row__wrapper">
-                <p class="feedback-row__text">Понравилась планировка?<br>Свяжитесь с нашим менеджером и обсудите все детали.</p>
+            <div class="feedback-row__wrapper form-id" id="flats_call">
+                <div class="feedback-row__text-wrapper">
+                    <p class="feedback-row__text-title">Понравилась планировка?</p>
+                    <p class="feedback-row__text">Свяжитесь с нашим менеджером и обсудите все детали.</p>
+                </div>
                 <div class="feedback-row__inputs-wrapper">
-                    <div class="feedback-row__input-wrapper feedback-input">
-                        <label class="feedback-input__label feedback-input__label--name">Имя</label>
-                        <input type="text" class="feedback-input__input">
+                    <input type="hidden" name="form" class="form-input" value="call">
+                    <div class="feedback-row__input-wrapper form-row">
+                        <div class="form-row__validation-wrap">
+                            <label class="feedbacks-input__label feedbacks-input__label--flats feedbacks-input__label--name"><span class="feedbacks-input__label-text">Имя</span></label>
+                            <input type="text" name="client_name" required class="form-row__input form-input feedbacks-input__input feedbacks-input__input--flats">
+                        </div>
                     </div>
-                    <div class="feedback-row__input-wrapper feedback-input">
-                        <label class="feedback-input__label feedback-input__label--tel">+7</label>
-                        <input type="tel" class="feedback-input__input">
+                    <div class="feedback-row__input-wrapper form-row">
+                        <div class="form-row__validation-wrap">
+                            <label class="feedbacks-input__label feedbacks-input__label--flats feedbacks-input__label--tel"><span class="feedbacks-input__label-text">+7</span></label>
+                            <input type="tel" class="form-row__input form-input feedbacks-input__input feedbacks-input__input--flats" maxlength="25" name="phone">
+                        </div>
                     </div>
-                    <div class="feedback-row__input-wrapper">
-                        <a class="feedback-row__cal-me button">Перезвонить мне</a>
+                    <div class="feedback-row__input-wrapper feedback-row__input-wrapper--btn form-row">
+                        <input type="submit" value="Перезвонить мне" class="form-row__send-form form-row__send-form--flats send-form">
                     </div>
                 </div>
             </div>

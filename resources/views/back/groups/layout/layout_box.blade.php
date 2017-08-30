@@ -7,17 +7,6 @@
     <div class="box-body">
 
         <div class="form-group">
-            <label>Название квартиры</label>
-            <input class="form-control string"
-                   type="text" placeholder=""
-                   value="{{$item->layout_name_field}}"
-                   data-name="layout_name"
-                   data-type="string"
-                   data-block="layout"
-                   data-id="{{$item->id_field}}">
-        </div>
-
-        <div class="form-group">
             <label>Размер квартиры</label>
             <input class="form-control float"
                    type="text" placeholder=""

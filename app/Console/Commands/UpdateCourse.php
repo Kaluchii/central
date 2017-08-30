@@ -46,7 +46,9 @@ class UpdateCourse extends Command
         $doc = \phpQuery::newDocumentHTML( $html, 'windows-1251' );
         $price = $doc->find('.bcc_full .s_table_over:nth-child(4) tbody tr:nth-child(3) td:nth-child(3)')->text();
 
-        $this->updateAgent->update('prices', 0, ['dollar' => $price]);
+        if($price){
+            $this->updateAgent->update('prices', 0, ['dollar' => $price]);
+        }
         echo('Course success update. USD to KZT course value = ' . $price."\n");
     }
 

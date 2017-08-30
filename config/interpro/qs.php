@@ -21,10 +21,9 @@ return [
         'string' => ['block_title'],
         'groups' => [
             'dom_flat' => [
-                'string' => ['dom_flat_name']
+                'string' => ['dom_flat_name', 'singularly']
             ],
             'layout' => [
-                'string' => ['layout_name'],
                 'image' => ['layout_scheme'],
                 'float' => ['area', 'meter_cost'],
                 'dom_flat' => ['superior']
