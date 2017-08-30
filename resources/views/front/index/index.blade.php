@@ -18,21 +18,21 @@
                 <img src="/img/logo.png" alt="Жилой комплекс Центральный" class="title-header__logo">
             </div>
             <div class="title-header__feedback-wrap">
-                <p class="title-header__phone-number">+ 7 (727) 346-63-70</p>
+                <p class="title-header__phone-number">{{ $contacts->phone_field }}</p>
                 <a href="#call" class="title-header__order-call button order_call_btn button"><span class="title-header__btn-text">Заказать звонок</span></a>
             </div>
         </header>
         <div class="title-block__text-wrap">
-            <h1 class="title-block__title">КОГДА ВСЕ ДОРОГИ<br>ВЕДУТ В ЦЕНТР</h1>
-            <p class="title-block__text">Новый современный жилой комплекс комфорт-класса, расположенный в самом центре Алматы. На сегодняшний день район улиц Курмангазы&nbsp;/&nbsp;Амангельды по праву считается одним из самых уютных уголков центра города.</p>
+            <h1 class="title-block__title">{!! $main_block->block_title_field !!}</h1>
+            <p class="title-block__text">{{ $main_block->text_field  }}</p>
         </div>
     </section>
     <section class="about" id="about">
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
-                <h2 class="text-col__title">О КОМПЛЕКСЕ</h2>
-                <div class="text-col__text text-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aspernatur consequuntur corporis cupiditate delectus, dolorem eligendi est eveniet id ipsam modi molestiae non optio perspiciatis possimus, quas ratione totam voluptas.</div>
-                <address class="text-col__address">Микрорайон Кок-тобе,<br>ул. Зои Космодемьянской, 138/1</address>
+                <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
+                <div class="text-col__text text-block">{!! $about->text_field !!}</div>
+                <address class="text-col__address">{!! $contacts->address_field !!}</address>
             </div>
             <div class="about__facts-col facts">
                 <ul class="facts__list">
@@ -104,49 +104,45 @@
     </section>
     <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
-            <h2 class="gallery__title">ГАЛЕРЕЯ</h2>
+            <h2 class="gallery__title">{{ $gallery->block_title_field }}</h2>
             <div class="gallery__fotorama-wrap">
                 <div class="fotorama"  data-auto="false" data-ratio="1140/510"
                      data-nav="thumbs" data-allowfullscreen="true"
                      data-thumbmargin="15" data-loop="true"
                      data-thumbwidth="110" data-thumbheight="100" data-transition="crossfade">
-                    <a href="/img/a1.jpg" class=""></a>
-                    <a href="/img/a2.jpg" class=""></a>
-                    <a href="/img/a3.jpg" class=""></a>
-                    <a href="/img/a4.jpg" class=""></a>
-                    <a href="/img/a5.jpg" class=""></a>
-                    <a href="/img/a6.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
-                    <a href="/img/1140x510.jpg" class=""></a>
+                    <?php $slider_arr = [] ?>
+                    @foreach($gallery->slider_group as $slide)
+                        <a href="{{$slide->slide_field->link}}"></a>
+                        <?php $slider_arr[] = $slide->slide_field->link ?>
+                    @endforeach
                 </div>
             </div>
             <div class="gallery__mobile-gallery mobile-gallery">
                 <div class="mobile-gallery__top-row">
                     <div class="mobile-gallery__col">
                         <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--left-big">
-                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="1" style="background-image: url('/img/a1.jpg')"></div>
+                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="1" style="background-image: url('{{$slider_arr[0] or "/img/1140x510.jpg"}}')"></div>
                         </div>
                         <div class="mobile-gallery__small-row">
                             <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--left-small">
-                                <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="2" style="background-image: url('/img/a2.jpg')"></div>
+                                <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="2" style="background-image: url('{{$slider_arr[1] or "/img/1140x510.jpg"}}')"></div>
                             </div>
                             <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--left-small">
-                                <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="3" style="background-image: url('/img/a3.jpg')"></div>
+                                <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="3" style="background-image: url('{{$slider_arr[2] or "/img/1140x510.jpg"}}')"></div>
                             </div>
                         </div>
                     </div>
                     <div class="mobile-gallery__col">
                         <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--right-small">
-                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="4" style="background-image: url('/img/a4.jpg')"></div>
+                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="4" style="background-image: url('{{$slider_arr[3] or "/img/1140x510.jpg"}}')"></div>
                         </div>
                         <div class="mobile-gallery__img-wrap mobile-gallery__img-wrap--right-big">
-                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="5" style="background-image: url('/img/a5.jpg')"></div>
+                            <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="5" style="background-image: url('{{$slider_arr[4] or "/img/1140x510.jpg"}}')"></div>
                         </div>
                     </div>
                 </div>
                 <div class="mobile-gallery__big-img-wrap">
-                    <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="6" style="background-image: url('/img/a6.jpg')"></div>
+                    <div class="mobile-gallery__pseudo-img js_open_fotorama" data-img="6" style="background-image: url('{{$slider_arr[5] or "/img/1140x510.jpg"}}')"></div>
                 </div>
             </div>
         </div>
@@ -168,7 +164,7 @@
                 <div class="feedback-form__row form-row">
                     <div class="form-row__validation-wrap feedbacks-input">
                         <label class="feedbacks-input__label feedbacks-input__label--tel"><span class="feedbacks-input__label-text">+7</span></label>
-                        <input type="tel" class="form-row__input form-input feedbacks-input__input" maxlength="25" name="phone">
+                        <input type="tel" class="form-row__input form-input feedbacks-input__input" maxlength="25" data-mask="(000) 000-00-00" name="phone">
                         <div class="form-row__tooltip-wrap form-row__tooltip-wrap--popup-none"><p class="form-row__tooltip form-row__tooltip--border">Телефонный номер для связи</p></div>
                     </div>
                 </div>
@@ -179,47 +175,41 @@
         </div>
     </section>
 
-    <section class="flats" id="flats">
+    <section class="flats" id="flats" data-exchange="{{$prices->dollar_field}}">
         <div class="flats__wrapper">
             <div class="flats__layout-choice layout-choice">
-                <h2 class="layout-choice__title">ПОДБЕРИТЕ ПЛАНИРОВКУ</h2>
+                <h2 class="layout-choice__title">{{ $flats->block_title_field }}</h2>
                 <div class="layout-choice__wrap">
                     <div class="layout-choice__nav">
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">ВЫБЕРИТЕ КОЛИЧЕСТВО КОМНАТ</p>
                             <ul class="layout-choice__list">
-                                <li class="layout-choice__item"><button class="layout-choice__button is-active">1-комнатные</button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">2-комнатные</button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button">3-комнатные</button></li>
+                                @foreach($flats->dom_flat_group as $item)
+                                    <li class="layout-choice__item"><button class="layout-choice__button js_rooms_btn" data-id="flat{{$item->id_field}}" data-singularly="{{$item->singularly_field}}">{{$item->dom_flat_name_field}}</button></li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">ВЫБЕРИТЕ ПЛОЩАДЬ</p>
                             <ul class="layout-choice__list">
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">112 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">64 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">26 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">211 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">165 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">89 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">90 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">54 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">111 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">79 м<sup class="layout-choice__btn-sup">2</sup></button></li>
-                                <li class="layout-choice__item"><button class="layout-choice__button layout-choice__button--area">87 м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                @foreach($flats->dom_flat_group as $item)
+                                    @foreach($item->layout_group as $layout_item)
+                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id_field}}" data-img="{{$layout_item->layout_scheme->link_field}}" data-area="{{$layout_item->area_field}}" data-cost="{{$layout_item->meter_cost_field}}">{{$layout_item->area_field}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                    @endforeach
+                                @endforeach
                             </ul>
                         </div>
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ</p>
-                            <p class="layout-choice__price">37 520 000</p>
+                            <p class="layout-choice__price"></p>
                         </div>
                     </div>
                     <div class="layout-choice__layout-view-wrap">
                         <div class="layout-choice__layout-view">
-                            <img src="/img/layout1.png" alt="" class="layout-choice__img">
+                            <img src="" alt="" class="layout-choice__img">
                             <div class="layout-choice__descr-wrap">
-                                <p class="layout-choice__name">2-комнатная квартира</p>
-                                <p class="layout-choice__area">112м<sup class="layout-choice__area-sup">2</sup></p>
+                                <p class="layout-choice__name"></p>
+                                <p class="layout-choice__area"><span class="layout-choice__area-text"></span>м<sup class="layout-choice__area-sup">2</sup></p>
                             </div>
                         </div>
                     </div>
@@ -244,7 +234,7 @@
                     <div class="feedback-row__input-wrapper form-row">
                         <div class="form-row__validation-wrap">
                             <label class="feedbacks-input__label feedbacks-input__label--flats feedbacks-input__label--tel"><span class="feedbacks-input__label-text">+7</span></label>
-                            <input type="tel" class="form-row__input form-input feedbacks-input__input feedbacks-input__input--flats" maxlength="25" name="phone">
+                            <input type="tel" class="form-row__input form-input feedbacks-input__input feedbacks-input__input--flats" data-mask="(000) 000-00-00" maxlength="25" name="phone">
                         </div>
                     </div>
                     <div class="feedback-row__input-wrapper feedback-row__input-wrapper--btn form-row">
@@ -258,9 +248,9 @@
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
             <div class="contacts__contact-block">
-                <h2 class="contacts__title">КОНТАКТЫ</h2>
-                <p class="contacts__phone">+7 (727) 346-63-70</p>
-                <p class="contacts__address">Алматы, ул. Курмангазы,<br>уг. ул. Амангельды</p>
+                <h2 class="contacts__title">{{ $contacts->block_title_field }}</h2>
+                <p class="contacts__phone">{{ $contacts->phone_field }}</p>
+                <p class="contacts__address">{!! $contacts->address_field !!}</p>
             </div>
             <div class="contacts__map-wrapper">
                 <div class="contacts__map" id="map"></div>

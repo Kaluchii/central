@@ -25,14 +25,10 @@
                 <div class="feedback-form__row form-row">
                     <div class="form-row__validation-wrap feedbacks-input">
                         <label class="feedbacks-input__label feedbacks-input__label--tel"><span class="feedbacks-input__label-text">+7</span></label>
-                        <input type="tel" class="form-row__input form-input feedbacks-input__input" maxlength="25" name="phone">
+                        <input type="tel" class="form-row__input form-input feedbacks-input__input" maxlength="25" data-mask="(000) 000-00-00" name="phone">
                         <div class="form-row__tooltip-wrap"><p class="form-row__tooltip form-row__tooltip--border">Телефонный номер для связи</p></div>
                     </div>
                 </div>
-
-                {{--<div id="recaptcha" class="g-recaptcha" data-size="invisible"
-                     data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                     data-callback="onSubmitReCaptcha"></div>--}}
 
                 <div class="feedback-form__row form-row feedback-form__row--center-flag">
                     <input type="submit" value="Перезвонить мне" class="form-row__send-form form-row__send-form--popup send-form">

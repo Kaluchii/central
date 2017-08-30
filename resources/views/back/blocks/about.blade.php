@@ -18,7 +18,7 @@
             </div>
             <div class="form-group">
                 <label>Текст под заголовком</label>
-                <textarea class="form-control text"
+                <textarea class="form-control text-editor"
                           data-name="text"
                           data-type="text"
                           data-block="about"

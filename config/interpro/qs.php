@@ -32,7 +32,7 @@ return [
     ],
 
     'contacts' => [
-        'string' => ['phone', 'mail', 'address']
+        'string' => ['block_title', 'phone', 'mail', 'address']
     ],
 
     'prices' => [

@@ -8,11 +8,11 @@
 
     @include('front.styles')
     @yield('styles')
-    {{--{!! $scripts->before_head_close_field !!}--}}
+    {!! $scripts->before_head_close_field !!}
     @yield('meta')
 </head>
 <body>
-{{--    {!! $scripts->after_open_field !!}--}}
+    {!! $scripts->after_open_field !!}
 
     @include('front.header')
     @yield('header')
@@ -33,7 +33,7 @@
     @yield('scripts')
     @yield('metriks')
 
-{{--    {!! $scripts->before_close_field !!}--}}
+    {!! $scripts->before_close_field !!}
 
 </body>
 </html>

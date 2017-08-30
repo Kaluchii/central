@@ -7,6 +7,16 @@
         </div>
         <div class="box-body">
             <div class="form-group">
+                <label>Заголовок</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$contacts->block_title_field}}"
+                       data-name="block_title"
+                       data-type="string"
+                       data-block="contacts"
+                       data-id="0">
+            </div>
+            <div class="form-group">
                 <label>Телефон</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -16,7 +26,7 @@
                        data-block="contacts"
                        data-id="0">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label>Почта</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -25,7 +35,7 @@
                        data-type="string"
                        data-block="contacts"
                        data-id="0">
-            </div>
+            </div>--}}
             <div class="form-group">
                 <label>Адрес местоположения</label>
                 <input class="form-control string"
