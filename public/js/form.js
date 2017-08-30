@@ -173,7 +173,7 @@ $(document).ready(function(){
                 /*grecaptcha.reset();
                 grecaptcha.execute();*/
                 active = false;
-                if (unical == 'feedback_call'){
+                if (unical == 'feedback_call' || unical == 'flats_call'){
                     thanks_show = true;
                 }
                 sendButton.addClass('load');

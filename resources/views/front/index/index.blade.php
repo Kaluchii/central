@@ -27,7 +27,7 @@
             <p class="title-block__text">Новый современный жилой комплекс комфорт-класса, расположенный в самом центре Алматы. На сегодняшний день район улиц Курмангазы&nbsp;/&nbsp;Амангельды по праву считается одним из самых уютных уголков центра города.</p>
         </div>
     </section>
-    {{--<section class="about" id="about"> Закона РК «О долевом участии в жилищном строительстве».
+    <section class="about" id="about">
         <div class="about__wrapper wrapper-1140">
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">О КОМПЛЕКСЕ</h2>
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </div>
-    </section>--}}
+    </section>
     <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
             <h2 class="gallery__title">ГАЛЕРЕЯ</h2>
