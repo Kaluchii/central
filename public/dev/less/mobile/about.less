@@ -1,0 +1,249 @@
+@media screen and (max-width: 1100px) {
+  .about{
+    &__wrapper{
+      &::before{
+      }
+    }
+
+    &__text-col{
+      width: 45%;
+    }
+
+    &__facts-col{}
+
+    &__in-detail{
+    }
+
+    &__in-detail__title{
+      text-align: center;
+    }
+
+    &__in-detail-wrapper{
+    }
+  }
+
+  .text-col{
+    &__title{
+    }
+
+    &__text{
+    }
+
+    &__address{
+      &::before{
+      }
+    }
+  }
+
+
+  .facts{
+    top: 200px;
+
+    &__list{
+      &::before{
+        top: -60px;
+        left: -320px;
+        background-size: 70% 70%;
+      }
+    }
+
+    &__item{
+      &::before{
+      }
+
+      &--floor{
+        top: 70px;
+        left: -255px;
+
+        &::before{
+          width: 70px;
+          height: 70px;
+          left: 33px;
+          top: 20px;
+        }
+      }
+
+      &--flats{
+        top: -30px;
+        left: -115px;
+
+        &::before{
+          width: 100px;
+          height: 100px;
+          left: 25px;
+          top: 5px;
+        }
+      }
+
+      &--kindergarten-places{
+        top: -15px;
+        left: -90px;
+
+        &::before{
+          width: 90px;
+          height: 90px;
+          left: 22px;
+          top: 20px;
+        }
+      }
+
+      &--parking-places{
+        top: -135px;
+        left: -230px;
+
+        &::before{
+          width: 120px;
+          height: 120px;
+          left: 5px;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .fact{
+    &__count{
+      font-size: 80px;
+    }
+
+    &__text{
+      font-size: 14px;
+    }
+  }
+
+  .in-detail{
+    height: 1140px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    &__col1{
+      height: 560px;
+      max-width: 560px;
+      width: 100%;
+    }
+
+    &__col2{
+      height: 560px;
+      max-width: 560px;
+      width: 100%;
+    }
+
+    &__wrapper{
+      &--col{
+      }
+
+      &--row{
+      }
+    }
+
+    &__item{
+      &::before{
+      }
+
+      &:hover{
+        &::before{
+        }
+
+        .in-detail__item-text{
+        }
+      }
+
+      &--left-top{
+      }
+
+      &--left-bottom{
+      }
+
+      &--middle{
+      }
+
+      &--right1{
+      }
+
+      &--right2{
+      }
+
+      &--bottom-right{
+      }
+    }
+
+    &__text-wrapper{
+    }
+
+    &__item-title{
+    }
+
+    &__item-text{
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+ .about{
+    &__wrapper{
+      padding: 120px 30px 90px;
+
+      &::before{
+        left: -250px;
+        top: 80px;
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+   &__in-detail{
+     margin-top: 0;
+   }
+
+   &__text-col{
+     width: 100%;
+   }
+  }
+
+  .facts{
+    position: static;
+
+    &__list{
+      height: 370px;
+
+      &::before{
+        display: none;
+      }
+    }
+
+    &__item{
+      &::before{
+      }
+
+      &--floor{
+        left: -255px;
+
+        &::before{
+          left: 339px;
+        }
+      }
+
+      &--flats{
+        left: -115px;
+
+        &::before{
+          left: 330px;
+        }
+      }
+
+      &--kindergarten-places{
+        &::before{
+          left: 329px;
+        }
+      }
+
+      &--parking-places{
+        &::before{
+          left: 310px;
+          top: 0;
+        }
+      }
+    }
+  }
+}

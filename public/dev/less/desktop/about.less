@@ -241,17 +241,19 @@
       width: 170%;
       height: 170%;
       background: rgba(243, 229, 148, 0.8);
-      transition: .4s;
+      transition: .4s .5s;
     }
     
     &:hover{
       &::before{
         left: -65%;
         top: -60%;
+        transition: .4s;
       }
 
       .in-detail__item-text{
         opacity: 1;
+        transition: 1.4s .2s;
       }
     }
 
@@ -314,6 +316,6 @@
     font-size: 14px;
     line-height: 1.5;
     opacity: 0;
-    transition: 1.4s .2s;
+    transition: 1s;
   }
 }
