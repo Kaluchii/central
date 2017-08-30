@@ -48,8 +48,10 @@ class UpdateCourse extends Command
 
         if($price){
             $this->updateAgent->update('prices', 0, ['dollar' => $price]);
+            echo('Course success update. USD to KZT course value = ' . $price."\n");
+        } else {
+            echo('Course not updated');
         }
-        echo('Course success update. USD to KZT course value = ' . $price."\n");
     }
 
 }
