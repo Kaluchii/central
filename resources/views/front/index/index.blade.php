@@ -70,7 +70,7 @@
                             <p class="mobile-detail__text">{!! $about->text2_field !!}</p>
                         </div>
                     </div>
-                    <div class="mobile-detail__item is-open">
+                    <div class="mobile-detail__item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth3">
                             <p class="mobile-detail__title">{!! $about->title3_field !!}</p>
                             <p class="mobile-detail__text">{!! $about->text3_field !!}</p>
