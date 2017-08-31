@@ -1,5 +1,6 @@
 @extends('front.layout')
 @section('content')
+    <div class="top-phone"><a href="tel:+77273466370" class="top-phone-link">+ 7 (727) 346-63-70</a></div>
     <section class="title-block" id="title">
         <header class="title-block__header title-header">
             <div class="title-block__menu-button js_menu"></div>
@@ -55,7 +56,46 @@
                 </ul>
             </div>
             <div class="about__in-detail">
-                <h3 class="about__in-detail__title">ПРЕИМУЩЕСТВА В ДЕТАЛЯХ</h3>
+                <h3 class="about__in-detail__title">ПРЕИМУЩЕСТВА В&nbsp;ДЕТАЛЯХ</h3>
+                <div class="about__in-detail-wrapper mobile-detail">
+                    <div class="mobile-detail__item">
+                        <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth1">
+                            <p class="mobile-detail__title">{!! $about->title1_field !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text1_field !!}</p>
+                        </div>
+                    </div>
+                    <div class="mobile-detail__item">
+                        <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth2">
+                            <p class="mobile-detail__title">{!! $about->title2_field !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text2_field !!}</p>
+                        </div>
+                    </div>
+                    <div class="mobile-detail__item is-open">
+                        <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth3">
+                            <p class="mobile-detail__title">{!! $about->title3_field !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text3_field !!}</p>
+                        </div>
+                    </div>
+                    <div class="mobile-detail__item">
+                        <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth4">
+                            <p class="mobile-detail__title">{!! $about->title4_field !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text4_field !!}</p>
+                        </div>
+                    </div>
+                    <div class="mobile-detail__item">
+                        <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth5">
+                            <p class="mobile-detail__title">{!! $about->title5_field !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text5_field !!}</p>
+                        </div>
+                    </div>
+                    <div class="mobile-detail__item">
+                        <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth6">
+                            <p class="mobile-detail__title">{!! $about->title6_field !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text6_field !!}</p>
+                        </div>
+                    </div>
+                    <div class="mobile-detail__close"></div>
+                </div>
                 <div class="about__in-detail-wrapper in-detail">
                     <div class="in-detail__col1">
                         <div class="in-detail__wrapper in-detail__wrapper--col">

@@ -193,11 +193,15 @@
     }
 
    &__in-detail{
-     margin-top: 0;
+     margin-top: 50px;
    }
 
    &__text-col{
      width: 100%;
+   }
+
+   &__facts-col{
+     margin-top: 60px;
    }
   }
 
@@ -205,7 +209,14 @@
     position: static;
 
     &__list{
-      height: 370px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 260px;
+      align-items: center;
+      max-width: 280px;
+      margin: 0 auto;
+      padding-right: 15px;
 
       &::before{
         display: none;
@@ -213,36 +224,125 @@
     }
 
     &__item{
+      left: auto;
+      top: auto;
+
+      &:nth-child(n+3){
+        margin-top: 15px;
+      }
+
       &::before{
       }
 
       &--floor{
-        left: -255px;
+        order: 0;
 
         &::before{
-          left: 339px;
+          left: 10px;
         }
       }
 
       &--flats{
-        left: -115px;
+        order: 2;
 
         &::before{
-          left: 330px;
+          top: 10px;
+          left: 20px;
         }
       }
 
       &--kindergarten-places{
+        order: 3;
+        left: 20px;
+
         &::before{
-          left: 329px;
+          left: 5px;
+        }
+
+        .fact__text{
+          max-width: 100px;
         }
       }
 
       &--parking-places{
+        order: 1;
+        left: 20px;
+
         &::before{
-          left: 310px;
+          left: 5px;
           top: 0;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .mobile-detail{
+    display: block;
+  }
+
+  .in-detail{
+    display: none;
+  }
+
+  .about{
+    &__in-detail__title{
+      text-align: left;
+    }
+
+    &__in-detail-wrapper{
+      margin-top: 20px;
+    }
+  }
+
+  .text-col{
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about{
+    &__wrapper{
+      padding: 100px 15px 90px;
+    }
+
+    &__facts-col{
+      margin-top: 40px;
+    }
+
+    &__in-detail{
+      margin-top: 35px;
+    }
+
+    &__in-detail__title{
+      margin-left: 15px;
+      line-height: 1.4;
+      font-size: 18px;
+    }
+
+    &__in-detail-wrapper{
+      margin-top: 10px;
+    }
+  }
+
+  .text-col{
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    &__text{
+      margin-top: 20px;
+
+      p{
+        font-size: 14px;
+        line-height: 1.75;
+      }
+    }
+
+    &__address{
+      margin-top: 15px;
+
+      &::before{
+        top: 5px;
       }
     }
   }

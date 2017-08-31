@@ -39,7 +39,7 @@ $(document).ready(function () {
         return s.join(dec);
     }
 
-    //==== Форма "Написать письмо"
+    //==== Форма "Заказать звонок"
     $('.order_call_btn').magnificPopup({
         type: 'inline',
         removalDelay: 500,
@@ -56,26 +56,28 @@ $(document).ready(function () {
     });
 
 
-    DG.then(function () {
-        mainIcon = DG.icon({
-            iconUrl: '/img/map_icon.png',
-            iconSize: [164, 164],
-            iconAnchor: [82, 82]
+    var _2gis = function(){
+        DG.then(function () {
+            mainIcon = DG.icon({
+                iconUrl: '/img/map_icon.png',
+                iconSize: [164, 164],
+                iconAnchor: [82, 82]
+            });
+            map = DG.map('map', {
+                center: [43.244562, 76.931334],
+                zoom: 16,
+                dragging : false,
+                touchZoom: false,
+                scrollWheelZoom: false,
+                doubleClickZoom: false,
+                boxZoom: false,
+                geoclicker: false,
+                zoomControl: false,
+                fullscreenControl: false
+            });
+            DG.marker([43.244562, 76.931334], {icon: mainIcon, riseOnHover: true}).addTo(map);
         });
-        map = DG.map('map', {
-            center: [43.244562, 76.931334],
-            zoom: 16,
-            dragging : false,
-            touchZoom: false,
-            scrollWheelZoom: false,
-            doubleClickZoom: false,
-            boxZoom: false,
-            geoclicker: false,
-            zoomControl: false,
-            fullscreenControl: false
-        });
-        DG.marker([43.244562, 76.931334], {icon: mainIcon, riseOnHover: true}).addTo(map);
-    });
+    };
 
 
 
@@ -195,5 +197,14 @@ $(document).ready(function () {
         $(this).addClass('is-active');
 
         state = true;
+    });
+
+
+    $('.mobile-detail__item').on('click', function () {
+        $(this).addClass('is-open');
+    });
+
+    $('.mobile-detail__close').on('click', function () {
+        $('.mobile-detail__item').removeClass('is-open');
     });
 });

@@ -5,7 +5,6 @@
                 <img src="/img/dark_logo.png" alt="Жилой комплекс Центральный" class="white-popup__logo">
             </div>
         </div>
-        <p class="white-popup__tel-number"><a href="tel:+77273466370" class="white-popup__tel-link">+ 7 (727) 346-63-70</a></p>
         <div class="white-popup__main-con-wrap">
             <h4 class="white-popup__title">МЫ С РАДОСТЬЮ<br> ВАМ ПЕРЕЗВОНИМ</h4>
             <p class="white-popup__sub-title">Оставьте ваши контакты, и&nbsp;наши менеджеры
