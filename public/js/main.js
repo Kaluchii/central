@@ -56,58 +56,6 @@ $(document).ready(function () {
     });
 
 
-    var _2gis = function(){
-        DG.then(function () {
-            mainIcon = DG.icon({
-                iconUrl: '/img/map_icon.png',
-                iconSize: [164, 164],
-                iconAnchor: [82, 82]
-            });
-            map = DG.map('map', {
-                center: [43.244562, 76.931334],
-                zoom: 16,
-                dragging : false,
-                touchZoom: false,
-                scrollWheelZoom: false,
-                doubleClickZoom: false,
-                boxZoom: false,
-                geoclicker: false,
-                zoomControl: false,
-                fullscreenControl: false
-            });
-            DG.marker([43.244562, 76.931334], {icon: mainIcon, riseOnHover: true}).addTo(map);
-        });
-    };
-
-
-
-
-
-// 1. Initialize fotorama manually.
-    var $fotorama = $('.fotorama').fotorama({
-        navwidth: '80%'
-    });
-// 2. Get the API object.
-    var fotorama = $fotorama.data('fotorama');
-    fotorama.setOptions({
-        arrows: false
-    });
-
-    jQuery("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
-    jQuery("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
-
-    jQuery("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
-    jQuery("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
-// make the buttons functionality
-
-    jQuery('.nav-scroll-btn--prev').click(function () {
-        fotorama.show('<');
-    });
-    jQuery('.nav-scroll-btn--next').click(function () {
-        fotorama.show('>');
-    });
-
-
     $('.js_menu').on('click', function () {
         $(this).toggleClass('is-open');
         $('.title-header__nav-wrap').toggleClass('is-open').slideToggle();
@@ -159,13 +107,6 @@ $(document).ready(function () {
         }
     });
 
-
-    $('.js_open_fotorama').on('click', function () {
-        fotorama.show($(this).data('img') - 1);
-        fotorama.requestFullScreen();
-    });
-
-
     /* Работа с планировками */
 
     var EXCHANGE_COST = $('#flats').data('exchange');
@@ -206,5 +147,62 @@ $(document).ready(function () {
 
     $('.mobile-detail__close').on('click', function () {
         $('.mobile-detail__item').removeClass('is-open');
+    });
+
+
+    /* Fotorama */
+
+// 1. Initialize fotorama manually.
+    var $fotorama = $('.fotorama').fotorama({
+        navwidth: '80%'
+    });
+// 2. Get the API object.
+    var fotorama = $fotorama.data('fotorama');
+    fotorama.setOptions({
+        arrows: false
+    });
+
+    jQuery("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+    jQuery("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+
+    jQuery("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
+    jQuery("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
+// make the buttons functionality
+
+    jQuery('.nav-scroll-btn--prev').click(function () {
+        fotorama.show('<');
+    });
+    jQuery('.nav-scroll-btn--next').click(function () {
+        fotorama.show('>');
+    });
+
+    $('.js_open_fotorama').on('click', function () {
+        fotorama.show($(this).data('img') - 1);
+        fotorama.requestFullScreen();
+    });
+
+
+
+    /* 2gis */
+
+    DG.then(function () {
+        mainIcon = DG.icon({
+            iconUrl: '/img/map_icon.png',
+            iconSize: [164, 164],
+            iconAnchor: [82, 82]
+        });
+        map = DG.map('map', {
+            center: [43.244562, 76.931334],
+            zoom: 16,
+            dragging : false,
+            touchZoom: false,
+            scrollWheelZoom: false,
+            doubleClickZoom: false,
+            boxZoom: false,
+            geoclicker: false,
+            zoomControl: false,
+            fullscreenControl: false
+        });
+        DG.marker([43.244562, 76.931334], {icon: mainIcon, riseOnHover: true}).addTo(map);
     });
 });
