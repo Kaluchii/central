@@ -203,7 +203,7 @@
                             </ul>
                         </div>
                         <div class="layout-choice__section">
-                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ</p>
+                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
                             <p class="layout-choice__price"></p>
                         </div>
                     </div>
