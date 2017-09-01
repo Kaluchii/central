@@ -29,9 +29,7 @@
     </div>
 
     @include('front.scripts')
-    @include('front.metriks')
     @yield('scripts')
-    @yield('metriks')
 
     {!! $scripts->before_close_field !!}
 

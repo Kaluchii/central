@@ -7,7 +7,6 @@
   background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
   background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
-  height: 740px;
   overflow: hidden;
 
   &__wrapper{
@@ -18,6 +17,7 @@
   &__contact-block{
     max-width: 1180px;
     padding-left: 40px;
+    padding-bottom: 300px;
     margin: 0 auto;
     padding-top: 100px;
     position: relative;
@@ -81,6 +81,17 @@
     }
   }
 
+  &__info-text{
+    margin-top: 50px;
+    max-width: 300px;
+    color: #000000;
+    font-size: 11px;
+    line-height: 1.4;
+    font-family: "Lato";
+    letter-spacing: .03em;
+    position: relative;
+  }
+
   &__map-wrapper{
     position: absolute;
     height: 150%;
@@ -94,4 +105,8 @@
     height: 100%;
     border-radius: ~"140% 0 0 70% / 90% 0 0 60%";
   }
+}
+
+.leaflet-marker-shadow{
+  max-width: none;
 }

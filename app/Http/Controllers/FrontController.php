@@ -39,4 +39,11 @@ class FrontController extends Controller
             'scripts' => $scripts
         ]);
     }
+
+    public function getThanks(){
+        $scripts = $this->extract->getBlock('scripts');
+        return view('front.index.thanks', [
+            'scripts' => $scripts
+        ]);
+    }
 }

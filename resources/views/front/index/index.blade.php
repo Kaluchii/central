@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    <div class="top-phone"><a href="tel:+77273466370" class="top-phone-link">+ 7 (727) 346-63-70</a></div>
+    <div class="top-phone"><a href="tel:+77273466370" class="top-phone-link">{{ $contacts->phone_field }}</a></div>
     <section class="title-block" id="title">
         <header class="title-block__header title-header">
             <div class="title-block__menu-button js_menu"></div>
@@ -294,6 +294,7 @@
                 <h2 class="contacts__title">{{ $contacts->block_title_field }}</h2>
                 <p class="contacts__phone">{{ $contacts->phone_field }}</p>
                 <p class="contacts__address">{!! $contacts->address_field !!}</p>
+                <p class="contacts  __info-text">Информация предоставлена с целью изучения спроса потенциальных потребителей. Договоры о долевом участии заключаются после получения разрешения на привлечение денег дольщиков местным исполнительным органом согласно Закона РК «О долевом участии в жилищном строительстве».</p>
             </div>
             <div class="contacts__map-wrapper">
                 <div class="contacts__map" id="map"></div>

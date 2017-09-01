@@ -17,7 +17,7 @@
                 </ul>
             </div>
             <div class="fixed-header__feedback-wrap">
-                <p class="fixed-header__phone-number">+ 7 (727) 346-63-70</p>
+                <p class="fixed-header__phone-number">{{ $contacts->phone_field }}</p>
                 <a href="#call" class="fixed-header__order-call button order_call_btn button"><span class="fixed-header__btn-text">Заказать звонок</span></a>
             </div>
         </div>

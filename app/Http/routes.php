@@ -12,8 +12,7 @@
 */
 
 Route::get('/',         'FrontController@getIndex');
-Route::get('/call-me',         function (){ return redirect(''); });
-Route::get('/thanks',         function (){ return redirect(''); });
+Route::get('/thanks',    'FrontController@getThanks');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');
