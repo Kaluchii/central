@@ -84,6 +84,12 @@ $(document).ready(function () {
             $('.title-header__nav-wrap').removeClass('show-imp');
             $('.fixed-header__logo').attr('src', '/img/dark_logo_mobile.png');
         }
+
+        if ($(window).width() < 1000) {
+            myMap.behaviors.disable("drag");
+        } else {
+            myMap.behaviors.enable("drag");
+        }
     });
 
     $(window).on('load', function () {
@@ -186,7 +192,6 @@ $(document).ready(function () {
             {center: [43.24507704, 76.93126367], zoom: 16, controls: []});
         myMap.behaviors.disable("scrollZoom");
         myMap.behaviors.disable("dblClickZoom");
-        if ($("#page-wrapper").hasClass("mobile-wrapper"))myMap.behaviors.disable("drag");
         var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
             iconLayout: "default#image",
             iconImageHref: "/img/map_icon_wshadow.png",
