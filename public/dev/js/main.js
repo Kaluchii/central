@@ -84,12 +84,6 @@ $(document).ready(function () {
             $('.title-header__nav-wrap').removeClass('show-imp');
             $('.fixed-header__logo').attr('src', '/img/dark_logo_mobile.png');
         }
-
-        if ($(window).width() < 1000) {
-            myMap.behaviors.disable("drag");
-        } else {
-            myMap.behaviors.enable("drag");
-        }
     });
 
     $(window).on('load', function () {
@@ -198,7 +192,15 @@ $(document).ready(function () {
             iconImageSize: [163, 210],
             iconImageOffset: [-70, -170]
         });
-        myMap.geoObjects.add(myPlacemark)
+        myMap.geoObjects.add(myPlacemark);
+
+        $(window).on('load resize', function (){
+            if ($(window).width() < 1000) {
+                myMap.behaviors.disable("drag");
+            } else {
+                myMap.behaviors.enable("drag");
+            }
+        });
     };
 
     ymaps.ready(init);
