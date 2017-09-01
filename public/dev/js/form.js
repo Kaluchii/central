@@ -5,10 +5,10 @@ $(document).ready(function(){
         callbacks: {
             beforeOpen: function() {
                 this.st.mainClass ='mfp-zoom-in';
-                history.pushState(null, null, '/thanks');
+                history.replaceState(null, null, '/thanks');
             },
             afterClose: function () {
-                history.back();
+                history.replaceState(null, null, '/');
             }
         },
         midClick: true
@@ -129,7 +129,7 @@ $(document).ready(function(){
         );
     }
 
-/*    window.onSubmitReCaptcha = function (token) {
+    /*window.onSubmitReCaptcha = function (token) {
         active = false;
         sendButton.addClass('load');
 
@@ -171,9 +171,9 @@ $(document).ready(function(){
 
             if ( validForm ){
                 /*grecaptcha.reset();
-                 grecaptcha.execute();*/
+                grecaptcha.execute();*/
                 active = false;
-                if (unical == 'feedback_call'){
+                if (unical == 'feedback_call' || unical == 'flats_call'){
                     thanks_show = true;
                 }
                 sendButton.addClass('load');
@@ -198,8 +198,10 @@ $(document).ready(function(){
                     $('.thank').click();
                 } else {
                     $('.white-popup__thanks-message').fadeIn();
+                    history.replaceState(null, null, '/thanks');
                     setTimeout(function () {
-                        $('.white-popup__thanks-message').fadeOut(1000)
+                        $('.white-popup__thanks-message').fadeOut(1000);
+                        history.replaceState(null, null, '/');
                     }, 5000);
                 }
                 clearFields( selector );
