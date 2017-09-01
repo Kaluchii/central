@@ -5,10 +5,6 @@ $(document).ready(function(){
         callbacks: {
             beforeOpen: function() {
                 this.st.mainClass ='mfp-zoom-in';
-                history.replaceState(null, null, '/thanks');
-            },
-            afterClose: function () {
-                history.replaceState(null, null, '/');
             }
         },
         midClick: true
@@ -159,7 +155,7 @@ $(document).ready(function(){
 
     var unical, sendButton, selector;
     var active = true;
-    var thanks_show = false;
+    // var thanks_show = false;
 
     function finalValidation() {
         if( active ){
@@ -173,9 +169,9 @@ $(document).ready(function(){
                 /*grecaptcha.reset();
                 grecaptcha.execute();*/
                 active = false;
-                if (unical == 'feedback_call' || unical == 'flats_call'){
+                /*if (unical == 'feedback_call' || unical == 'flats_call'){
                     thanks_show = true;
-                }
+                }*/
                 sendButton.addClass('load');
                 sendForm();
             }
@@ -194,19 +190,18 @@ $(document).ready(function(){
         var response = ajaxDataSend('POST', '/feedback/mail', dataobj);
         response.success(function(data){
             if(!data.error){
-                if (thanks_show){
+                /*if (thanks_show){
                     $('.thank').click();
                 } else {
                     $('.white-popup__thanks-message').fadeIn();
-                    history.replaceState(null, null, '/thanks');
                     setTimeout(function () {
                         $('.white-popup__thanks-message').fadeOut(1000);
-                        history.replaceState(null, null, '/');
                     }, 5000);
-                }
+                }*/
+                document.location.href="/thanks";
                 clearFields( selector );
             }
-            thanks_show = false;
+            // thanks_show = false;
             sendButton.removeClass('load');
             active = true;
         });
@@ -214,7 +209,7 @@ $(document).ready(function(){
             console.log(data);
             sendButton.removeClass('load');
             active = true;
-            thanks_show = false;
+            // thanks_show = false;
         });
     }
 });

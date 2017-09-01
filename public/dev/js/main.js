@@ -46,10 +46,6 @@ $(document).ready(function () {
         callbacks: {
             beforeOpen: function () {
                 this.st.mainClass = 'mfp-zoom-in';
-                history.replaceState(null, null, '/call-me');
-            },
-            afterClose: function () {
-                history.replaceState(null, null, '/');
             }
         },
         midClick: true
@@ -87,6 +83,12 @@ $(document).ready(function () {
         } else {
             $('.title-header__nav-wrap').removeClass('show-imp');
             $('.fixed-header__logo').attr('src', '/img/dark_logo_mobile.png');
+        }
+
+        if ($(window).width() < 1000) {
+            myMap.behaviors.disable("drag");
+        } else {
+            myMap.behaviors.enable("drag");
         }
     });
 
@@ -162,17 +164,17 @@ $(document).ready(function () {
         arrows: false
     });
 
-    jQuery("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
-    jQuery("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+    $("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+    $("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
 
-    jQuery("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
-    jQuery("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
+    $("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
+    $("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
 // make the buttons functionality
 
-    jQuery('.nav-scroll-btn--prev').click(function () {
+    $('.nav-scroll-btn--prev').click(function () {
         fotorama.show('<');
     });
-    jQuery('.nav-scroll-btn--next').click(function () {
+    $('.nav-scroll-btn--next').click(function () {
         fotorama.show('>');
     });
 
@@ -183,26 +185,22 @@ $(document).ready(function () {
 
 
 
-    /* 2gis */
+    /* Yandex map */
 
-    DG.then(function () {
-        mainIcon = DG.icon({
-            iconUrl: '/img/map_icon.png',
-            iconSize: [164, 164],
-            iconAnchor: [82, 82]
+    var init = function () {
+        myMap = new ymaps.Map("map",
+            {center: [43.24507704, 76.93126367], zoom: 16, controls: []});
+        myMap.behaviors.disable("scrollZoom");
+        myMap.behaviors.disable("dblClickZoom");
+        var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+            iconLayout: "default#image",
+            iconImageHref: "/img/map_icon_wshadow.png",
+            iconImageSize: [163, 210],
+            iconImageOffset: [-70, -170]
         });
-        map = DG.map('map', {
-            center: [43.244562, 76.931334],
-            zoom: 16,
-            dragging : false,
-            touchZoom: false,
-            scrollWheelZoom: false,
-            doubleClickZoom: false,
-            boxZoom: false,
-            geoclicker: false,
-            zoomControl: false,
-            fullscreenControl: false
-        });
-        DG.marker([43.244562, 76.931334], {icon: mainIcon, riseOnHover: true}).addTo(map);
-    });
+        myMap.geoObjects.add(myPlacemark)
+    };
+
+    ymaps.ready(init);
+    var myMap;
 });
