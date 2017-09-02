@@ -4,13 +4,16 @@
 
         Header always edit Set-Cookie (.*) "$1; HTTPOnly"
         Header always edit Set-Cookie (.*) "$1; Secure"
-    </IfModule>
+</IfModule>
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
     </IfModule>
 
     RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
