@@ -25,6 +25,7 @@ return [
             ],
             'layout' => [
                 'image' => ['layout_scheme'],
+                'string' => ['info'],
                 'float' => ['area', 'meter_cost'],
                 'dom_flat' => ['superior']
             ]
