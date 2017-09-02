@@ -128,6 +128,7 @@ $(document).ready(function () {
 
         $('.layout-choice__img').attr('src', $(this).data('img'));
         $('.layout-choice__area-text').text($(this).data('area'));
+        $('.layout-choice__info').text($(this).data('info'));
         var half_tg = number_format(Math.round($(this).data('cost') * $(this).data('area') * EXCHANGE_COST), 0, ',', ' ');
         $('.layout-choice__price').text(half_tg);
         $('.js_area_btn').removeClass('is-active');
