@@ -160,6 +160,11 @@
                     @endforeach
                 </div>
             </div>
+            <div class="for-Google-PageSpeed">
+                @for($i = 0; $i < 9, isset($slider_arr[$i]); $i++)
+                    <img src="{{ $slider_arr[$i]  }}" alt="">
+                @endfor
+            </div>
             <div class="gallery__mobile-gallery mobile-gallery">
                 <div class="mobile-gallery__top-row">
                     <div class="mobile-gallery__col">
