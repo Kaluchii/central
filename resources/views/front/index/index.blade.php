@@ -237,7 +237,7 @@
                             <ul class="layout-choice__list">
                                 @foreach($flats->dom_flat_group as $item)
                                     @foreach($item->layout_group as $layout_item)
-                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id_field}}" data-img="{{$layout_item->layout_scheme->link_field}}" data-area="{{$layout_item->area_field}}" data-cost="{{$layout_item->meter_cost_field}}">{{$layout_item->area_field}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id_field}}" data-img="{{$layout_item->layout_scheme->link_field}}" data-area="{{$layout_item->area_field}}" data-cost="{{$layout_item->meter_cost_field}}" data-info="{{$layout_item->info_field}}">{{$layout_item->area_field}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
                                     @endforeach
                                 @endforeach
                             </ul>
@@ -250,6 +250,7 @@
                     <div class="layout-choice__layout-view-wrap">
                         <div class="layout-choice__layout-view">
                             <img src="" alt="" class="layout-choice__img">
+                            <p class="layout-choice__info"></p>
                             <div class="layout-choice__descr-wrap">
                                 <p class="layout-choice__name"></p>
                                 <p class="layout-choice__area"><span class="layout-choice__area-text"></span>м<sup class="layout-choice__area-sup">2</sup></p>

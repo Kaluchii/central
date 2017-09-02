@@ -196,8 +196,24 @@ $(document).ready(function () {
 
         $(window).on('load resize', function (){
             if ($(window).width() < 1000) {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon_wshadow_mob.png",
+                    iconImageSize: [85, 110],
+                    iconImageOffset: [-39, -91]
+                });
+                myMap.geoObjects.add(myPlacemark);
                 myMap.behaviors.disable("drag");
             } else {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon_wshadow.png",
+                    iconImageSize: [163, 210],
+                    iconImageOffset: [-70, -170]
+                });
+                myMap.geoObjects.add(myPlacemark);
                 myMap.behaviors.enable("drag");
             }
         });
