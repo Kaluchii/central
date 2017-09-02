@@ -13,7 +13,7 @@ class AdminController extends Controller
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
         $this->extract->tuneSelection('slider')->sortBy('id','DESC');
-        $this->extract->tuneSelection('layout')->sortBy('id','DESC');
+        $this->extract->tuneSelection('layout')->sortBy('sorter','DESC');
     }
 
     public function getIndex(){

@@ -18,6 +18,7 @@ class FrontController extends Controller
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
         $this->extract->tuneSelection('dom_flat')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('layout')->sortBy('sorter','ASC');
     }
 
 
