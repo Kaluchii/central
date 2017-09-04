@@ -55,6 +55,15 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label>Позиция</label>
+            <input type="number" class="form-control string"
+                   data-id="{{$item->id_field}}"
+                   data-block="slider"
+                   data-name="sorter"
+                   value="{{$item->sorter_field}}">
+        </div>
+
 
     </div>
 </div>

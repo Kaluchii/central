@@ -19,6 +19,7 @@ class FrontController extends Controller
         $this->extract = $ext;
         $this->extract->tuneSelection('dom_flat')->sortBy('sorter','ASC');
         $this->extract->tuneSelection('layout')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('slider')->sortBy('sorter','DESC');
     }
 
 
