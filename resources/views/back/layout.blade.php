@@ -64,7 +64,7 @@
                         {{--<a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>--}}
                     {{--</li>--}}
                     <li>
-                        <a href="/logout"><i class="fa  fa-arrow-circle-right"></i></a>
+                        <a href="/logout">Выход <i class="fa  fa-arrow-circle-right"></i></a>
                     </li>
                 </ul>
             </div>
