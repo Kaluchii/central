@@ -155,7 +155,7 @@
                      data-thumbwidth="110" data-thumbheight="100" data-transition="crossfade">
                     <?php $slider_arr = [] ?>
                     @foreach($gallery->slider_group as $slide)
-                        <a href="{{$slide->slide_field->link}}"></a>
+                        <a href="{{$slide->slide_field->link}}?{{$slide->slide_field->cache_index}}"></a>
                         <?php $slider_arr[] = $slide->slide_field->link ?>
                     @endforeach
                 </div>
@@ -242,7 +242,7 @@
                             <ul class="layout-choice__list">
                                 @foreach($flats->dom_flat_group as $item)
                                     @foreach($item->layout_group as $layout_item)
-                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id_field}}" data-img="{{$layout_item->layout_scheme->link_field}}" data-area="{{$layout_item->area_field}}" data-cost="{{$layout_item->meter_cost_field}}" data-info="{{$layout_item->info_field}}">{{$layout_item->area_field}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id_field}}" data-img="{{$layout_item->layout_scheme->link_field}}?{{$layout_item->layout_scheme->cache_index}}" data-area="{{$layout_item->area_field}}" data-cost="{{$layout_item->meter_cost_field}}" data-info="{{$layout_item->info_field}}">{{$layout_item->area_field}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
                                     @endforeach
                                 @endforeach
                             </ul>
