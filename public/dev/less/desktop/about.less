@@ -2,6 +2,9 @@
   overflow: hidden;
 
   &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 1140px;
     margin: 0 auto;
     padding: 155px 40px 95px;
@@ -32,10 +35,51 @@
     width: ~'calc(100% - 570px)';
   }
 
-  &__facts-col{}
+  //&__facts-col{}
+
+  &__parking{
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  &__parking-wrapper{
+    padding-top: 100px;
+    height: 500px;
+    width: 500px;
+    background: #ccc url("/img/parking_backg.jpg") no-repeat;
+  }
+
+  &__parking-top-text{
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      top: -140px;
+      background: url("/img/car.png") no-repeat;
+    }
+  }
+
+  &__parking-middle-text{
+    font-size: 64px;
+    color: #ffffff;
+  }
+
+  &__parking-bottom-text{
+    font-size: 48px;
+    color: #ffffff;
+  }
 
   &__in-detail{
     margin-top: 120px;
+    width: 100%;
   }
 
   &__in-detail__title{
@@ -84,7 +128,7 @@
 }
 
 
-.facts{
+/*.facts{
   position: absolute;
   right: 0;
   top: 150px;
@@ -192,7 +236,7 @@
     line-height: 1.4;
 
   }
-}
+}*/
 
 .in-detail{
   height: 560px;

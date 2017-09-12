@@ -35,7 +35,14 @@
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
                 <address class="text-col__address">Алматы, Курмангазы /&nbsp;Амангельды</address>
             </div>
-            <div class="about__facts-col facts">
+            <div class="about__parking">
+                <div class="about__parking-wrapper">
+                    <p class="about__parking-top-text">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
+                    <p class="about__parking-middle-text">ПАРКИНГ</p>
+                    <p class="about__parking-bottom-text">В ПОДАРОК</p>
+                </div>
+            </div>
+            {{--<div class="about__facts-col facts">
                 <ul class="facts__list">
                     <li class="facts__item facts__item--floor fact">
                         <p class="fact__count">10</p>
@@ -54,7 +61,7 @@
                         <p class="fact__text">ПАРКОВОЧНЫХ<br>МЕСТ</p>
                     </li>
                 </ul>
-            </div>
+            </div>--}}
             <div class="about__in-detail">
                 <h3 class="about__in-detail__title">ПРЕИМУЩЕСТВА В&nbsp;ДЕТАЛЯХ</h3>
                 <div class="about__in-detail-wrapper mobile-detail">
@@ -250,6 +257,7 @@
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
                             <p class="layout-choice__price"></p>
+                            <p class="layout-choice__under-price">+5% скидка при 100% оплате</p>
                         </div>
                     </div>
                     <div class="layout-choice__layout-view-wrap">
