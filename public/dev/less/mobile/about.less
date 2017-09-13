@@ -35,6 +35,22 @@
     }
   }
 
+  &__parking{
+  }
+
+  &__parking-wrapper{
+  }
+
+  &__parking-top-text{
+    &::before{
+    }
+  }
+
+  &__parking-middle-text{
+  }
+
+  &__parking-bottom-text{
+  }
 
   /*
   .facts{
@@ -181,6 +197,52 @@
   }
 }
 
+@media screen and (max-width: 1020px) {
+  .about{
+    &__parking{
+      height: 400px;
+      width: 400px;
+    }
+
+    &__parking-wrapper{
+      padding-top: 140px;
+      height: 400px;
+      width: 400px;
+    }
+
+    &__parking-top-text{
+      &::before{
+        top: -65px;
+        left: 120px;
+      }
+    }
+
+    &__parking-middle-text{
+      font-size: 66px;
+    }
+
+    &__parking-bottom-text{
+      font-size: 42px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about{
+    &__text-col{
+      width: 100%;
+    }
+
+    &__in-detail{
+      margin-top: 60px;
+    }
+
+    &__parking{
+      margin: 60px auto 0;
+    }
+  }
+}
+
 @media screen and (max-width: 820px) {
  .about{
     &__wrapper{
@@ -194,17 +256,9 @@
       }
     }
 
-   &__in-detail{
-     margin-top: 50px;
-   }
-
-   &__text-col{
-     width: 100%;
-   }
-
-   &__facts-col{
+    &__facts-col{
      margin-top: 60px;
-   }
+    }
   }
 /*
   .facts{
@@ -299,6 +353,38 @@
   }
 
   .text-col{
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about{
+    &__parking{
+      height: 290px;
+      width: 290px;
+    }
+
+    &__parking-wrapper{
+      padding-top: 90px;
+      height: 290px;
+      width: 290px;
+    }
+
+    &__parking-top-text{
+      &::before{
+        width: 100px;
+        height: 36px;
+        top: -45px;
+        left: 100px;
+      }
+    }
+
+    &__parking-middle-text{
+      font-size: 52px;
+    }
+
+    &__parking-bottom-text{
+      font-size: 36px;
+    }
   }
 }
 

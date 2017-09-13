@@ -39,41 +39,57 @@
 
   &__parking{
     overflow: hidden;
-    height: 500px;
-    width: 500px;
+    margin-left: 50px;
+    height: 466px;
+    width: 466px;
     border-radius: 50%;
     text-align: center;
   }
 
   &__parking-wrapper{
-    padding-top: 100px;
-    height: 500px;
-    width: 500px;
+    padding-top: 170px;
+    height: 466px;
+    width: 466px;
     background: #ccc url("/img/parking_backg.jpg") no-repeat;
+    background-size: contain;
   }
 
   &__parking-top-text{
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    font-family: "AvenirNext";
     color: #ffffff;
 
     &::before{
       content: '';
       position: absolute;
-      width: 80px;
-      height: 40px;
-      top: -140px;
+      display: block;
+      width: 159px;
+      height: 58px;
+      top: -75px;
+      left: 155px;
       background: url("/img/car.png") no-repeat;
+      background-size: contain;
     }
   }
 
   &__parking-middle-text{
-    font-size: 64px;
+    margin-top: 10px;
+    font-size: 86px;
+    font-weight: 800;
+    line-height: .9;
+    font-family: "Gilroy";
     color: #ffffff;
   }
 
   &__parking-bottom-text{
-    font-size: 48px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1;
+    font-family: "Gilroy";
     color: #ffffff;
   }
 
