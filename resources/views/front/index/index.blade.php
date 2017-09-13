@@ -33,7 +33,7 @@
             <div class="about__text-col text-col">
                 <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
-                <address class="text-col__address">Алматы, Курмангазы /&nbsp;Амангельды</address>
+                <address class="text-col__address">{!! $about->address_field !!}</address>
             </div>
             <div class="about__parking">
                 <div class="about__parking-wrapper">

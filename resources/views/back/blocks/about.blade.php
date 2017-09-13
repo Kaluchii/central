@@ -24,6 +24,16 @@
                           data-block="about"
                           data-id="0">{{$about->text_field}}</textarea>
             </div>
+            <div class="form-group">
+                <label>Адрес</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$about->address_field}}"
+                       data-name="address"
+                       data-type="string"
+                       data-block="about"
+                       data-id="0">
+            </div>
         </div>
     </div>
 

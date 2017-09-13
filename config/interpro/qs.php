@@ -8,7 +8,7 @@ return [
     ],
 
     'about' => [
-        'string' => ['block_title', 'title1', 'title2', 'title3', 'title4', 'title5', 'title6'],
+        'string' => ['block_title', 'address', 'title1', 'title2', 'title3', 'title4', 'title5', 'title6'],
         'text' => ['text', 'text1', 'text2', 'text3', 'text4', 'text5', 'text6']
     ],
 
