@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    <div class="top-phone"><a href="tel:+77273466370" class="top-phone-link">{{ $contacts->phone_field }}</a></div>
+    <div class="top-phone"><a href="tel:{{ $contacts->phone_field }}" class="top-phone-link">{{ $contacts->phone_field }}</a></div>
     <section class="title-block" id="title">
         <header class="title-block__header title-header">
             <div class="title-block__menu-button js_menu"></div>
