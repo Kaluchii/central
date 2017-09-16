@@ -197,7 +197,14 @@
   opacity: 1 !important; }
 
 .fotorama__stage__frame {
-  overflow: hidden; }
+  overflow: hidden;
+}
+
+.fotorama:not([class*='fullscreen']){
+  .fotorama__stage__frame {
+    transition-duration: .5s !important;
+  }
+}
   .fotorama__stage__frame.fotorama__active {
     z-index: 8; }
 

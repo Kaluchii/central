@@ -36,10 +36,12 @@
                 <address class="text-col__address">{!! $about->address_field !!}</address>
             </div>
             <div class="about__parking">
-                <div class="about__parking-wrapper">
-                    <p class="about__parking-top-text">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
-                    <p class="about__parking-middle-text">ПАРКИНГ</p>
-                    <p class="about__parking-bottom-text">В ПОДАРОК</p>
+                <div class="about__parking-animation-wrapper">
+                    <div class="about__parking-wrapper">
+                        <p class="about__parking-top-text">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
+                        <p class="about__parking-middle-text">ПАРКИНГ</p>
+                        <p class="about__parking-bottom-text">В ПОДАРОК</p>
+                    </div>
                 </div>
             </div>
             {{--<div class="about__facts-col facts">

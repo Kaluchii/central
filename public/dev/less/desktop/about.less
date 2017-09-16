@@ -38,19 +38,46 @@
   //&__facts-col{}
 
   &__parking{
-    overflow: hidden;
     margin-left: 50px;
     height: 466px;
     width: 466px;
-    border-radius: 50%;
+    //border-radius: 50%;
     text-align: center;
+
+    &.display{
+      .about{
+        &__parking-animation-wrapper{
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__parking-animation-wrapper{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    transition: 1.8s;
   }
 
   &__parking-wrapper{
+    box-sizing: border-box;
     padding-top: 170px;
     height: 466px;
     width: 466px;
-    background: #ccc url("/img/parking_backg.jpg") no-repeat;
+    min-width: 466px;
+    min-height: 466px;
+    background: url("/img/parking_backg.jpg") no-repeat;
     background-size: contain;
   }
 
@@ -112,21 +139,50 @@
 }
 
 .text-col{
+  &.display{
+    .text-col{
+      &__title{
+        left: 0;
+        opacity: 1;
+      }
+
+      &__text{
+        left: 0;
+        opacity: 1;
+      }
+
+      &__address{
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+
   &__title{
     position: relative;
+    left: -20px;
+    opacity: 0;
+    transition: .6s;
     color: #201306;
   }
 
   &__text{
+    position: relative;
+    opacity: 0;
+    left: -20px;
+    transition: .6s .6s;
     margin-top: 30px;
   }
 
   &__address{
+    position: relative;
+    opacity: 0;
+    left: -20px;
+    transition: .6s 1.2s;
     margin: 20px 0 0 45px;
     font-size: 18px;
     color: #34261b;
     font-style: normal;
-    position: relative;
     letter-spacing: 0.04em;
     font-family: 'AvenirNext';
     font-weight: 600;
