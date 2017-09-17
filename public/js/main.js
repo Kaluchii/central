@@ -154,7 +154,9 @@ $(document).ready(function () {
         var $fotorama = $('.fotorama').on('fotorama:show', function () {
             $('.fotorama__circle-animation').addClass('animate');
         }).on('fotorama:showend', function () {
-            $('.fotorama__circle-animation').removeClass('animate');
+            setTimeout(function () {
+                $('.fotorama__circle-animation').removeClass('animate');
+            }, 200);
         }).fotorama({
             navwidth: '80%'
         });
@@ -234,11 +236,4 @@ $(document).ready(function () {
         classToAdd: 'display',
         offset: '40%'
     });
-
-    /*$('.about__parking').viewportChecker({
-        classToAdd: 'display',
-        offset: 120
-    });*/
-
-
 });

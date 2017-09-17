@@ -193,7 +193,7 @@
   &::after{
     content: '';
     position: absolute;
-    z-index: 2;
+    z-index: 20;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -202,14 +202,15 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    transition: .5s;
+    transition: opacity .3s, width 0s .3s, height 0s .3s;
   }
 
   &.animate{
     &::after{
-      width: 1300px;
-      height: 1300px;
+      width: 1500px;
+      height: 1500px;
       opacity: 1;
+      transition: width .7s, height .7s, opacity .5s;
     }
   }
 }
