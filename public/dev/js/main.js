@@ -149,35 +149,43 @@ $(document).ready(function () {
 
     /* Fotorama */
 
-// 1. Initialize fotorama manually.
-    var $fotorama = $('.fotorama').fotorama({
-        navwidth: '80%'
-    });
-// 2. Get the API object.
-    var fotorama = $fotorama.data('fotorama');
-    fotorama.setOptions({
-        arrows: false
-    });
+    if ($('#gallery').length){
+        // 1. Initialize fotorama manually.
+        var $fotorama = $('.fotorama').on('fotorama:show', function () {
+            $('.fotorama__circle-animation').addClass('animate');
+        }).on('fotorama:showend', function () {
+            setTimeout(function () {
+                $('.fotorama__circle-animation').removeClass('animate');
+            }, 200);
+        }).fotorama({
+            navwidth: '80%'
+        });
+        // 2. Get the API object.
+        var fotorama = $fotorama.data('fotorama');
+        fotorama.setOptions({
+            arrows: false
+        });
 
-    $("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
-    $("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+        $("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+        $("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+        $("<div class='fotorama__circle-animation'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
 
-    $("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
-    $("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
-// make the buttons functionality
+        $("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
+        $("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
+    // make the buttons functionality
 
-    $('.nav-scroll-btn--prev').click(function () {
-        fotorama.show('<');
-    });
-    $('.nav-scroll-btn--next').click(function () {
-        fotorama.show('>');
-    });
+        $('.nav-scroll-btn--prev').click(function () {
+            fotorama.show('<');
+        });
+        $('.nav-scroll-btn--next').click(function () {
+            fotorama.show('>');
+        });
 
-    $('.js_open_fotorama').on('click', function () {
-        fotorama.show($(this).data('img') - 1);
-        fotorama.requestFullScreen();
-    });
-
+        $('.js_open_fotorama').on('click', function () {
+            fotorama.show($(this).data('img') - 1);
+            fotorama.requestFullScreen();
+        });
+    }
 
 
     /* Yandex map */
@@ -222,4 +230,10 @@ $(document).ready(function () {
 
     ymaps.ready(init);
     var myMap;
+
+
+    $('.about__text-col, .about__parking, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
+        classToAdd: 'display',
+        offset: '40%'
+    });
 });

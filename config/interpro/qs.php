@@ -18,7 +18,7 @@ return [
     ],
 
     'flats' => [
-        'string' => ['block_title'],
+        'string' => ['block_title', 'discount_text'],
         'groups' => [
             'dom_flat' => [
                 'string' => ['dom_flat_name', 'singularly']

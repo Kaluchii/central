@@ -259,7 +259,7 @@
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
                             <p class="layout-choice__price"></p>
-                            <p class="layout-choice__under-price">+5% скидка при 100% оплате</p>
+                            <p class="layout-choice__under-price">{{$flats->discount_text_field}}</p>
                         </div>
                     </div>
                     <div class="layout-choice__layout-view-wrap">

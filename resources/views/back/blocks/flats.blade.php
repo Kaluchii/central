@@ -18,6 +18,16 @@
                    data-block="flats"
                    data-id="0">
         </div>
+        <div class="form-group">
+            <label>Текст скидки</label>
+            <input class="form-control string"
+                   type="text" placeholder=""
+                   value="{{$flats->discount_text_field}}"
+                   data-name="discount_text"
+                   data-type="string"
+                   data-block="flats"
+                   data-id="0">
+        </div>
     </div>
 </div>
 <div class="row">
