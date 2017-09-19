@@ -4,4 +4,4 @@ Disallow: /adm
 User-agent: Yandex
 Disallow: /adm
 
-Host: http://centralny.kz
+Host: https://centralny.kz
