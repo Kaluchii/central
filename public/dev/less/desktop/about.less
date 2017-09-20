@@ -37,7 +37,7 @@
 
   //&__facts-col{}
 
-  &__parking{
+  /*&__parking{
     margin-left: 50px;
     height: 466px;
     width: 466px;
@@ -118,6 +118,61 @@
     line-height: 1;
     font-family: "Gilroy";
     color: #ffffff;
+  }*/
+  
+  &__tagline{
+    margin-top: 50px;
+
+    &.display{
+      .about__tagline-text-wrap{
+        &::before{
+          transform: scale(1);
+        }
+      }
+
+      .about__tagline-text{
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__tagline-text-wrap{
+    position: relative;
+
+    &::before{
+      content: '';
+      z-index: -1;
+      position: absolute;
+      left: -40px;
+      top: -55px;
+      width: 395px;
+      height: 395px;
+      border-radius: 50%;
+      background: rgba(247,236,153,1);
+      background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
+      background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+      transform: scale(0);
+      transition: .6s;
+    }
+  }
+  
+  &__tagline-text{
+    color: #2f2013;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: .95;
+    font-family: "Gilroy";
+    z-index: 2;
+    position: relative;
+    left: -25px;
+    opacity: 0;
+    transition: .6s .6s;
   }
 
   &__in-detail{

@@ -25,7 +25,18 @@
         </header>
         <div class="title-block__text-wrap">
             <h1 class="title-block__title">{!! $main_block->block_title_field !!}</h1>
-            <p class="title-block__text">{{ $main_block->text_field  }}</p>
+            <p class="title-block__text"><span class="title-block__small-text">от</span><span class="title-block__price">{{ $main_block->text_field }}</span><span class="title-block__tenge">T</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span></p>
+        </div>
+        <div class="title-block__parking">
+            <div class="title-block__parking-wrapper">
+                <div class="title-block__parking-text-wrap">
+                    <p class="title-block__parking-condition">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
+                    <p class="title-block__big-text">ПАРКИНГ</p>
+                    <p class="title-block__gift">В ПОДАРОК</p>
+                </div>
+                <div class="title-block__parking-img-block"></div>
+            </div>
+            <div class="title-block__parking-close js_parking_close"></div>
         </div>
     </section>
     <section class="about" id="about">
@@ -35,14 +46,8 @@
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
                 <address class="text-col__address">{!! $about->address_field !!}</address>
             </div>
-            <div class="about__parking">
-                <div class="about__parking-animation-wrapper">
-                    <div class="about__parking-wrapper">
-                        <p class="about__parking-top-text">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
-                        <p class="about__parking-middle-text">ПАРКИНГ</p>
-                        <p class="about__parking-bottom-text">В ПОДАРОК</p>
-                    </div>
-                </div>
+            <div class="about__tagline">
+                <p class="about__tagline-text-wrap"><span class="about__tagline-text">Когда<br>все дороги<br>ведут<br>в центр!</span></p>
             </div>
             {{--<div class="about__facts-col facts">
                 <ul class="facts__list">
