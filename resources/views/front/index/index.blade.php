@@ -34,7 +34,9 @@
                     <p class="title-block__big-text">ПАРКИНГ</p>
                     <p class="title-block__gift">В ПОДАРОК</p>
                 </div>
-                <div class="title-block__parking-img-block"></div>
+                <div class="title-block__parking-img-block">
+                    <span class="title-block__parking-img"></span>
+                </div>
             </div>
             <div class="title-block__parking-close js_parking_close"></div>
         </div>
