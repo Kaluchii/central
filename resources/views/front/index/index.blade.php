@@ -211,6 +211,44 @@
             </div>
         </div>
     </section>
+    <section class="stages">
+        <div class="stages__wrapper">
+            <h3 class="stages__title">ЭТАПЫ СТРОИТЕЛЬСТВА</h3>
+            <div class="stages__row-wrap">
+                <div class="stages__row">
+                    <button class="stages__btn is-active">Сентябрь 2017</button>
+                </div>
+                <div class="stages__control"></div>
+            </div>
+            <div class="stages__text-wrap">
+                <p class="stages__text">Монолитные работы и заполнение внешних проемов газобетонными блоками на завершающей стадии</p>
+            </div>
+            <ul class="stages__images-list">
+                <li class="stages__images-item"><img src="/img/s1.jpg" alt="" width="270" height="200" data-num="0" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s2.jpg" alt="" width="270" height="200" data-num="1" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s3.jpg" alt="" width="270" height="200" data-num="2" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s4.jpg" alt="" width="270" height="200" data-num="3" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s5.jpg" alt="" width="270" height="200" data-num="4" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s6.jpg" alt="" width="270" height="200" data-num="5" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s7.jpg" alt="" width="270" height="200" data-num="6" class="stages__img js_open_fotoramaStage"></li>
+                <li class="stages__images-item"><img src="/img/s8.jpg" alt="" width="270" height="200" data-num="7" class="stages__img js_open_fotoramaStage"></li>
+            </ul>
+            <div class="stages__fotorama" id="fotoramaStage"
+                 data-nav="thumbs" data-allowfullscreen="true"
+                 data-thumbmargin="15" data-loop="true"
+                 data-thumbwidth="110"
+                 data-auto="false" data-transition="crossfade">
+                <img src="/img/s1.jpg" alt="">
+                <img src="/img/s2.jpg" alt="">
+                <img src="/img/s3.jpg" alt="">
+                <img src="/img/s4.jpg" alt="">
+                <img src="/img/s5.jpg" alt="">
+                <img src="/img/s6.jpg" alt="">
+                <img src="/img/s7.jpg" alt="">
+                <img src="/img/s8.jpg" alt="">
+            </div>
+        </div>
+    </section>
     <section class="feedbacks">
         <div class="feedbacks__wrapper">
             <h2 class="feedbacks__title">Вам понравился<br>ЖК Центральный?</h2>

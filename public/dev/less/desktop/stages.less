@@ -1,0 +1,81 @@
+.stages{
+  background-color: #f5f4ec;
+  
+  &__wrapper{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 70px 40px 80px;
+  }
+
+  &__title{
+    color: #2f2013;
+    letter-spacing: .2em;
+  }
+
+  &__row-wrap{
+    margin-top: 35px;
+  }
+
+  &__row{}
+
+  &__btn{
+    height: 35px;
+    padding: 0 18px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #2f2013;
+    font-size: 14px;
+    font-family: 'AvenirNext';
+    font-weight: 500;
+    box-shadow: -2px 2px 4px rgba(54, 41, 18, 0.07);
+    border: none;
+    cursor: pointer;
+    transition: 2.3s;
+
+    &.is-active{
+      background-color: #ebd889;
+      box-shadow: none;
+    }
+  }
+
+  &__control{}
+
+  &__text-wrap{
+    max-width: 540px;
+    margin-top: 35px;
+  }
+
+  &__text{
+    color: #201306;
+    line-height: 1.7;
+    letter-spacing: .02em;
+  }
+
+  &__images-list{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__images-item{
+    width: ~'calc(25% - 15px)';
+
+    &:nth-child(n+5){
+      margin-top: 20px;
+    }
+  }
+
+  &__img{
+    display: block;
+    box-shadow: -2px 2px 9px rgba(54, 41, 18, 0.37);
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+
+  &__fotorama{
+    position: absolute;
+    left: -9999px;
+  }
+}

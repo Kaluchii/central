@@ -190,6 +190,22 @@ $(document).ready(function () {
             fotorama.show($(this).data('img') - 1);
             fotorama.requestFullScreen();
         });
+
+
+        // Временное решение
+
+        // 1. Initialize fotorama manually.
+        var $fotoramaStage = $('#fotoramaStage').fotorama();
+        // 2. Get the API object.
+        var fotoramaS = $fotoramaStage.data('fotorama');
+        fotoramaS.setOptions({
+            arrows: false
+        });
+
+        $('.js_open_fotoramaStage').on('click', function () {
+            fotoramaS.show($(this).data('num'));
+            fotoramaS.requestFullScreen();
+        });
     }
 
 
