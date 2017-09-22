@@ -35,7 +35,8 @@
                     <p class="title-block__gift">В ПОДАРОК</p>
                 </div>
                 <div class="title-block__parking-img-block">
-                    <span class="title-block__parking-img"></span>
+                    <p class="title-block__parking-big-text-bottom">РАССРОЧКА</p>
+                    <p class="title-block__parking-medium-text-bottom">ОТ ЗАСТРОЙЩИКА</p>
                 </div>
             </div>
             <div class="title-block__parking-close js_parking_close"></div>
