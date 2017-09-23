@@ -88,13 +88,7 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
         $('.layout-choice__item:first-child .js_rooms_btn').click();
-        $('.title-block__parking').fadeIn(600);
     });
-
-    $('.js_parking_close').on('click', function () {
-        $('.title-block__parking').fadeOut(600);
-    });
-
 
     $(window).on('scroll', function () {
         if($(window).scrollTop() >= $('#title').outerHeight()){

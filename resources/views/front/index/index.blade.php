@@ -27,19 +27,18 @@
             <h1 class="title-block__title">{!! $main_block->block_title_field !!}</h1>
             <p class="title-block__text"><span class="title-block__small-text">от</span><span class="title-block__price">{{ $main_block->text_field }}</span><span class="title-block__tenge">T</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span></p>
         </div>
-        <div class="title-block__parking">
-            <div class="title-block__parking-wrapper">
-                <div class="title-block__parking-text-wrap">
-                    <p class="title-block__parking-condition">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
-                    <p class="title-block__big-text">ПАРКИНГ</p>
-                    <p class="title-block__gift">В ПОДАРОК</p>
-                </div>
-                <div class="title-block__parking-img-block">
-                    <p class="title-block__parking-big-text-bottom">РАССРОЧКА</p>
-                    <p class="title-block__parking-medium-text-bottom">ОТ ЗАСТРОЙЩИКА</p>
-                </div>
+        <div class="title-block__pros">
+            <div class="title-block__pros-item">
+                <img src="/img/parking.png" alt="Парковка ЖК Центральный" class="title-block__pros-img">
+                <p class="title-block__pros-big-text">Паркинг</p>
+                <p class="title-block__pros-medium-text">в подарок</p>
+                <p class="title-block__pros-small-text">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
             </div>
-            <div class="title-block__parking-close js_parking_close"></div>
+            <div class="title-block__pros-item">
+                <img src="/img/time.png" alt="Рассрочка" class="title-block__pros-img">
+                <p class="title-block__pros-big-text">Рассрочка</p>
+                <p class="title-block__pros-medium-text">от застройщика</p>
+            </div>
         </div>
     </section>
     <section class="about" id="about">
