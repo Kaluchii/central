@@ -17,6 +17,20 @@ return [
         'imageset' => ['slider' => 'slide'],
     ],
 
+    'stages' => [
+        'string' => ['block_title'],
+        'groups' => [
+            'dom_stages' => [
+                'string' => ['dom_stages_name'],
+                'text' => ['text']
+            ],
+            'stage_images' => [
+                'image' => ['stage_photo'],
+                'dom_stages' => ['superior']
+            ]
+        ]
+    ],
+
     'flats' => [
         'string' => ['block_title', 'discount_text'],
         'groups' => [

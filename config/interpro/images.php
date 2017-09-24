@@ -10,4 +10,8 @@ return [
         'resizes' => ['preview']
     ],
 
+    'stage_images.stage_photo' => [
+        'resizes' => ['preview']
+    ],
+
 ];

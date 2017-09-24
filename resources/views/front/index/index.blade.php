@@ -1,5 +1,7 @@
 @extends('front.layout')
 @section('content')
+@include('front.index.stages_obj')
+@yield('stageObj')
     <div class="top-phone"><a href="tel:{{ $contacts->phone_field }}" class="top-phone-link">{{ $contacts->phone_field }}</a></div>
     <section class="title-block" id="title">
         <header class="title-block__header title-header">
@@ -51,26 +53,6 @@
             <div class="about__tagline">
                 <p class="about__tagline-text-wrap"><span class="about__tagline-text">Когда<br>все дороги<br>ведут<br>в центр!</span></p>
             </div>
-            {{--<div class="about__facts-col facts">
-                <ul class="facts__list">
-                    <li class="facts__item facts__item--floor fact">
-                        <p class="fact__count">10</p>
-                        <p class="fact__text">ЭТАЖЕЙ</p>
-                    </li>
-                    <li class="facts__item facts__item--flats fact">
-                        <p class="fact__count">339</p>
-                        <p class="fact__text">КВАРТИР</p>
-                    </li>
-                    <li class="facts__item facts__item--kindergarten-places fact">
-                        <p class="fact__count">60</p>
-                        <p class="fact__text">МЕСТ<br>В ДЕТСКОМ САДУ</p>
-                    </li>
-                    <li class="facts__item facts__item--parking-places fact">
-                        <p class="fact__count">189</p>
-                        <p class="fact__text">ПАРКОВОЧНЫХ<br>МЕСТ</p>
-                    </li>
-                </ul>
-            </div>--}}
             <div class="about__in-detail">
                 <h3 class="about__in-detail__title">ПРЕИМУЩЕСТВА В&nbsp;ДЕТАЛЯХ</h3>
                 <div class="about__in-detail-wrapper mobile-detail">
@@ -165,7 +147,7 @@
         <div class="gallery__wrapper">
             <h2 class="gallery__title">{{ $gallery->block_title_field }}</h2>
             <div class="gallery__fotorama-wrap">
-                <div class="fotorama"  data-auto="false" data-ratio="1140/510"
+                <div class="js_gallery__fotorama fotorama"  data-auto="false" data-ratio="1140/510"
                      data-nav="thumbs" data-allowfullscreen="true"
                      data-thumbmargin="15" data-loop="true"
                      data-thumbwidth="110" data-thumbheight="100" data-transition="crossfade">
@@ -213,42 +195,34 @@
     </section>
     <section class="stages">
         <div class="stages__wrapper">
-            <h3 class="stages__title">ЭТАПЫ СТРОИТЕЛЬСТВА</h3>
+            <h3 class="stages__title">{{ $stages->block_title_field }}</h3>
             <div class="stages__row-wrap">
                 <div class="stages__row">
-                    <button class="stages__btn is-active">Сентябрь 2017</button>
+                    @foreach($stages->dom_stages_group as $stage)
+                        @if($stage->show_field == 1)
+                            <button class="stages__btn js_stage_btn" id="{{$stage->id_field}}">{{$stage->dom_stages_name_field}}</button>
+                        @endif
+                    @endforeach
                 </div>
-                <div class="stages__control"></div>
+                <div class="stages__control">
+                    <div class="stages__left js_stages_left"></div>
+                    <div class="stages__right js_stages_right"></div>
+                </div>
             </div>
             <div class="stages__text-wrap">
-                <p class="stages__text">Монолитные работы и заполнение внешних проемов газобетонными блоками на завершающей стадии</p>
+                <p class="stages__text js_give_me_text"></p>
             </div>
-            <ul class="stages__images-list">
-                <li class="stages__images-item"><img src="/img/s1.jpg" alt="" width="270" height="200" data-num="0" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s2.jpg" alt="" width="270" height="200" data-num="1" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s3.jpg" alt="" width="270" height="200" data-num="2" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s4.jpg" alt="" width="270" height="200" data-num="3" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s5.jpg" alt="" width="270" height="200" data-num="4" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s6.jpg" alt="" width="270" height="200" data-num="5" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s7.jpg" alt="" width="270" height="200" data-num="6" class="stages__img js_open_fotoramaStage"></li>
-                <li class="stages__images-item"><img src="/img/s8.jpg" alt="" width="270" height="200" data-num="7" class="stages__img js_open_fotoramaStage"></li>
+            <ul class="stages__images-list js_fotorama_thumbs">
             </ul>
-            <div class="stages__fotorama" id="fotoramaStage"
+            <div class="stages__fotorama js_stages_fotorama fotorama"
                  data-nav="thumbs" data-allowfullscreen="true"
                  data-thumbmargin="15" data-loop="true"
                  data-thumbwidth="110"
                  data-auto="false" data-transition="crossfade">
-                <img src="/img/s1.jpg" alt="">
-                <img src="/img/s2.jpg" alt="">
-                <img src="/img/s3.jpg" alt="">
-                <img src="/img/s4.jpg" alt="">
-                <img src="/img/s5.jpg" alt="">
-                <img src="/img/s6.jpg" alt="">
-                <img src="/img/s7.jpg" alt="">
-                <img src="/img/s8.jpg" alt="">
             </div>
         </div>
     </section>
+
     <section class="feedbacks">
         <div class="feedbacks__wrapper">
             <h2 class="feedbacks__title">Вам понравился<br>ЖК Центральный?</h2>

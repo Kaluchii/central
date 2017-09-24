@@ -18,6 +18,11 @@
                 </a>
             </li>
             <li>
+                <a href="/adm/stages">
+                    <i class="fa fa-image"></i> <span>Этапы строительства</span>
+                </a>
+            </li>
+            <li>
                 <a href="/adm/flats">
                     <i class="fa fa-home"></i> <span>Квартиры</span>
                 </a>

@@ -27,6 +27,7 @@ class FrontController extends Controller
         $main_block = $this->extract->getBlock('main_block');
         $about = $this->extract->getBlock('about');
         $gallery = $this->extract->getBlock('gallery');
+        $stages = $this->extract->getBlock('stages');
         $flats = $this->extract->getBlock('flats');
         $contacts = $this->extract->getBlock('contacts');
         $prices = $this->extract->getBlock('prices');
@@ -35,6 +36,7 @@ class FrontController extends Controller
             'main_block' => $main_block,
             'about' => $about,
             'gallery' => $gallery,
+            'stages' => $stages,
             'flats' => $flats,
             'contacts' => $contacts,
             'prices' => $prices,

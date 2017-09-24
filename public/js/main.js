@@ -88,6 +88,7 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
         $('.layout-choice__item:first-child .js_rooms_btn').click();
+        $('.js_stage_btn:first-child').click();
     });
 
     $(window).on('scroll', function () {
@@ -150,7 +151,7 @@ $(document).ready(function () {
 
     if ($('#gallery').length){
         // 1. Initialize fotorama manually.
-        var $fotorama = $('.fotorama').on('fotorama:show', function () {
+        var $fotorama = $('.js_gallery__fotorama').on('fotorama:show', function () {
             $('.fotorama__circle-animation').addClass('animate');
         }).on('fotorama:showend', function () {
             setTimeout(function () {
@@ -186,20 +187,47 @@ $(document).ready(function () {
         });
 
 
-        // Временное решение
+        // Подсветка текущего этапа и отображение нужных изображений
 
         // 1. Initialize fotorama manually.
-        var $fotoramaStage = $('#fotoramaStage').fotorama();
+        var $fotoramaStage = $('.js_stages_fotorama').fotorama();
         // 2. Get the API object.
         var fotoramaS = $fotoramaStage.data('fotorama');
         fotoramaS.setOptions({
             arrows: false
         });
 
-        $('.js_open_fotoramaStage').on('click', function () {
-            fotoramaS.show($(this).data('num'));
+        $('.js_fotorama_thumbs').on('click', '.js_open_fotoramaStage', function () {
+            var set = $('.js_fotorama_thumbs .js_open_fotoramaStage');
+            fotoramaS.show(set.index(this));
             fotoramaS.requestFullScreen();
         });
+
+
+        $('.js_stage_btn').on('click', function () {
+            if (!$(this).hasClass('is-active')) {
+
+                $('.js_give_me_text').text(stageObj[$(this).attr('id')]['text']);
+
+                $('.js_fotorama_thumbs .stages__images-item').remove();
+
+                var imageArray = [];
+                // fotoramaS.splice(0, fotoramaS.size-1);
+                for (var stageImg in stageObj[$(this).attr('id')]['images']){
+                    var imageSrc = stageObj[$(this).attr('id')]['images'][stageImg].src;
+                    imageArray.push({img: imageSrc});
+                    // fotoramaS.push({img: imageSrc, thumb: imageSrc});
+                    $(".js_fotorama_thumbs").append($('<li class="stages__images-item js_open_fotoramaStage"><img src="' + imageSrc + '" alt="" width="270" height="200" class="stages__img"></li>'));
+                }
+                fotoramaS.load(imageArray);
+
+                $('.js_stage_btn').removeClass('is-active');
+
+                $(this).addClass('is-active');
+            }
+        });
+
+        //==================================================================
     }
 
 
