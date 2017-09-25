@@ -203,17 +203,6 @@
                             <button class="stages__btn js_stage_btn" id="{{$stage->id_field}}">{{$stage->dom_stages_name_field}}</button>
                         @endif
                     @endforeach
-                        <button class="stages__btn js_stage_btn" id="151">СентЯбрь1 2017</button>
-                        <button class="stages__btn js_stage_btn" id="152">СентЯбрь2 2017</button>
-                        <button class="stages__btn js_stage_btn" id="153">СентЯбрь3 2017</button>
-                        <button class="stages__btn js_stage_btn" id="154">СентЯбрь4 2017</button>
-                        <button class="stages__btn js_stage_btn" id="155">СентЯбрь5 2017</button>
-                        <button class="stages__btn js_stage_btn" id="156">СентЯбрь6 2017</button>
-                        <button class="stages__btn js_stage_btn" id="157">СентЯбрь7 2017</button>
-                        <button class="stages__btn js_stage_btn" id="158">СентЯбрь 82017</button>
-                        <button class="stages__btn js_stage_btn" id="159">СентЯбрь9 2017</button>
-                        <button class="stages__btn js_stage_btn" id="1954">СентЯбр8ь 2017</button>
-                        <button class="stages__btn js_stage_btn" id="1451">СентЯбрь 232017</button>
                 </div>
                 <div class="stages__control">
                     <div class="stages__left js_stages_left"></div>
