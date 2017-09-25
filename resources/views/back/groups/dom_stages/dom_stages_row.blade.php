@@ -10,7 +10,7 @@
     <td> {{$item->getField('updated_at')->getItem()->getDate()}} </td>
 
     {{-- Опубликовано  --}}
-    {{--<td data-order="{{$item->show_field}}">
+    <td data-order="{{$item->show_field}}">
         <select class="form-control group-show"
                 data-id="{{$item->id_field}}"
                 data-block="dom_flat"
@@ -23,7 +23,7 @@
                 <option value="true">Опубликовано</option>
             @endif
         </select>
-    </td>--}}
+    </td>
 
     {{-- Сортировака --}}
     <td data-order="{{$item->sorter_field}}">

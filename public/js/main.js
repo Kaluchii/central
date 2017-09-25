@@ -227,6 +227,26 @@ $(document).ready(function () {
             }
         });
 
+        var stagesRow = $('.stages__row');
+        $('.js_stages_left').on('click', function () {
+            stagesRow.stop();
+            stagesRow.animate({
+                scrollLeft: stagesRow.scrollLeft() - 180
+            }, 300);
+        });
+        $('.js_stages_right').on('click', function () {
+            stagesRow.stop();
+            stagesRow.animate({
+                scrollLeft: stagesRow.scrollLeft() + 180
+            }, 300);
+        });
+
+        $('.js_detail_item').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: $('.mobile-detail').offset().top - 140
+            }, 600);
+        });
+
         //==================================================================
     }
 

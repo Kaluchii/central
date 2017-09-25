@@ -88,8 +88,8 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
         $('.layout-choice__item:first-child .js_rooms_btn').click();
+        $('.js_stage_btn:first-child').click();
     });
-
 
     $(window).on('scroll', function () {
         if($(window).scrollTop() >= $('#title').outerHeight()){
@@ -151,7 +151,7 @@ $(document).ready(function () {
 
     if ($('#gallery').length){
         // 1. Initialize fotorama manually.
-        var $fotorama = $('.fotorama').on('fotorama:show', function () {
+        var $fotorama = $('.js_gallery__fotorama').on('fotorama:show', function () {
             $('.fotorama__circle-animation').addClass('animate');
         }).on('fotorama:showend', function () {
             setTimeout(function () {
@@ -185,6 +185,69 @@ $(document).ready(function () {
             fotorama.show($(this).data('img') - 1);
             fotorama.requestFullScreen();
         });
+
+
+        // Подсветка текущего этапа и отображение нужных изображений
+
+        // 1. Initialize fotorama manually.
+        var $fotoramaStage = $('.js_stages_fotorama').fotorama();
+        // 2. Get the API object.
+        var fotoramaS = $fotoramaStage.data('fotorama');
+        fotoramaS.setOptions({
+            arrows: false
+        });
+
+        $('.js_fotorama_thumbs').on('click', '.js_open_fotoramaStage', function () {
+            var set = $('.js_fotorama_thumbs .js_open_fotoramaStage');
+            fotoramaS.show(set.index(this));
+            fotoramaS.requestFullScreen();
+        });
+
+
+        $('.js_stage_btn').on('click', function () {
+            if (!$(this).hasClass('is-active')) {
+
+                $('.js_give_me_text').text(stageObj[$(this).attr('id')]['text']);
+
+                $('.js_fotorama_thumbs .stages__images-item').remove();
+
+                var imageArray = [];
+                // fotoramaS.splice(0, fotoramaS.size-1);
+                for (var stageImg in stageObj[$(this).attr('id')]['images']){
+                    var imageSrc = stageObj[$(this).attr('id')]['images'][stageImg].src;
+                    imageArray.push({img: imageSrc});
+                    // fotoramaS.push({img: imageSrc, thumb: imageSrc});
+                    $(".js_fotorama_thumbs").append($('<li class="stages__images-item js_open_fotoramaStage"><img src="' + imageSrc + '" alt="" width="270" height="200" class="stages__img"></li>'));
+                }
+                fotoramaS.load(imageArray);
+
+                $('.js_stage_btn').removeClass('is-active');
+
+                $(this).addClass('is-active');
+            }
+        });
+
+        var stagesRow = $('.stages__row');
+        $('.js_stages_left').on('click', function () {
+            stagesRow.stop();
+            stagesRow.animate({
+                scrollLeft: stagesRow.scrollLeft() - 180
+            }, 300);
+        });
+        $('.js_stages_right').on('click', function () {
+            stagesRow.stop();
+            stagesRow.animate({
+                scrollLeft: stagesRow.scrollLeft() + 180
+            }, 300);
+        });
+
+        $('.js_detail_item').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: $('.mobile-detail').offset().top - 140
+            }, 600);
+        });
+
+        //==================================================================
     }
 
 
@@ -232,7 +295,7 @@ $(document).ready(function () {
     var myMap;
 
 
-    $('.about__text-col, .about__parking, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
+    $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
         classToAdd: 'display',
         offset: '40%'
     });
