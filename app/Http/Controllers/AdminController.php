@@ -14,7 +14,7 @@ class AdminController extends Controller
         $this->extract = $ext;
         $this->extract->tuneSelection('slider')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('layout')->sortBy('sorter','DESC');
-        $this->extract->tuneSelection('dom_stages')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('stage_images')->sortBy('sorter','DESC');
     }
 
     public function getIndex(){
