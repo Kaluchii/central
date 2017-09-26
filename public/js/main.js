@@ -151,13 +151,7 @@ $(document).ready(function () {
 
     if ($('#gallery').length){
         // 1. Initialize fotorama manually.
-        var $fotorama = $('.js_gallery__fotorama').on('fotorama:show', function () {
-            $('.fotorama__circle-animation').addClass('animate');
-        }).on('fotorama:showend', function () {
-            setTimeout(function () {
-                $('.fotorama__circle-animation').removeClass('animate');
-            }, 200);
-        }).fotorama({
+        var $fotorama = $('.js_gallery__fotorama').fotorama({
             navwidth: '80%'
         });
         // 2. Get the API object.
