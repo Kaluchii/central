@@ -190,7 +190,9 @@ $(document).ready(function () {
         // Подсветка текущего этапа и отображение нужных изображений
 
         // 1. Initialize fotorama manually.
-        var $fotoramaStage = $('.js_stages_fotorama').fotorama();
+        var $fotoramaStage = $('.js_stages_fotorama').on('fotorama:fullscreenexit', function () {
+            fotoramaS.show(0);
+        }).fotorama();
         // 2. Get the API object.
         var fotoramaS = $fotoramaStage.data('fotorama');
         fotoramaS.setOptions({
@@ -212,11 +214,9 @@ $(document).ready(function () {
                 $('.js_fotorama_thumbs .stages__images-item').remove();
 
                 var imageArray = [];
-                // fotoramaS.splice(0, fotoramaS.size-1);
                 for (var stageImg in stageObj[$(this).attr('id')]['images']){
                     var imageSrc = stageObj[$(this).attr('id')]['images'][stageImg].src;
                     imageArray.push({img: imageSrc});
-                    // fotoramaS.push({img: imageSrc, thumb: imageSrc});
                     $(".js_fotorama_thumbs").append($('<li class="stages__images-item js_open_fotoramaStage"><img src="' + imageSrc + '" alt="" width="270" height="200" class="stages__img"></li>'));
                 }
                 fotoramaS.load(imageArray);
