@@ -62,7 +62,46 @@ $(document).ready(function () {
         $('.fixed-header__nav-wrap').toggleClass('is-open').slideToggle();
     });
 
+    $('.js_goto_anchor').bind("click", function(e){
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 1000);
+        e.preventDefault();
+        if ($(window).width() <= 810){
+            $('.js_fixed-menu').removeClass('is-open');
+            $('.js_menu').removeClass('is-open');
+            $('.title-header__nav-wrap').removeClass('is-open').slideUp();
+            $('.fixed-header__nav-wrap').removeClass('is-open').slideUp();
+        }
+    });
 
+    $(window).on('load resize', function () {
+        if ($(window).width() > 810) {
+            $('.title-header__nav-wrap').attr('style', '');
+            $('.fixed-header__nav-wrap').attr('style', '');
+            $('.fixed-header__logo').attr('src', '/img/dark_logo.png');
+        } else {
+            $('.title-header__nav-wrap').removeClass('show-imp');
+            $('.fixed-header__logo').attr('src', '/img/dark_logo_mobile.png');
+        }
+    });
+
+    $(window).on('load', function () {
+        $('.layout-choice__item:first-child .js_rooms_btn').click();
+        $('.js_stage_btn:first-child').click();
+    });
+
+    $(window).on('scroll', function () {
+        if($(window).scrollTop() >= $('#title').outerHeight()){
+            $('.fixed-header').slideDown();
+        }else{
+            $('.fixed-header').slideUp();
+            if ($(window).width() <= 810){
+                $('.js_fixed-menu').removeClass('is-open');
+                $('.fixed-header__nav-wrap').removeClass('is-open').hide();
+            }
+        }
+    });
 
     /* Работа с планировками */
 
@@ -80,6 +119,11 @@ $(document).ready(function () {
     var state = false;
     $('.js_area_btn').on('click', function () {
         if ($(window).width() <= 820 && state){
+            setTimeout(function () {
+                $('body,html').animate({
+                    scrollTop: $('.layout-choice__layout-view').offset().top - 70
+                }, 500);
+            }, 200);
         }
 
         $('.layout-choice__img').attr('src', $(this).data('img'));
@@ -107,4 +151,50 @@ $(document).ready(function () {
 
     /* Yandex map */
 
+    var init = function () {
+        myMap = new ymaps.Map("map",
+            {center: [43.24507704, 76.93126367], zoom: 16, controls: []});
+        myMap.behaviors.disable("scrollZoom");
+        myMap.behaviors.disable("dblClickZoom");
+        var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+            iconLayout: "default#image",
+            iconImageHref: "/img/map_icon_wshadow.png",
+            iconImageSize: [163, 210],
+            iconImageOffset: [-70, -170]
+        });
+        myMap.geoObjects.add(myPlacemark);
+
+        $(window).on('load resize', function (){
+            if ($(window).width() < 1000) {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon_wshadow_mob.png",
+                    iconImageSize: [85, 110],
+                    iconImageOffset: [-39, -91]
+                });
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.disable("drag");
+            } else {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon_wshadow.png",
+                    iconImageSize: [163, 210],
+                    iconImageOffset: [-70, -170]
+                });
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.enable("drag");
+            }
+        });
+    };
+
+    ymaps.ready(init);
+    var myMap;
+
+
+    $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
+        classToAdd: 'display',
+        offset: '40%'
+    });
 });
