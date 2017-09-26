@@ -118,13 +118,6 @@ $(document).ready(function () {
 
     var state = false;
     $('.js_area_btn').on('click', function () {
-        if ($(window).width() <= 820 && state){
-            setTimeout(function () {
-                $('body,html').animate({
-                    scrollTop: $('.layout-choice__layout-view').offset().top - 70
-                }, 500);
-            }, 200);
-        }
 
         $('.layout-choice__img').attr('src', $(this).data('img'));
         $('.layout-choice__area-text').text($(this).data('area'));
