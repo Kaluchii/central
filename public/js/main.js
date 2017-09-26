@@ -150,6 +150,35 @@ $(document).ready(function () {
     /* Fotorama */
 
     if ($('#gallery').length){
+        // 1. Initialize fotorama manually.
+        var $fotorama = $('.js_gallery__fotorama').fotorama({
+            navwidth: '80%'
+        });
+        // 2. Get the API object.
+        var fotorama = $fotorama.data('fotorama');
+        fotorama.setOptions({
+            arrows: false
+        });
+
+        $("<div class='custom-control custom-control--prev'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+        $("<div class='custom-control custom-control--next'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+        $("<div class='fotorama__circle-animation'></div>").insertAfter(".fotorama__arr.fotorama__arr--next");
+
+        $("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
+        $("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
+    // make the buttons functionality
+
+        $('.nav-scroll-btn--prev').click(function () {
+            fotorama.show('<');
+        });
+        $('.nav-scroll-btn--next').click(function () {
+            fotorama.show('>');
+        });
+
+        $('.js_open_fotorama').on('click', function () {
+            fotorama.show($(this).data('img') - 1);
+            fotorama.requestFullScreen();
+        });
 
 
         // Подсветка текущего этапа и отображение нужных изображений
@@ -192,25 +221,6 @@ $(document).ready(function () {
             }
         });
 
-        var stagesRow = $('.stages__row');
-        $('.js_stages_left').on('click', function () {
-            stagesRow.stop();
-            stagesRow.animate({
-                scrollLeft: stagesRow.scrollLeft() - 180
-            }, 300);
-        });
-        $('.js_stages_right').on('click', function () {
-            stagesRow.stop();
-            stagesRow.animate({
-                scrollLeft: stagesRow.scrollLeft() + 180
-            }, 300);
-        });
-
-        $('.js_detail_item').on('click', function () {
-            $('html, body').stop().animate({
-                scrollTop: $('.mobile-detail').offset().top - 140
-            }, 600);
-        });
 
         //==================================================================
     }
