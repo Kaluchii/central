@@ -63,22 +63,6 @@ $(document).ready(function () {
     });
 
 
-    $(window).on('load resize', function () {
-        if ($(window).width() > 810) {
-            $('.title-header__nav-wrap').attr('style', '');
-            $('.fixed-header__nav-wrap').attr('style', '');
-            $('.fixed-header__logo').attr('src', '/img/dark_logo.png');
-        } else {
-            $('.title-header__nav-wrap').removeClass('show-imp');
-            $('.fixed-header__logo').attr('src', '/img/dark_logo_mobile.png');
-        }
-    });
-
-    $(window).on('load', function () {
-        $('.layout-choice__item:first-child .js_rooms_btn').click();
-        $('.js_stage_btn:first-child').click();
-    });
-
 
     /* Работа с планировками */
 
