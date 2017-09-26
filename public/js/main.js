@@ -147,4 +147,121 @@ $(document).ready(function () {
     });
 
 
+    /* Fotorama */
+
+    if ($('#gallery').length){
+
+
+        // Подсветка текущего этапа и отображение нужных изображений
+
+        // 1. Initialize fotorama manually.
+        var $fotoramaStage = $('.js_stages_fotorama').fotorama();
+        // 2. Get the API object.
+        var fotoramaS = $fotoramaStage.data('fotorama');
+        fotoramaS.setOptions({
+            arrows: false
+        });
+
+        $('.js_fotorama_thumbs').on('click', '.js_open_fotoramaStage', function () {
+            var set = $('.js_fotorama_thumbs .js_open_fotoramaStage');
+            fotoramaS.show(set.index(this));
+            fotoramaS.requestFullScreen();
+        });
+
+
+        $('.js_stage_btn').on('click', function () {
+            if (!$(this).hasClass('is-active')) {
+
+                $('.js_give_me_text').text(stageObj[$(this).attr('id')]['text']);
+
+                $('.js_fotorama_thumbs .stages__images-item').remove();
+
+                var imageArray = [];
+                // fotoramaS.splice(0, fotoramaS.size-1);
+                for (var stageImg in stageObj[$(this).attr('id')]['images']){
+                    var imageSrc = stageObj[$(this).attr('id')]['images'][stageImg].src;
+                    imageArray.push({img: imageSrc});
+                    // fotoramaS.push({img: imageSrc, thumb: imageSrc});
+                    $(".js_fotorama_thumbs").append($('<li class="stages__images-item js_open_fotoramaStage"><img src="' + imageSrc + '" alt="" width="270" height="200" class="stages__img"></li>'));
+                }
+                fotoramaS.load(imageArray);
+
+                $('.js_stage_btn').removeClass('is-active');
+
+                $(this).addClass('is-active');
+            }
+        });
+
+        var stagesRow = $('.stages__row');
+        $('.js_stages_left').on('click', function () {
+            stagesRow.stop();
+            stagesRow.animate({
+                scrollLeft: stagesRow.scrollLeft() - 180
+            }, 300);
+        });
+        $('.js_stages_right').on('click', function () {
+            stagesRow.stop();
+            stagesRow.animate({
+                scrollLeft: stagesRow.scrollLeft() + 180
+            }, 300);
+        });
+
+        $('.js_detail_item').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: $('.mobile-detail').offset().top - 140
+            }, 600);
+        });
+
+        //==================================================================
+    }
+
+
+    /* Yandex map */
+
+    var init = function () {
+        myMap = new ymaps.Map("map",
+            {center: [43.24507704, 76.93126367], zoom: 16, controls: []});
+        myMap.behaviors.disable("scrollZoom");
+        myMap.behaviors.disable("dblClickZoom");
+        var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+            iconLayout: "default#image",
+            iconImageHref: "/img/map_icon_wshadow.png",
+            iconImageSize: [163, 210],
+            iconImageOffset: [-70, -170]
+        });
+        myMap.geoObjects.add(myPlacemark);
+
+        $(window).on('load resize', function (){
+            if ($(window).width() < 1000) {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon_wshadow_mob.png",
+                    iconImageSize: [85, 110],
+                    iconImageOffset: [-39, -91]
+                });
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.disable("drag");
+            } else {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon_wshadow.png",
+                    iconImageSize: [163, 210],
+                    iconImageOffset: [-70, -170]
+                });
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.enable("drag");
+            }
+        });
+    };
+
+    ymaps.ready(init);
+    var myMap;
+
+
+    $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
+        classToAdd: 'display',
+        offset: '40%'
+    });
 });
