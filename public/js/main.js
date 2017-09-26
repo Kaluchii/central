@@ -151,7 +151,13 @@ $(document).ready(function () {
 
     if ($('#gallery').length){
         // 1. Initialize fotorama manually.
-        var $fotorama = $('.js_gallery__fotorama').fotorama({
+        var $fotorama = $('.js_gallery__fotorama').on('fotorama:show', function () {
+            $('.fotorama__circle-animation').addClass('animate');
+        }).on('fotorama:showend', function () {
+            setTimeout(function () {
+                $('.fotorama__circle-animation').removeClass('animate');
+            }, 200);
+        }).fotorama({
             navwidth: '80%'
         });
         // 2. Get the API object.
@@ -221,25 +227,6 @@ $(document).ready(function () {
             }
         });
 
-        var stagesRow = $('.stages__row');
-        $('.js_stages_left').on('click', function () {
-            stagesRow.stop();
-            stagesRow.animate({
-                scrollLeft: stagesRow.scrollLeft() - 180
-            }, 300);
-        });
-        $('.js_stages_right').on('click', function () {
-            stagesRow.stop();
-            stagesRow.animate({
-                scrollLeft: stagesRow.scrollLeft() + 180
-            }, 300);
-        });
-
-        $('.js_detail_item').on('click', function () {
-            $('html, body').stop().animate({
-                scrollTop: $('.mobile-detail').offset().top - 140
-            }, 600);
-        });
 
         //==================================================================
     }
