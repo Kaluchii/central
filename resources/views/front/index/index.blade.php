@@ -45,12 +45,12 @@
     </section>
     <section class="about" id="about">
         <div class="about__wrapper">
-            <div class="about__text-col text-col">
+            <div class="about__text-col text-col display">
                 <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
                 <address class="text-col__address">{!! $about->address_field !!}</address>
             </div>
-            <div class="about__tagline">
+            <div class="about__tagline display">
                 <p class="about__tagline-text-wrap"><span class="about__tagline-text">Когда<br>все дороги<br>ведут<br>в центр!</span></p>
             </div>
             <div class="about__in-detail">
@@ -224,7 +224,7 @@
     </section>
 
     <section class="feedbacks">
-        <div class="feedbacks__wrapper">
+        <div class="feedbacks__wrapper display">
             <h2 class="feedbacks__title">Вам понравился<br>ЖК Центральный?</h2>
             <div class="feedbacks__sub-title">Оставьте ваши контакты, и наши менеджеры ответят на все ваши вопросы.</div>
             <div class="feedbacks__input-rows form-id" id="feedback_call">
@@ -325,14 +325,14 @@
 
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
-            <div class="contacts__contact-block">
+            <div class="contacts__contact-block display">
                 <h2 class="contacts__title">{{ $contacts->block_title_field }}</h2>
                 <p class="contacts__phone">{{ $contacts->phone_field }}</p>
                 <p class="contacts__address">{!! $contacts->address_field !!}</p>
                 <p class="contacts__info-text">Информация предоставлена с целью изучения спроса потенциальных потребителей. Договоры о долевом участии заключаются после получения разрешения на привлечение денег дольщиков местным исполнительным органом согласно Закона РК «О долевом участии в жилищном строительстве».</p>
             </div>
             <div class="contacts__map-wrapper">
-                {{--<div class="contacts__map" id="map"></div>--}}
+                <div class="contacts__map" id="map"></div>
             </div>
         </div>
     </section>
