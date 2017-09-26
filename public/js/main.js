@@ -62,18 +62,6 @@ $(document).ready(function () {
         $('.fixed-header__nav-wrap').toggleClass('is-open').slideToggle();
     });
 
-    $('.js_goto_anchor').bind("click", function(e){
-        $('html, body').stop().animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 1000);
-        e.preventDefault();
-        if ($(window).width() <= 810){
-            $('.js_fixed-menu').removeClass('is-open');
-            $('.js_menu').removeClass('is-open');
-            $('.title-header__nav-wrap').removeClass('is-open').slideUp();
-            $('.fixed-header__nav-wrap').removeClass('is-open').slideUp();
-        }
-    });
 
     $(window).on('load resize', function () {
         if ($(window).width() > 810) {
@@ -91,17 +79,6 @@ $(document).ready(function () {
         $('.js_stage_btn:first-child').click();
     });
 
-    $(window).on('scroll', function () {
-        if($(window).scrollTop() >= $('#title').outerHeight()){
-            $('.fixed-header').slideDown();
-        }else{
-            $('.fixed-header').slideUp();
-            if ($(window).width() <= 810){
-                $('.js_fixed-menu').removeClass('is-open');
-                $('.fixed-header__nav-wrap').removeClass('is-open').hide();
-            }
-        }
-    });
 
     /* Работа с планировками */
 
@@ -119,11 +96,6 @@ $(document).ready(function () {
     var state = false;
     $('.js_area_btn').on('click', function () {
         if ($(window).width() <= 820 && state){
-            setTimeout(function () {
-                $('body,html').animate({
-                    scrollTop: $('.layout-choice__layout-view').offset().top - 70
-                }, 500);
-            }, 200);
         }
 
         $('.layout-choice__img').attr('src', $(this).data('img'));
@@ -154,9 +126,6 @@ $(document).ready(function () {
         var $fotorama = $('.js_gallery__fotorama').on('fotorama:show', function () {
             $('.fotorama__circle-animation').addClass('animate');
         }).on('fotorama:showend', function () {
-            setTimeout(function () {
-                $('.fotorama__circle-animation').removeClass('animate');
-            }, 200);
         }).fotorama({
             navwidth: '80%'
         });
@@ -227,26 +196,6 @@ $(document).ready(function () {
             }
         });
 
-        var stagesRow = $('.stages__row');
-        $('.js_stages_left').on('click', function () {
-            stagesRow.stop();
-            stagesRow.animate({
-                scrollLeft: stagesRow.scrollLeft() - 180
-            }, 300);
-        });
-        $('.js_stages_right').on('click', function () {
-            stagesRow.stop();
-            stagesRow.animate({
-                scrollLeft: stagesRow.scrollLeft() + 180
-            }, 300);
-        });
-
-        $('.js_detail_item').on('click', function () {
-            $('html, body').stop().animate({
-                scrollTop: $('.mobile-detail').offset().top - 140
-            }, 600);
-        });
-
         //==================================================================
     }
 
@@ -293,10 +242,4 @@ $(document).ready(function () {
 
     ymaps.ready(init);
     var myMap;
-
-
-    $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
-        classToAdd: 'display',
-        offset: '40%'
-    });
 });
