@@ -154,15 +154,6 @@ $(document).ready(function () {
 
         // Подсветка текущего этапа и отображение нужных изображений
 
-        // 1. Initialize fotorama manually.
-        var $fotoramaStage = $('.js_stages_fotorama').on('fotorama:fullscreenexit', function () {
-            fotoramaS.show(0);
-        }).fotorama();
-        // 2. Get the API object.
-        var fotoramaS = $fotoramaStage.data('fotorama');
-        fotoramaS.setOptions({
-            arrows: false
-        });
 
         $('.js_fotorama_thumbs').on('click', '.js_open_fotoramaStage', function () {
             var set = $('.js_fotorama_thumbs .js_open_fotoramaStage');
