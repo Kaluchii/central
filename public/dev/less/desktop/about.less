@@ -255,117 +255,6 @@
   }
 }
 
-
-/*.facts{
-  position: absolute;
-  right: 0;
-  top: 150px;
-
-  &__list{
-    position: relative;
-
-    &::before{
-      content: '';
-      width: 181px;
-      height: 486px;
-      top: -20px;
-      left: -260px;
-      position: absolute;
-      background: url("/img/about_elipses.png") no-repeat 100%;
-    }
-  }
-
-  &__item{
-    position: relative;
-
-    &::before{
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      z-index: -1;
-      background: rgba(247,236,153,1);
-      background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
-      background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
-    }
-
-    &--floor{
-      top: 70px;
-      left: -255px;
-
-      &::before{
-        width: 120px;
-        height: 120px;
-        left: 27px;
-        top: 20px;
-      }
-    }
-
-    &--flats{
-      top: -65px;
-      left: -55px;
-
-      &::before{
-        width: 170px;
-        height: 170px;
-        left: 6px;
-        top: -28px;
-      }
-    }
-
-    &--kindergarten-places{
-      top: -15px;
-      left: -315px;
-
-      &::before{
-        width: 150px;
-        height: 150px;
-        left: 13px;
-        top: 5px;
-      }
-    }
-
-    &--parking-places{
-      top: -150px;
-      left: -75px;
-
-      &::before{
-        width: 190px;
-        height: 190px;
-        left: -9px;
-        top: -6px;
-      }
-    }
-  }
-}
-
-.fact{
-  text-align: center;
-
-  &__count{
-    font-family: "Gilroy";
-    font-weight: 800;
-    font-size: 100px;
-    line-height: 1;
-    color: #2f2013;
-    letter-spacing: 0.05em;
-  }
-
-  &__text{
-    font-family: "Gilroy";
-    font-weight: 300;
-    font-size: 18px;
-    color: #2f2013;
-    letter-spacing: 0.1em;
-    line-height: 1.4;
-
-  }
-}*/
-
 .in-detail{
   height: 560px;
   display: flex;
@@ -521,8 +410,34 @@
         z-index: 10;
         box-shadow: 2px 2px 4px rgba(54, 41, 18, 0.37);
 
-        &::after{
-          top: 100%;
+        &--nth1{
+          background: url("/img/nth1.jpg") no-repeat center;
+          background-size: cover;
+        }
+
+        &--nth2{
+          background: url("/img/nth2.jpg") no-repeat center;
+          background-size: cover;
+        }
+
+        &--nth3{
+          background: url("/img/nth3.jpg") no-repeat center;
+          background-size: cover;
+        }
+
+        &--nth4{
+          background: url("/img/nth4.jpg") no-repeat center;
+          background-size: cover;
+        }
+
+        &--nth5{
+          background: url("/img/nth5.jpg") no-repeat center;
+          background-size: cover;
+        }
+
+        &--nth6{
+          background: url("/img/nth6.jpg") no-repeat center;
+          background-size: cover;
         }
       }
 
@@ -549,48 +464,36 @@
     justify-content: center;
     padding: 0 15px;
     border-radius: 5px;
-    transition: .3s;
+    transition: box-shadow .3s, padding .3s;
     overflow: hidden;
 
-    &::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 5px;
-      background-color: rgba(236, 217, 138, 0.7);
-      transition: .3s;
-    }
-
     &--nth1{
-      background: url("/img/nth1.jpg") no-repeat;
+      background: url("/img/nth1c.jpg") no-repeat;
       background-size: cover;
     }
 
     &--nth2{
-      background: url("/img/nth2.jpg") no-repeat center;
+      background: url("/img/nth2c.jpg") no-repeat center;
       background-size: cover;
     }
 
     &--nth3{
-      background: url("/img/nth3.jpg") no-repeat center;
+      background: url("/img/nth3c.jpg") no-repeat center;
       background-size: cover;
     }
 
     &--nth4{
-      background: url("/img/nth4.jpg") no-repeat center;
+      background: url("/img/nth4c.jpg") no-repeat center;
       background-size: cover;
     }
 
     &--nth5{
-      background: url("/img/nth5.jpg") no-repeat center;
+      background: url("/img/nth5c.jpg") no-repeat center;
       background-size: cover;
     }
 
     &--nth6{
-      background: url("/img/nth6.jpg") no-repeat center;
+      background: url("/img/nth6c.jpg") no-repeat center;
       background-size: cover;
     }
   }
