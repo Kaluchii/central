@@ -14,12 +14,6 @@
 <body>
     {!! $scripts->after_open_field !!}
 
-    <script>
-        $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
-            classToAdd: 'display',
-            offset: '40%'
-        });
-    </script>
     @include('front.header')
     @yield('header')
 
