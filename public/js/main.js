@@ -87,8 +87,17 @@ $(document).ready(function () {
     });
 
     $(window).on('load', function () {
-        $('.layout-choice__item:first-child .js_rooms_btn').click();
-        $('.js_stage_btn:first-child').click();
+        $(this).on('scroll', function () {
+            if($(window).scrollTop() >= $('#title').outerHeight()){
+                $('.fixed-header').slideDown();
+            }else{
+                $('.fixed-header').slideUp();
+                if ($(window).width() <= 810){
+                    $('.js_fixed-menu').removeClass('is-open');
+                    $('.fixed-header__nav-wrap').removeClass('is-open').hide();
+                }
+            }
+        });
 
         /* Fotorama */
 
@@ -236,18 +245,10 @@ $(document).ready(function () {
 
         ymaps.ready(init);
         var myMap;
-    });
 
-    $(window).on('scroll', function () {
-        if($(window).scrollTop() >= $('#title').outerHeight()){
-            $('.fixed-header').slideDown();
-        }else{
-            $('.fixed-header').slideUp();
-            if ($(window).width() <= 810){
-                $('.js_fixed-menu').removeClass('is-open');
-                $('.fixed-header__nav-wrap').removeClass('is-open').hide();
-            }
-        }
+
+        $('.layout-choice__item:first-child .js_rooms_btn').click();
+        $('.js_stage_btn:first-child').click();
     });
 
     /* Работа с планировками */

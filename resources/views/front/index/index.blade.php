@@ -45,12 +45,12 @@
     </section>
     <section class="about" id="about">
         <div class="about__wrapper">
-            <div class="about__text-col text-col display">
+            <div class="about__text-col text-col displayf">
                 <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
                 <address class="text-col__address">{!! $about->address_field !!}</address>
             </div>
-            <div class="about__tagline display">
+            <div class="about__tagline displayf">
                 <p class="about__tagline-text-wrap"><span class="about__tagline-text">Когда<br>все дороги<br>ведут<br>в центр!</span></p>
             </div>
             <div class="about__in-detail">
@@ -224,7 +224,7 @@
     </section>
 
     <section class="feedbacks">
-        <div class="feedbacks__wrapper display">
+        <div class="feedbacks__wrapper displayf">
             <h2 class="feedbacks__title">Вам понравился<br>ЖК Центральный?</h2>
             <div class="feedbacks__sub-title">Оставьте ваши контакты, и наши менеджеры ответят на все ваши вопросы.</div>
             <div class="feedbacks__input-rows form-id" id="feedback_call">
@@ -325,7 +325,7 @@
 
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
-            <div class="contacts__contact-block display">
+            <div class="contacts__contact-block displayf">
                 <h2 class="contacts__title">{{ $contacts->block_title_field }}</h2>
                 <p class="contacts__phone">{{ $contacts->phone_field }}</p>
                 <p class="contacts__address">{!! $contacts->address_field !!}</p>
