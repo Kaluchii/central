@@ -247,6 +247,12 @@ $(document).ready(function () {
         var myMap;
 
 
+        $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
+            classToAdd: 'display',
+            offset: '40%'
+        });
+
+
         $('.layout-choice__item:first-child .js_rooms_btn').click();
         $('.js_stage_btn:first-child').click();
     });
@@ -292,10 +298,5 @@ $(document).ready(function () {
 
     $('.mobile-detail__close').on('click', function () {
         $('.mobile-detail__item').removeClass('is-open');
-    });
-
-    $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
-        classToAdd: 'display',
-        offset: '40%'
     });
 });
