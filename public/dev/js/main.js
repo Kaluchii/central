@@ -86,11 +86,6 @@ $(document).ready(function () {
         }
     });
 
-    $(window).on('load', function () {
-        $('.layout-choice__item:first-child .js_rooms_btn').click();
-        $('.js_stage_btn:first-child').click();
-    });
-
     $(window).on('scroll', function () {
         if($(window).scrollTop() >= $('#title').outerHeight()){
             $('.fixed-header').slideDown();
@@ -146,7 +141,6 @@ $(document).ready(function () {
         $('.mobile-detail__item').removeClass('is-open');
     });
 
-
     /* Fotorama */
 
     if ($('#gallery').length){
@@ -172,7 +166,7 @@ $(document).ready(function () {
 
         $("<div class='nav-scroll-btn nav-scroll-btn--prev'></div>").insertBefore(".fotorama__nav.fotorama__nav--thumbs");
         $("<div class='nav-scroll-btn nav-scroll-btn--next'></div>").insertAfter(".fotorama__nav.fotorama__nav--thumbs");
-    // make the buttons functionality
+        // make the buttons functionality
 
         $('.nav-scroll-btn--prev').click(function () {
             fotorama.show('<');
@@ -190,7 +184,9 @@ $(document).ready(function () {
         // Подсветка текущего этапа и отображение нужных изображений
 
         // 1. Initialize fotorama manually.
-        var $fotoramaStage = $('.js_stages_fotorama').fotorama();
+        var $fotoramaStage = $('.js_stages_fotorama').on('fotorama:fullscreenexit', function () {
+            fotoramaS.show(0);
+        }).fotorama();
         // 2. Get the API object.
         var fotoramaS = $fotoramaStage.data('fotorama');
         fotoramaS.setOptions({
@@ -212,11 +208,9 @@ $(document).ready(function () {
                 $('.js_fotorama_thumbs .stages__images-item').remove();
 
                 var imageArray = [];
-                // fotoramaS.splice(0, fotoramaS.size-1);
                 for (var stageImg in stageObj[$(this).attr('id')]['images']){
                     var imageSrc = stageObj[$(this).attr('id')]['images'][stageImg].src;
                     imageArray.push({img: imageSrc});
-                    // fotoramaS.push({img: imageSrc, thumb: imageSrc});
                     $(".js_fotorama_thumbs").append($('<li class="stages__images-item js_open_fotoramaStage"><img src="' + imageSrc + '" alt="" width="270" height="200" class="stages__img"></li>'));
                 }
                 fotoramaS.load(imageArray);
@@ -250,6 +244,8 @@ $(document).ready(function () {
         //==================================================================
     }
 
+    $('.layout-choice__item:first-child .js_rooms_btn').click();
+    $('.js_stage_btn:first-child').click();
 
     /* Yandex map */
 
@@ -258,15 +254,25 @@ $(document).ready(function () {
             {center: [43.24507704, 76.93126367], zoom: 16, controls: []});
         myMap.behaviors.disable("scrollZoom");
         myMap.behaviors.disable("dblClickZoom");
-        var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
-            iconLayout: "default#image",
-            iconImageHref: "/img/map_icon_wshadow.png",
-            iconImageSize: [163, 210],
-            iconImageOffset: [-70, -170]
-        });
+        if ($(window).width() < 1000) {
+            var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                iconLayout: "default#image",
+                iconImageHref: "/img/map_icon_wshadow_mob.png",
+                iconImageSize: [85, 110],
+                iconImageOffset: [-39, -91]
+            });
+            myMap.behaviors.disable("drag");
+        } else {
+            var myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
+                iconLayout: "default#image",
+                iconImageHref: "/img/map_icon_wshadow.png",
+                iconImageSize: [163, 210],
+                iconImageOffset: [-70, -170]
+            });
+        }
         myMap.geoObjects.add(myPlacemark);
 
-        $(window).on('load resize', function (){
+        $(window).on('resize', function (){
             if ($(window).width() < 1000) {
                 myMap.geoObjects.removeAll();
                 myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {
@@ -293,10 +299,4 @@ $(document).ready(function () {
 
     ymaps.ready(init);
     var myMap;
-
-
-    $('.about__text-col, .about__tagline, .contacts__contact-block, .feedbacks__wrapper').viewportChecker({
-        classToAdd: 'display',
-        offset: '40%'
-    });
 });

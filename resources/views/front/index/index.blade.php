@@ -162,6 +162,14 @@
                 @for($i = 0; $i < 9, isset($slider_arr[$i]); $i++)
                     <img src="{{ $slider_arr[$i] }}" alt="">
                 @endfor
+                @foreach($stages->dom_stages_group as $stage)
+                    @if($stage->show_field == 1)
+                        @foreach($stage->stage_images_group as $stage_img)
+                            <img src="{{$stage_img->stage_photo_field->link}}?{{$stage_img->stage_photo_field->cache_index}}" alt="">
+                        @endforeach
+                    @endif
+                    @break
+                @endforeach
             </div>
             <div class="gallery__mobile-gallery mobile-gallery">
                 <div class="mobile-gallery__top-row">
