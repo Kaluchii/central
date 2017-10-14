@@ -4,7 +4,7 @@
             @foreach($stages->dom_stages_group as $stage)
                 @if($stage->show_field == 1)
 {{$stage->id_field}}: {
-                        text: '{{$stage->text_field}}',
+                        text: '{!!$stage->text_field!!}',
                         images: [
                         @foreach($stage->stage_images_group as $stage_img)
                             {

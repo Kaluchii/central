@@ -203,7 +203,7 @@ $(document).ready(function () {
         $('.js_stage_btn').on('click', function () {
             if (!$(this).hasClass('is-active')) {
 
-                $('.js_give_me_text').text(stageObj[$(this).attr('id')]['text']);
+                $('.js_give_me_text').html(stageObj[$(this).attr('id')]['text']);
 
                 $('.js_fotorama_thumbs .stages__images-item').remove();
 

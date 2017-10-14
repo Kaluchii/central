@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label>Текст</label>
                 <textarea class="form-control text"
-                          data-name="text"
+                          data-name="text" data-reg="true"
                           data-type="text"
                           data-block="dom_stages"
                           data-id="{{$item->id_field}}">{{$item->text_field}}</textarea>
