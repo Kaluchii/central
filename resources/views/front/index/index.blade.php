@@ -36,6 +36,14 @@
                 <p class="title-block__pros-medium-text">в подарок</p>
                 <p class="title-block__pros-small-text">ПРИ ПОКУПКЕ КВАРТИРЫ<br>ДО КОНЦА 2017 ГОДА</p>
             </div>
+            <a href="https://www.bcc.kz/" target="_blank" class="title-block__pros-item">
+                <img src="/img/credit.png" alt="Рассрочка" class="title-block__pros-img">
+                <p class="title-block__pros-big-text">Ипотека</p>
+                <p class="title-block__pros-medium-text">от банка</p>
+                <div class="title-block__credit-wrap">
+                    <img src="/img/centercredit.png" alt="Ипотека ЖК Центральный" class="title-block__credit">
+                </div>
+            </a>
             <div class="title-block__pros-item">
                 <img src="/img/time.png" alt="Рассрочка" class="title-block__pros-img">
                 <p class="title-block__pros-big-text">Рассрочка</p>
