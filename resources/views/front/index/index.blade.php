@@ -27,7 +27,10 @@
         </header>
         <div class="title-block__text-wrap">
             <h1 class="title-block__title">{!! $main_block->block_title_field !!}</h1>
-            <p class="title-block__text"><span class="title-block__small-text">от</span><span class="title-block__price">{{ $main_block->text_field }}</span><span class="title-block__tenge">T</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span></p>
+            <p class="title-block__text">
+                <span class="title-block__small-text">от</span
+                ><span class="title-block__price">{{ $main_block->text_field }}<span class="title-block__stock-wrap"><span class="title-block__stock"><span class="title-block__stock-text-top">НОВОГОДНЯЯ</span><span class="title-block__stock-text-bottom">СКИДКА</span></span></span></span><span class="title-block__tenge">n</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span>
+            </p>
         </div>
         <div class="title-block__pros">
             <div class="title-block__pros-item">

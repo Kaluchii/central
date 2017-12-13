@@ -32,7 +32,7 @@
   }
 
   &__text-wrap{
-    margin: 85px auto 0;
+    margin: 105px auto 0;
     max-width: 1100px;
     text-align: center;
     position: relative;
@@ -83,19 +83,19 @@
   &__delimiter{}
 
   &__tenge{
-    color: transparent;
+    font-family: "tenge";
+    color: #c3003c;
     font-size: 70px;
-    background: url("/img/title_tenge.png") no-repeat bottom center;
-    position: relative;
-    bottom: 15px;
-    margin-left: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 65px #FFFFFF, 0 0 25px #FFFFFF;
   }
 
   &__delimiter{
     font-family: "Gilroy";
     font-size: 90px;
     font-weight: 800;
-    color: #ffffff;
+    color: #c3003c;
+    text-shadow: 0 0 65px #FFFFFF, 0 0 25px #FFFFFF;
   }
 
   &__small-text{
@@ -103,8 +103,9 @@
     letter-spacing: 0;
     font-size: 80px;
     font-weight: 800;
-    color: #ffffff;
+    color: #c3003c;
     position: relative;
+    text-shadow: 0 0 65px #FFFFFF, 0 0 25px #FFFFFF;
 
     &--sqr{
       margin-left: -10px;
@@ -113,19 +114,54 @@
         font-family: "Gilroy";
         font-size: 34px;
         font-weight: 800;
-        color: #ffffff;
+        color: #c3003c;
         position: relative;
         top: 6px;
+        text-shadow: 0 0 65px #FFFFFF, 0 0 25px #FFFFFF;
       }
     }
   }
 
   &__text{
-    margin: 20px auto 0;
+    margin: 0 auto;
     font-family: "Gilroy";
     line-height: 1;
     white-space: nowrap;
     width: 1100px;
+  }
+
+  &__stock-wrap{
+    position: absolute;
+    top: -120px;
+    right: -225px;
+  }
+
+  &__stock{
+    position: relative;
+    display: block;
+    width: 228px;
+    height: 260px;
+    letter-spacing: .1em;
+    word-spacing: 0;
+    text-shadow: none;
+    background: url("/img/tooltip_stock.png") no-repeat center/contain;
+  }
+
+  &__stock-text-top{
+    display: block;
+    padding-top: 90px;
+    font-size: 24px;
+    font-family: 'Gilroy';
+    font-weight: 900;
+    color: #c3003c;
+  }
+
+  &__stock-text-bottom{
+    display: block;
+    font-size: 40px;
+    font-family: 'Gilroy';
+    font-weight: 900;
+    color: #c3003c;
   }
 
   &__pros{
@@ -187,14 +223,16 @@
   }
 
   &__price{
-    margin-left: 50px;
+    margin-left: 15px;
     font-family: "Gilroy";
-    font-weight: 800;
-    font-size: 192px;
+    font-weight: 900;
+    font-size: 205px;
     letter-spacing: 0.06em;
+    word-spacing: -0.1em;
     line-height: 1;
-    color: #ff0000;
-    text-shadow:
+    color: #c3003c;
+    text-shadow: 0 0 65px #FFFFFF, 0 0 25px #FFFFFF;
+    /*text-shadow:
               -0   -5px 0   #FFFFFF,
               0   -5px 0   #FFFFFF,
             -0    5px 0   #FFFFFF,
@@ -242,7 +280,7 @@
               -5px -5px 0   #FFFFFF,
               5px -5px 0   #FFFFFF,
             -5px  5px 0   #FFFFFF,
-            5px  5px 0   #FFFFFF;
+            5px  5px 0   #FFFFFF;*/
     position: relative;
   }
 
