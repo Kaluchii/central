@@ -40,12 +40,10 @@ class UpdateCourse extends Command
      */
     public function handle()
     {
-        $url = "https://www.bcc.kz/about/kursy-valyut/";
+        $url = "http://course.wonderbar.kz/courses.json";
 
-        $html = file_get_contents( $url );
-        $doc = \phpQuery::newDocumentHTML( $html, 'windows-1251' );
-        $price = $doc->find('.bcc_full .s_table_over:nth-child(4) tbody tr:nth-child(3) td:nth-child(3)')->text();
-
+        $dataObj = json_decode(file_get_contents($url), true);
+        $price = $dataObj['courses']['usd'];
         if($price){
             $this->updateAgent->update('prices', 0, ['dollar' => $price]);
             echo('Course success update. USD to KZT course value = ' . $price."\n");
