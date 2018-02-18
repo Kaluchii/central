@@ -40,7 +40,7 @@ class UpdateCourse extends Command
      */
     public function handle()
     {
-        $url = "http://course.wonderbar.kz/courses.json";
+        $url = "http://185.111.107.122/courses.json";
 
         $dataObj = json_decode(file_get_contents($url), true);
         $price = $dataObj['courses']['usd'];
