@@ -350,12 +350,17 @@
     }
 
     &__pros{
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       top: -40px;
     }
 
     &__pros-item{
+      &--complete{
+        order: 1;
+        padding-top: 40px;
+      }
+
       &:nth-child(n){
         margin: 15px 0 0;
       }
