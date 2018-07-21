@@ -210,6 +210,11 @@
         left: 0;
         opacity: 1;
       }
+
+      &__bank-link{
+        left: 0;
+        opacity: 1;
+      }
     }
   }
 
@@ -233,7 +238,7 @@
     position: relative;
     opacity: 0;
     left: -20px;
-    transition: .6s 1.2s;
+    transition: left .6s 1.2s, opacity .6s 1.2s;
     margin: 20px 0 0 45px;
     font-size: 22px;
     color: #34261b;
@@ -243,6 +248,7 @@
     font-weight: 600;
 
     &::before{
+      display: none;
       content: '';
       width: 26px;
       height: 36px;
@@ -252,6 +258,16 @@
       transform: translateY(-50%);
       background: url("/img/location_about.png");
     }
+  }
+
+  &__bank-link{
+    position: relative;
+    left: -20px;
+    opacity: 0;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 45px;
+    transition: left .6s 1.5s, opacity .6s 1.5s;
   }
 }
 

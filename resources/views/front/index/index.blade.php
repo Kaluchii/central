@@ -43,13 +43,13 @@
                 <img src="/img/61,06.png" alt="61,06" class="title-block__pros-img">
                 <p class="title-block__pros-big-text title-block__pros-big-text--design">Дизайн интерьера</p>
                 <p class="title-block__pros-medium-text">в подарок</p>
-                <a href="/3d-tour" class="title-block__button">Смотреть в 3D</a>
+                <a href="/3d-tour" target="_blank" class="title-block__button">Смотреть в 3D</a>
             </div>
             <div class="title-block__pros-item">
                 <img src="/img/7-25.png" alt="Ипотека" class="title-block__pros-img">
                 <p class="title-block__pros-big-text">Ипотека</p>
                 <p class="title-block__pros-medium-text">от банка</p>
-                <a href="https://www.bcc.kz/product/ipoteka-standart/" target="_blank"  class="title-block__button">Узнать подробнее</a>
+                <a href="#call" class="title-block__button order_call_btn">Узнать подробнее</a>
             </div>
         </div>
     </section>
@@ -60,6 +60,9 @@
                 <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
                 <div class="text-col__text text-block">{!! $about->text_field !!}</div>
                 <address class="text-col__address">{!! $about->address_field !!}</address>
+                <a href="https://www.bcc.kz/product/ipoteka-7-20-25/" target="_blank" class="text-col__bank-link">
+                    <img src="/img/centercredit.png" alt="Банк centercredit" class="text-col__bank-img">
+                </a>
             </div>
             <div class="about__tagline js_revealOnScroll" data-viewport-offset="30" data-animation="display">
                 <p class="about__tagline-text-wrap"><span class="about__tagline-text">Когда<br>все дороги<br>ведут<br>в центр!</span></p>
