@@ -1,35 +1,5 @@
-@media screen and (max-width: 1240px) {
-  .title-block{
-    &__stock-wrap{
-      top: -100px;
-      right: -155px;
-    }
-
-    &__stock{
-      width: 160px;
-      height: 182px;
-      letter-spacing: .01em;
-    }
-
-    &__stock-text-top{
-      padding-top: 60px;
-      font-size: 16px;
-    }
-
-    &__stock-text-bottom{
-      font-size: 28px;
-    }
-  }
-}
-
 @media screen and (max-width: 1180px) {
   .title-block{
-    .title-block{
-      &__stock-wrap{
-        right: -175px;
-      }
-    }
-
     &__text-wrap{
       width: 870px;
 
@@ -39,6 +9,17 @@
 
       &::after{
         left: 423px;
+      }
+    }
+
+    &__title{
+      font-size: 32px;
+
+      &::before{
+        top: -70px;
+        left: -140px;
+        width: 120px;
+        height: 94px;
       }
     }
 
@@ -57,11 +38,14 @@
   .title-block{
     &__pros-item{
       max-width: 350px;
-      height: 235px;
     }
 
     &__pros-big-text{
       font-size: 46px;
+
+      &--design{
+        font-size: 28px;
+      }
     }
 
     &__pros-medium-text{
@@ -74,13 +58,6 @@
 
 @media screen and (max-width: 980px) {
   .title-block{
-    .title-block{
-      &__stock-wrap{
-        top: -40px;
-        right: -160px;
-      }
-    }
-
     &__text-wrap{
       max-width: 700px;
 
@@ -93,6 +70,15 @@
       }
     }
 
+    &__title{
+      font-size: 28px;
+
+      &::before{
+        left: -120px;
+        width: 100px;
+      }
+    }
+
     &__text{
       transform: scale(.6) translateX(-25%);
       width: 700px;
@@ -100,7 +86,6 @@
 
     &__pros-item{
       max-width: 290px;
-      height: 190px;
       padding-top: 15px;
 
       &:first-child{
@@ -114,6 +99,10 @@
 
     &__pros-big-text{
       font-size: 32px;
+
+      &--design{
+        font-size: 22px;
+      }
     }
 
     &__pros-medium-text{
@@ -187,6 +176,20 @@
       &::after{
         left: 272px;
         top: 160px;
+      }
+    }
+
+    &__title{
+      padding: 0;
+      font-size: 24px;
+      background: none;
+      color: #ff003c;
+
+      &::before{
+        left: -80px;
+        top: -40px;
+        width: 60px;
+        height: 47px;
       }
     }
 
@@ -281,9 +284,8 @@
       width: 38px;
       height: 38px;
       padding: 0;
-      background: transparent url("/img/phone_white.png") center no-repeat;
+      background: #e2ce70 url("/img/phone_black.png") center no-repeat;
       box-shadow: none;
-      border: 1px solid #433c33;
 
       &:hover{
         box-shadow: none;
@@ -302,27 +304,6 @@
 
 @media screen and (max-width: 620px) {
   .title-block{
-    .title-block{
-      &__stock-wrap{
-        top: -130px;
-        right: -215px;
-      }
-
-      &__stock{
-        width: 228px;
-        height: 260px;
-      }
-
-      &__stock-text-top{
-        padding-top: 90px;
-        font-size: 24px;
-      }
-
-      &__stock-text-bottom{
-        font-size: 40px;
-      }
-    }
-
     &__text-wrap{
       margin-top: 65px;
       max-width: 380px;
@@ -342,6 +323,13 @@
       }
     }
 
+    &__title{
+      &::before{
+        left: -50px;
+        top: -55px;
+      }
+    }
+
     &__text{
       margin-top: 0;
       font-size: 28px;
@@ -350,20 +338,40 @@
     }
 
     &__pros{
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
-      top: -40px;
+      top: -75px;
     }
 
     &__pros-item{
-      &--complete{
-        order: 1;
-        padding-top: 40px;
+      max-width: 370px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      &--design{
+        order: -1;
       }
 
       &:nth-child(n){
-        margin: 15px 0 0;
+        margin: 20px 0 0;
       }
+    }
+
+    &__pros-big-text{
+      font-size: 48px;
+
+      &--design{
+        font-size: 34px;
+      }
+    }
+
+    &__pros-medium-text{
+      font-size: 24px;
+    }
+
+    &__pros-small-text{
+      font-size: 11px;
+      line-height: 1;
     }
   }
 }
@@ -395,30 +403,27 @@
       font-size: 150px;
     }
 
-    .title-block{
-      &__stock-wrap{
-        top: -220px;
-        right: -265px;
-      }
-
-      &__stock{
-        width: 260px;
-        height: 296px;
-      }
-
-      &__stock-text-top{
-        padding-top: 105px;
-        font-size: 28px;
-      }
-
-      &__stock-text-bottom{
-        font-size: 48px;
-      }
-    }
-
     &__text{
       margin-top: 40px;
       transform: scale(0.32) translateX(-108%) translateY(-30%);
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .title-block{
+    &__title{
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .title-block{
+    &__title{
+      &::before{
+        left: -15px;
+        top: -50px;
+      }
     }
   }
 }

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node3">
+  <panorama id="node3">
+    <view fovmode="1" pannorth="0">
+      <start pan="0" fov="102.4478577779883" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Зал" target="" pan="-6.55011" skinid="" url="{node5}" id="Point01" tilt="-2.88622"/>
+      <hotspot title="Кухня" target="" pan="-89.2349" skinid="" url="{node1}" id="Point02" tilt="-0.61159"/>
+      <hotspot title="Сан-узел" target="" pan="-135.386" skinid="" url="{node4}" id="Point03" tilt="-0.289821"/>
+    </hotspots>
+    <media/>
+    <input tile0url="images/Prixojka_aygerim_View05_o_0.jpg" prev5url="images/Prixojka_aygerim_View05_o_preview_5.jpg" prev4url="images/Prixojka_aygerim_View05_o_preview_4.jpg" prev3url="images/Prixojka_aygerim_View05_o_preview_3.jpg" prev2url="images/Prixojka_aygerim_View05_o_preview_2.jpg" prev1url="images/Prixojka_aygerim_View05_o_preview_1.jpg" prev0url="images/Prixojka_aygerim_View05_o_preview_0.jpg" tile5url="images/Prixojka_aygerim_View05_o_5.jpg" tilesize="2000" tile4url="images/Prixojka_aygerim_View05_o_4.jpg" tile3url="images/Prixojka_aygerim_View05_o_3.jpg" tilescale="1.005" tile2url="images/Prixojka_aygerim_View05_o_2.jpg" tile1url="images/Prixojka_aygerim_View05_o_1.jpg"/>
+    <autorotate speed="0.050" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="5.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node1">
+    <view fovmode="1" pannorth="0">
+      <start pan="0" fov="102.4478577779883" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Лоджия" target="" pan="87.5446" skinid="" url="{node2}" id="Point01" tilt="-1.61253"/>
+      <hotspot title="Прихожая" target="" pan="-125.833" skinid="" url="{node3}" id="Point02" tilt="-2.69656"/>
+    </hotspots>
+    <media/>
+    <input tile0url="images/kuhnya_lodjia_View11_o_0.jpg" prev5url="images/kuhnya_lodjia_View11_o_preview_5.jpg" prev4url="images/kuhnya_lodjia_View11_o_preview_4.jpg" prev3url="images/kuhnya_lodjia_View11_o_preview_3.jpg" prev2url="images/kuhnya_lodjia_View11_o_preview_2.jpg" prev1url="images/kuhnya_lodjia_View11_o_preview_1.jpg" prev0url="images/kuhnya_lodjia_View11_o_preview_0.jpg" tile5url="images/kuhnya_lodjia_View11_o_5.jpg" tilesize="2000" tile4url="images/kuhnya_lodjia_View11_o_4.jpg" tile3url="images/kuhnya_lodjia_View11_o_3.jpg" tilescale="1.005" tile2url="images/kuhnya_lodjia_View11_o_2.jpg" tile1url="images/kuhnya_lodjia_View11_o_1.jpg"/>
+    <autorotate speed="0.050" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="5.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node2">
+    <view fovmode="1" pannorth="0">
+      <start pan="0" fov="102.4478577779883" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Кухня" target="" pan="140.965" skinid="" url="{node1}" id="Point01" tilt="-2.35411"/>
+      <hotspot title="Зал" target="" pan="30.4608" skinid="" url="{node5}" id="Point02" tilt="0.663427"/>
+    </hotspots>
+    <media/>
+    <input tile0url="images/kuhnya_lodjia_View12_o_0.jpg" prev5url="images/kuhnya_lodjia_View12_o_preview_5.jpg" prev4url="images/kuhnya_lodjia_View12_o_preview_4.jpg" prev3url="images/kuhnya_lodjia_View12_o_preview_3.jpg" prev2url="images/kuhnya_lodjia_View12_o_preview_2.jpg" prev1url="images/kuhnya_lodjia_View12_o_preview_1.jpg" prev0url="images/kuhnya_lodjia_View12_o_preview_0.jpg" tile5url="images/kuhnya_lodjia_View12_o_5.jpg" tilesize="2000" tile4url="images/kuhnya_lodjia_View12_o_4.jpg" tile3url="images/kuhnya_lodjia_View12_o_3.jpg" tilescale="1.005" tile2url="images/kuhnya_lodjia_View12_o_2.jpg" tile1url="images/kuhnya_lodjia_View12_o_1.jpg"/>
+    <autorotate speed="0.050" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="5.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node4">
+    <view fovmode="1" pannorth="0">
+      <start pan="0" fov="102.4478577779883" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Прихожая" target="" pan="89.2612" skinid="" url="{node3}" id="Point01" tilt="1.91697"/>
+    </hotspots>
+    <media/>
+    <input tile0url="images/S_U_Aygerim_View06_o_0.jpg" prev5url="images/S_U_Aygerim_View06_o_preview_5.jpg" prev4url="images/S_U_Aygerim_View06_o_preview_4.jpg" prev3url="images/S_U_Aygerim_View06_o_preview_3.jpg" prev2url="images/S_U_Aygerim_View06_o_preview_2.jpg" prev1url="images/S_U_Aygerim_View06_o_preview_1.jpg" prev0url="images/S_U_Aygerim_View06_o_preview_0.jpg" tile5url="images/S_U_Aygerim_View06_o_5.jpg" tilesize="2000" tile4url="images/S_U_Aygerim_View06_o_4.jpg" tile3url="images/S_U_Aygerim_View06_o_3.jpg" tilescale="1.005" tile2url="images/S_U_Aygerim_View06_o_2.jpg" tile1url="images/S_U_Aygerim_View06_o_1.jpg"/>
+    <autorotate speed="0.050" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="5.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node5">
+    <view fovmode="1" pannorth="0">
+      <start pan="0" fov="102.4478577779883" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Лоджия" target="" pan="-36.1425" skinid="" url="{node2}" id="Point01" tilt="0.275482"/>
+      <hotspot title="Прихожая" target="" pan="170.989" skinid="" url="{node3}" id="Point02" tilt="-0.7025"/>
+      <hotspot title="Гардеробная" target="" pan="-143.905" skinid="" url="{node6}" id="Point03" tilt="0.215738"/>
+    </hotspots>
+    <media/>
+    <input tile0url="images/zal_o_0.jpg" prev5url="images/zal_o_preview_5.jpg" prev4url="images/zal_o_preview_4.jpg" prev3url="images/zal_o_preview_3.jpg" prev2url="images/zal_o_preview_2.jpg" prev1url="images/zal_o_preview_1.jpg" prev0url="images/zal_o_preview_0.jpg" tile5url="images/zal_o_5.jpg" tilesize="2000" tile4url="images/zal_o_4.jpg" tile3url="images/zal_o_3.jpg" tilescale="1.005" tile2url="images/zal_o_2.jpg" tile1url="images/zal_o_1.jpg"/>
+    <autorotate speed="0.050" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="5.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node6">
+    <view fovmode="1" pannorth="0">
+      <start pan="0" fov="102.4478577779883" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Зал" target="" pan="87.5171" skinid="" url="{node5}" id="Point01" tilt="5.51498"/>
+    </hotspots>
+    <media/>
+    <input tile0url="images/Garderob_View11_o_0.jpg" prev5url="images/Garderob_View11_o_preview_5.jpg" prev4url="images/Garderob_View11_o_preview_4.jpg" prev3url="images/Garderob_View11_o_preview_3.jpg" prev2url="images/Garderob_View11_o_preview_2.jpg" prev1url="images/Garderob_View11_o_preview_1.jpg" prev0url="images/Garderob_View11_o_preview_0.jpg" tile5url="images/Garderob_View11_o_5.jpg" tilesize="2000" tile4url="images/Garderob_View11_o_4.jpg" tile3url="images/Garderob_View11_o_3.jpg" tilescale="1.005" tile2url="images/Garderob_View11_o_2.jpg" tile1url="images/Garderob_View11_o_1.jpg"/>
+    <autorotate speed="0.050" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="5.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+</tour>
