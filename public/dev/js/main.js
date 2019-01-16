@@ -17,7 +17,7 @@ $(document).ready(function () {
             toFixedFix = function (n, prec) {
                 var k = Math.pow(10, prec);
                 return '' + (Math.round(n * k) / k)
-                        .toFixed(prec);
+                    .toFixed(prec);
             };
         // Fix for IE parseFloat(0.55).toFixed(0) = 0;
         s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
@@ -31,7 +31,7 @@ $(document).ready(function () {
         }
         //////
         if ((s[1] || '')
-                .length < prec) {
+            .length < prec) {
             s[1] = s[1] || '';
             s[1] += new Array(prec - s[1].length + 1)
                 .join('0');
@@ -71,17 +71,17 @@ $(document).ready(function () {
         var anchor = path.split('/')[4];
         setTimeout(function () {
             $('html, body').stop().animate({
-                scrollTop: $('#'+anchor).offset().top-120
+                scrollTop: $('#' + anchor).offset().top - 120
             }, 1000);
         }, 500);
     }
 
-    $('.js_goto_anchor').bind("click", function(e){
+    $('.js_goto_anchor').bind("click", function (e) {
         $('html, body').stop().animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 1000);
         e.preventDefault();
-        if ($window.width() <= 810){
+        if ($window.width() <= 810) {
             $('.js_fixed-menu').removeClass('is-open');
             $('.js_menu').removeClass('is-open');
             $('.title-header__nav-wrap').removeClass('is-open').slideUp();
@@ -105,22 +105,22 @@ $(document).ready(function () {
             cur_sec = '',
             hash;
 
-        sections.each(function(){
+        sections.each(function () {
             var sec_name = $(this).attr('href');
-            if( $(sec_name).offset().top - offset < cursor){
+            if ($(sec_name).offset().top - offset < cursor) {
                 sections.removeClass('is-active');
                 $(this).addClass('is-active');
                 cur_sec = sec_name;
             }
         });
         hash = cur_sec.slice(1);
-        window.location.hash = '/'+hash;
+        window.location.hash = '/' + hash;
 
-        if($window.scrollTop() >= $('#title').outerHeight()){
+        if ($window.scrollTop() >= $('#title').outerHeight()) {
             $('.fixed-header').slideDown();
-        }else{
+        } else {
             $('.fixed-header').slideUp();
-            if ($window.width() <= 810){
+            if ($window.width() <= 810) {
                 $('.js_fixed-menu').removeClass('is-open');
                 $('.fixed-header__nav-wrap').removeClass('is-open').hide();
             }
@@ -142,7 +142,7 @@ $(document).ready(function () {
 
     var state = false;
     $('.js_area_btn').on('click', function () {
-        if ($window.width() <= 820 && state){
+        if ($window.width() <= 820 && state) {
             setTimeout(function () {
                 $('body,html').animate({
                     scrollTop: $('.layout-choice__layout-view').offset().top - 70
@@ -153,8 +153,14 @@ $(document).ready(function () {
         $('.layout-choice__img').attr('src', $(this).data('img'));
         $('.layout-choice__area-text').text($(this).data('area'));
         $('.layout-choice__info').text($(this).data('info'));
-        var half_tg = number_format(Math.round($(this).data('cost') * $(this).data('area') * EXCHANGE_COST), 0, ',', ' ');
-        $('.layout-choice__price').text(half_tg);
+        var price,
+            meterInTg = $(this).data('costInTg');
+        if (+meterInTg > 0) {
+            price = number_format(Math.round(meterInTg * $(this).data('area')), 0, ',', ' ');
+        } else {
+            price = number_format(Math.round($(this).data('cost') * $(this).data('area') * EXCHANGE_COST), 0, ',', ' ');
+        }
+        $('.layout-choice__price').text(price);
         $('.js_area_btn').removeClass('is-active');
         $(this).addClass('is-active');
 
@@ -172,7 +178,7 @@ $(document).ready(function () {
 
     /* Fotorama */
 
-    if ($('#gallery').length){
+    if ($('#gallery').length) {
         // 1. Initialize fotorama manually.
         var $fotorama = $('.js_gallery__fotorama').on('fotorama:show', function () {
             $('.fotorama__circle-animation').addClass('animate');
@@ -237,7 +243,7 @@ $(document).ready(function () {
                 $('.js_fotorama_thumbs .stages__images-item').remove();
 
                 var imageArray = [];
-                for (var stageImg in stageObj[$(this).attr('id')]['images']){
+                for (var stageImg in stageObj[$(this).attr('id')]['images']) {
                     var imageSrc = stageObj[$(this).attr('id')]['images'][stageImg].src;
                     imageArray.push({img: imageSrc});
                     $(".js_fotorama_thumbs").append($('<li class="stages__images-item js_open_fotoramaStage"><img src="' + imageSrc + '" alt="" width="270" height="200" class="stages__img"></li>'));
@@ -301,7 +307,7 @@ $(document).ready(function () {
         }
         myMap.geoObjects.add(myPlacemark);
 
-        $window.on('resize', function (){
+        $window.on('resize', function () {
             if ($window.width() < 1000) {
                 myMap.geoObjects.removeAll();
                 myPlacemark = new ymaps.Placemark([43.24474076, 76.93127042], {}, {

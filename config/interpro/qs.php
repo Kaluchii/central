@@ -40,7 +40,7 @@ return [
             'layout' => [
                 'image' => ['layout_scheme'],
                 'string' => ['info'],
-                'float' => ['area', 'meter_cost'],
+                'float' => ['area', 'meter_cost', 'meter_in_tg'],
                 'dom_flat' => ['superior']
             ]
         ]

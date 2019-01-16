@@ -40,6 +40,17 @@
         </div>
 
         <div class="form-group">
+            <label>Стоимость 1 м² в тенге (включается при значении > 0, перекрывает стоимость в долларах)</label>
+            <input class="form-control float"
+                   type="text" placeholder=""
+                   value="{{$item->meter_in_tg_field}}"
+                   data-name="meter_in_tg"
+                   data-type="float"
+                   data-block="layout"
+                   data-id="{{$item->id_field}}">
+        </div>
+
+        <div class="form-group">
             <label>Изображение</label>
             <div class="dropzone">
                 <div class="file-input">
