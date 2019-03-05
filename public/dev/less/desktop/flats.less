@@ -43,6 +43,12 @@
     &:nth-child(n+2){
       margin-top: 30px;
     }
+
+    &--price-descr{
+      &:nth-child(n){
+        margin-top: 20px;
+      }
+    }
   }
 
   &__section-title{
@@ -101,29 +107,49 @@
   }
 
   &__price{
-    margin-top: 5px;
+    margin-top: 11px;
     display: inline-block;
     font-size: 48px;
     color: #ebd989;
     font-family: "Gilroy";
     font-weight: 800;
     position: relative;
-    line-height: 1;
+    line-height: 0.75;
     letter-spacing: 0.05em;
 
     &::after{
-      content: '';
-      position: absolute;
-      width: 19px;
-      height: 22px;
-      background: url("/img/t.png");
-      bottom: 7px;
-      right: -23px;
+      content: 'a';
+      margin-left: 4px;
+      font-family: "tenge";
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+
+  &__discount-price{
+    margin-top: 11px;
+    display: inline-block;
+    padding: 8px 5px 7px;
+    font-size: 48px;
+    color: #fff;
+    font-family: "Gilroy";
+    font-weight: 800;
+    position: relative;
+    line-height: 0.75;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    background-color: rgba(255, 0, 60, 0.5);
+
+    &::after{
+      content: 'a';
+      margin-left: 4px;
+      font-family: "tenge";
+      font-size: 30px;
+      font-weight: 400;
     }
   }
 
   &__under-price{
-    margin-top: 5px;
     color: #ebd98a;
     font-size: 18px;
     font-family: "Lato";
@@ -132,6 +158,13 @@
 
   &__layout-view-wrap{
     margin-left: 35px;
+    width: 100%;
+  }
+
+  &__mobile-prices{
+    display: none;
+    margin-top: 30px;
+    max-width: 305px;
     width: 100%;
   }
 
@@ -168,6 +201,32 @@
     color: #201306;
     letter-spacing: 0.05em;
     font-family: "AvenirNext";
+  }
+
+  &__3d-tour-btn-wrap{
+    display: none;
+    position: absolute;
+    top: 33px;
+    right: 40px;
+  }
+
+  &__3d-tour-btn{
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .05em;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ff003c;
+    color: #201306;
+    font-family: "AvenirNext";
+    transition: .2s;
+
+    &:hover{
+      background-color: rgba(255, 0, 60, 0.15);
+    }
   }
 
   &__area{

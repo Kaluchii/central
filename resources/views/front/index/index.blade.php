@@ -2,7 +2,7 @@
 @section('content')
 @include('front.index.stages_obj')
 @yield('stageObj')
-    <div class="top-phone"><a href="tel:{{ $contacts->phone_field }}" class="top-phone-link">{{ $contacts->phone_field }}</a></div>
+    <div class="top-phone"><a href="tel:{{ $contacts->phone }}" class="top-phone-link">{{ $contacts->phone }}</a></div>
     <section class="title-block" id="title">
         <header class="title-block__header title-header">
             <div class="title-block__menu-button js_menu"></div>
@@ -21,15 +21,15 @@
                 <img src="/img/light_logo.png" alt="Жилой комплекс Центральный" class="title-header__logo">
             </div>
             <div class="title-header__feedback-wrap">
-                <p class="title-header__phone-number">{{ $contacts->phone_field }}</p>
+                <p class="title-header__phone-number">{{ $contacts->phone }}</p>
                 <a href="#call" class="title-header__order-call button order_call_btn button"><span class="title-header__btn-text">Заказать звонок</span></a>
             </div>
         </header>
         <div class="title-block__text-wrap">
-            <h1 class="title-block__title">{!! $main_block->block_title_field !!}</h1>
+            <h1 class="title-block__title">{!! $main_block->block_title !!}</h1>
             <p class="title-block__text">
                 <span class="title-block__small-text">от</span
-                ><span class="title-block__price">{{ $main_block->text_field }}</span><span class="title-block__tenge">k</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span>
+                ><span class="title-block__price">{{ $main_block->text }}</span><span class="title-block__tenge">k</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span>
             </p>
         </div>
         <div class="title-block__pros">
@@ -40,10 +40,10 @@
                 <p class="title-block__pros-small-text">ПОДРОБНАЯ ИНФОРМАЦИЯ <br> ОБ АКЦИИ В ОТДЕЛЕ ПРОДАЖ</p>
             </div>
             <div class="title-block__pros-item title-block__pros-item--design">
-                <img src="/img/61,06.png" alt="61,06" class="title-block__pros-img">
-                <p class="title-block__pros-big-text title-block__pros-big-text--design">Дизайн интерьера</p>
-                <p class="title-block__pros-medium-text">в подарок</p>
-                <a href="/3d-tour" target="_blank" class="title-block__button">Смотреть в 3D</a>
+                <img src="/img/61,6.png" alt="61,6 Квартира в ЖК Центральный" class="title-block__pros-img">
+                <p class="title-block__pros-big-text">Квартира</p>
+                <p class="title-block__pros-medium-text">с ремонтом</p>
+                <a href="/3d-tour" target="_blank" class="title-block__button">Смотреть планировку</a>
             </div>
             <div class="title-block__pros-item">
                 <img src="/img/7-25.png" alt="Ипотека" class="title-block__pros-img">
@@ -57,9 +57,9 @@
     <section class="about" id="about">
         <div class="about__wrapper">
             <div class="about__text-col text-col js_revealOnScroll" data-viewport-offset="30" data-animation="display">
-                <h2 class="text-col__title">{{ $about->block_title_field }}</h2>
-                <div class="text-col__text text-block">{!! $about->text_field !!}</div>
-                <address class="text-col__address">{!! $about->address_field !!}</address>
+                <h2 class="text-col__title">{{ $about->block_title }}</h2>
+                <div class="text-col__text text-block">{!! $about->text !!}</div>
+                <address class="text-col__address">{!! $about->address !!}</address>
                 <a href="https://www.bcc.kz/product/ipoteka-7-20-25/" target="_blank" class="text-col__bank-link">
                     <img src="/img/centercredit.png" alt="Банк centercredit" class="text-col__bank-img">
                 </a>
@@ -72,38 +72,38 @@
                 <div class="about__in-detail-wrapper mobile-detail">
                     <div class="mobile-detail__item js_detail_item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth1">
-                            <p class="mobile-detail__title">{!! $about->title3_field !!}</p>
-                            <p class="mobile-detail__text">{!! $about->text3_field !!}</p>
+                            <p class="mobile-detail__title">{!! $about->title3 !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text3 !!}</p>
                         </div>
                     </div>
                     <div class="mobile-detail__item js_detail_item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth2">
-                            <p class="mobile-detail__title">{!! $about->title1_field !!}</p>
-                            <p class="mobile-detail__text">{!! $about->text1_field !!}</p>
+                            <p class="mobile-detail__title">{!! $about->title1 !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text1 !!}</p>
                         </div>
                     </div>
                     <div class="mobile-detail__item js_detail_item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth3">
-                            <p class="mobile-detail__title">{!! $about->title2_field !!}</p>
-                            <p class="mobile-detail__text">{!! $about->text2_field !!}</p>
+                            <p class="mobile-detail__title">{!! $about->title2 !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text2 !!}</p>
                         </div>
                     </div>
                     <div class="mobile-detail__item js_detail_item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth4">
-                            <p class="mobile-detail__title">{!! $about->title6_field !!}</p>
-                            <p class="mobile-detail__text">{!! $about->text6_field !!}</p>
+                            <p class="mobile-detail__title">{!! $about->title6 !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text6 !!}</p>
                         </div>
                     </div>
                     <div class="mobile-detail__item js_detail_item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth5">
-                            <p class="mobile-detail__title">{!! $about->title4_field !!}</p>
-                            <p class="mobile-detail__text">{!! $about->text4_field !!}</p>
+                            <p class="mobile-detail__title">{!! $about->title4 !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text4 !!}</p>
                         </div>
                     </div>
                     <div class="mobile-detail__item js_detail_item">
                         <div class="mobile-detail__item-wrapper mobile-detail__item-wrapper--nth6">
-                            <p class="mobile-detail__title">{!! $about->title5_field !!}</p>
-                            <p class="mobile-detail__text">{!! $about->text5_field !!}</p>
+                            <p class="mobile-detail__title">{!! $about->title5 !!}</p>
+                            <p class="mobile-detail__text">{!! $about->text5 !!}</p>
                         </div>
                     </div>
                     <div class="mobile-detail__close"></div>
@@ -113,21 +113,21 @@
                         <div class="in-detail__wrapper in-detail__wrapper--col">
                             <div class="in-detail__item in-detail__item--left-top">
                                 <div class="in-detail__text-wrapper">
-                                    <p class="in-detail__item-title">{!! $about->title1_field !!}</p>
-                                    <p class="in-detail__item-text">{!! $about->text1_field !!}</p>
+                                    <p class="in-detail__item-title">{!! $about->title1 !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text1 !!}</p>
                                 </div>
                             </div>
                             <div class="in-detail__item in-detail__item--left-bottom">
                                 <div class="in-detail__text-wrapper">
-                                    <p class="in-detail__item-title">{!! $about->title2_field !!}</p>
-                                    <p class="in-detail__item-text">{!! $about->text2_field !!}</p>
+                                    <p class="in-detail__item-title">{!! $about->title2 !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text2 !!}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="in-detail__item in-detail__item--middle">
                             <div class="in-detail__text-wrapper">
-                                <p class="in-detail__item-title">{!! $about->title3_field !!}</p>
-                                <p class="in-detail__item-text">{!! $about->text3_field !!}</p>
+                                <p class="in-detail__item-title">{!! $about->title3 !!}</p>
+                                <p class="in-detail__item-text">{!! $about->text3 !!}</p>
                             </div>
                         </div>
                     </div>
@@ -135,21 +135,21 @@
                         <div class="in-detail__wrapper in-detail__wrapper--row">
                             <div class="in-detail__item in-detail__item--right1">
                                 <div class="in-detail__text-wrapper">
-                                    <p class="in-detail__item-title">{!! $about->title4_field !!}</p>
-                                    <p class="in-detail__item-text">{!! $about->text4_field !!}</p>
+                                    <p class="in-detail__item-title">{!! $about->title4 !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text4 !!}</p>
                                 </div>
                             </div>
                             <div class="in-detail__item in-detail__item--right2">
                                 <div class="in-detail__text-wrapper">
-                                    <p class="in-detail__item-title">{!! $about->title5_field !!}</p>
-                                    <p class="in-detail__item-text">{!! $about->text5_field !!}</p>
+                                    <p class="in-detail__item-title">{!! $about->title5 !!}</p>
+                                    <p class="in-detail__item-text">{!! $about->text5 !!}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="in-detail__item in-detail__item--bottom-right">
                             <div class="in-detail__text-wrapper">
-                                <p class="in-detail__item-title">{!! $about->title6_field !!}</p>
-                                <p class="in-detail__item-text">{!! $about->text6_field !!}</p>
+                                <p class="in-detail__item-title">{!! $about->title6 !!}</p>
+                                <p class="in-detail__item-text">{!! $about->text6 !!}</p>
                             </div>
                         </div>
                     </div>
@@ -157,9 +157,10 @@
             </div>
         </div>
     </section>
+
     <section class="gallery" id="gallery">
         <div class="gallery__wrapper">
-            <h2 class="gallery__title">{{ $gallery->block_title_field }}</h2>
+            <h2 class="gallery__title">{{ $gallery->block_title }}</h2>
             <div class="gallery__fotorama-wrap">
                 <div class="js_gallery__fotorama fotorama"  data-auto="false" data-ratio="1140/510"
                      data-nav="thumbs" data-allowfullscreen="true"
@@ -167,8 +168,8 @@
                      data-thumbwidth="110" data-thumbheight="100" data-transition="crossfade">
                     <?php $slider_arr = [] ?>
                     @foreach($gallery->slider_group as $slide)
-                        <a href="{{$slide->slide_field->link}}?{{$slide->slide_field->cache_index}}"></a>
-                        <?php $slider_arr[] = $slide->slide_field->link.'?'.$slide->slide_field->cache_index ?>
+                        <a href="{{$slide->slide->link}}?{{$slide->slide->cache_index}}"></a>
+                        <?php $slider_arr[] = $slide->slide->link.'?'.$slide->slide->cache_index ?>
                     @endforeach
                 </div>
             </div>
@@ -177,9 +178,9 @@
                     <img src="{{ $slider_arr[$i] }}" alt="">
                 @endfor
                 @foreach($stages->dom_stages_group as $stage)
-                    @if($stage->show_field == 1)
+                    @if($stage->show == 1)
                         @foreach($stage->stage_images_group as $stage_img)
-                            <img src="{{$stage_img->stage_photo_field->link}}?{{$stage_img->stage_photo_field->cache_index}}" alt="">
+                            <img src="{{$stage_img->stage_photo->link}}?{{$stage_img->stage_photo->cache_index}}" alt="">
                         @endforeach
                     @endif
                     @break
@@ -215,14 +216,15 @@
             </div>
         </div>
     </section>
+
     <section class="stages">
         <div class="stages__wrapper">
-            <h3 class="stages__title">{{ $stages->block_title_field }}</h3>
+            <h3 class="stages__title">{{ $stages->block_title }}</h3>
             <div class="stages__row-wrap">
                 <div class="stages__row">
                     @foreach($stages->dom_stages_group as $stage)
-                        @if($stage->show_field == 1)
-                            <button class="stages__btn js_stage_btn" id="{{$stage->id_field}}">{{$stage->dom_stages_name_field}}</button>
+                        @if($stage->show == 1)
+                            <button class="stages__btn js_stage_btn" id="{{$stage->id}}">{{$stage->dom_stages_name}}</button>
                         @endif
                     @endforeach
                 </div>
@@ -273,17 +275,17 @@
         </div>
     </section>
 
-    <section class="flats" id="flats" data-exchange="{{$prices->dollar_field}}">
+    <section class="flats" id="flats" data-exchange="{{$prices->dollar}}">
         <div class="flats__wrapper">
             <div class="flats__layout-choice layout-choice">
-                <h2 class="layout-choice__title">{{ $flats->block_title_field }}</h2>
+                <h2 class="layout-choice__title">{{ $flats->block_title }}</h2>
                 <div class="layout-choice__wrap">
                     <div class="layout-choice__nav">
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">ВЫБЕРИТЕ КОЛИЧЕСТВО КОМНАТ</p>
                             <ul class="layout-choice__list">
                                 @foreach($flats->dom_flat_group as $item)
-                                    <li class="layout-choice__item"><button class="layout-choice__button js_rooms_btn" data-id="flat{{$item->id_field}}" data-singularly="{{$item->singularly_field}}">{{$item->dom_flat_name_field}}</button></li>
+                                    <li class="layout-choice__item"><button class="layout-choice__button js_rooms_btn" data-id="flat{{$item->id}}" data-singularly="{{$item->singularly}}">{{$item->dom_flat_name}}</button></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -292,25 +294,47 @@
                             <ul class="layout-choice__list">
                                 @foreach($flats->dom_flat_group as $item)
                                     @foreach($item->layout_group as $layout_item)
-                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id_field}}" data-img="{{$layout_item->layout_scheme->link_field}}?{{$layout_item->layout_scheme->cache_index}}" data-area="{{$layout_item->area_field}}" data-cost="{{$layout_item->meter_cost_field}}" data-cost-in-tg="{{$layout_item->meter_in_tg_field}}" data-info="{{$layout_item->info_field}}">{{$layout_item->area_field}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id}}" data-img="{{$layout_item->layout_scheme->link}}?{{$layout_item->layout_scheme->cache_index}}" data-area="{{$layout_item->area}}" data-cost="{{$layout_item->meter_cost}}" data-cost-in-tg="{{$layout_item->meter_in_tg}}" data-discount="{{$layout_item->discount}}" data-info="{{$layout_item->info}}">{{$layout_item->area}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
                                     @endforeach
                                 @endforeach
                             </ul>
                         </div>
-                        <div class="layout-choice__section">
+                        <div class="layout-choice__section layout-choice__section--hide-on-mob">
                             <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
                             <p class="layout-choice__price"></p>
-                            <p class="layout-choice__under-price">{{$flats->discount_text_field}}</p>
+                        </div>
+                        <div class="layout-choice__section layout-choice__section--hide-on-mob js_discount_price">
+                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ СО&nbsp;СКИДКОЙ&nbsp;ОТ:</p>
+                            <p class="layout-choice__discount-price"></p>
+                        </div>
+                        <div class="layout-choice__section layout-choice__section--hide-on-mob layout-choice__section--price-descr">
+                            <p class="layout-choice__under-price">{{$flats->discount_text}}</p>
                         </div>
                     </div>
                     <div class="layout-choice__layout-view-wrap">
                         <div class="layout-choice__layout-view">
                             <img src="" alt="" class="layout-choice__img">
                             <p class="layout-choice__info"></p>
+                            <div class="layout-choice__3d-tour-btn-wrap js_3d_tour_btn">
+                                <a href="/3d-tour" target="_blank" class="layout-choice__3d-tour-btn">Смотреть в 3D</a>
+                            </div>
                             <div class="layout-choice__descr-wrap">
                                 <p class="layout-choice__name"></p>
                                 <p class="layout-choice__area"><span class="layout-choice__area-text"></span>м<sup class="layout-choice__area-sup">2</sup></p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="layout-choice__mobile-prices">
+                        <div class="layout-choice__section">
+                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
+                            <p class="layout-choice__price"></p>
+                        </div>
+                        <div class="layout-choice__section js_discount_price">
+                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ СО&nbsp;СКИДКОЙ&nbsp;ОТ:</p>
+                            <p class="layout-choice__discount-price"></p>
+                        </div>
+                        <div class="layout-choice__section layout-choice__section--price-descr">
+                            <p class="layout-choice__under-price">{{$flats->discount_text}}</p>
                         </div>
                     </div>
                 </div>
@@ -348,9 +372,9 @@
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
             <div class="contacts__contact-block js_revealOnScroll" data-viewport-offset="30" data-animation="display">
-                <h2 class="contacts__title">{{ $contacts->block_title_field }}</h2>
-                <p class="contacts__phone">{{ $contacts->phone_field }}</p>
-                <p class="contacts__address">{!! $contacts->address_field !!}</p>
+                <h2 class="contacts__title">{{ $contacts->block_title }}</h2>
+                <p class="contacts__phone">{{ $contacts->phone }}</p>
+                <p class="contacts__address">{!! $contacts->address !!}</p>
             </div>
             <div class="contacts__map-wrapper">
                 <div class="contacts__map" id="map"></div>

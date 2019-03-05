@@ -51,6 +51,17 @@
         </div>
 
         <div class="form-group">
+            <label>Размер скидки в % (включается при значении > 0)</label>
+            <input class="form-control float"
+                   type="text" placeholder=""
+                   value="{{$item->discount_field}}"
+                   data-name="discount"
+                   data-type="float"
+                   data-block="layout"
+                   data-id="{{$item->id_field}}">
+        </div>
+
+        <div class="form-group">
             <label>Изображение</label>
             <div class="dropzone">
                 <div class="file-input">
