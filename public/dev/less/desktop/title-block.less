@@ -30,9 +30,6 @@
   }
 
   &__text-wrap{
-    margin: 125px auto 0;
-    max-width: 1100px;
-    text-align: center;
     position: relative;
 
     &::before{
@@ -71,82 +68,112 @@
     }
   }
 
-  &__title{
+  &__discount-info{
     position: relative;
-    display: inline-block;
-    padding: 6px 18px;
-    border-radius: 5px;
-    font-size: 35px;
-    letter-spacing: .2em;
-    line-height: 1.2;
-    color: #fff;
-    background-color: rgba(255, 0, 60, 0.5);
+    z-index: 1;
+    margin: 45px auto 0;
+    max-width: 615px;
+    width: 100%;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: rgba(243, 7, 62, 0.6);
+    font-family: "Gilroy";
 
     &::before{
       content: '';
       position: absolute;
-      top: -81px;
-      left: -219px;
+      top: 0;
+      left: -260px;
       width: 170px;
       height: 135px;
       background: url('/img/home_complete.png') no-repeat center / contain;
     }
   }
 
-  &__delimiter{}
-
-  &__tenge{
-    font-family: "tenge";
-    color: #ff003c;
-    font-size: 84px;
-    text-shadow: -4px -5px 27px rgba(187, 30, 67, 0.36);
+  &__discount-title{
+    font-size: 117px;
+    line-height: 1;
+    letter-spacing: 9px;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
   }
 
-  &__delimiter{
-    font-family: "Gilroy";
-    font-size: 90px;
-    font-weight: 800;
-    color: #ff003c;
-    text-shadow: -4px -5px 27px rgba(187, 30, 67, 0.36);
+  &__discount-subtitle{
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: #e4cb7e;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
   }
 
-  &__small-text{
-    font-family: "Gilroy";
-    letter-spacing: 0;
-    font-size: 80px;
-    font-weight: 800;
-    color: #ff003c;
+  &__meter{
     position: relative;
-    text-shadow: -4px -5px 27px rgba(187, 30, 67, 0.36);
+    font-size: inherit;
+    font-weight: inherit;
 
-    &--sqr{
-      margin-left: -10px;
-
-      sup{
-        font-family: "Gilroy";
-        font-size: 34px;
-        font-weight: 800;
-        color: #ff003c;
-        position: relative;
-        top: 6px;
-        text-shadow: -4px -5px 27px rgba(187, 30, 67, 0.36);
-      }
+    sup{
+      position: relative;
+      top: 1px;
+      font-weight: 800;
     }
   }
 
-  &__text{
-    margin: 5px auto 0;
-    font-family: "Gilroy";
-    line-height: 1;
-    white-space: nowrap;
-    width: 1100px;
+  &__discount-sizes{
+    margin-top: 40px;
+    display: flex;
+  }
+
+  &__discount-col-1{
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  &__discount-col-2{
+    position: relative;
+    width: 50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+
+  &__discount-size{
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color: #ffffff;
+  }
+
+  &__discount-col1-descr{
+    position: absolute;
+    top: -23px;
+    left: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  &__discount-col2-descr{
+    position: absolute;
+    top: -23px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  &__tenge{
+    font-family: "tenge";
+    font-size: 24px;
   }
 
   &__pros{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 55px;
+    margin-top: 80px;
     padding: 0 20px;
   }
 
@@ -212,19 +239,6 @@
     border-radius: 20px;
     font-family: "AvenirNext";
     background-color: #fff;
-  }
-
-  &__price{
-    margin-left: 15px;
-    font-family: "Gilroy";
-    font-weight: 900;
-    font-size: 200px;
-    letter-spacing: 0.024em;
-    word-spacing: 0.01em;
-    line-height: 1;
-    color: #ff003c;
-    text-shadow: -4px -5px 27px rgba(187, 30, 67, 0.36);
-    position: relative;
   }
 }
 

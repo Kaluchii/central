@@ -26,11 +26,20 @@
             </div>
         </header>
         <div class="title-block__text-wrap">
-            <h1 class="title-block__title">{!! $main_block->block_title !!}</h1>
-            <p class="title-block__text">
-                <span class="title-block__small-text">от</span
-                ><span class="title-block__price">{{ $main_block->text }}</span><span class="title-block__tenge">k</span><span class="title-block__delimiter">/</span><span class="title-block__small-text title-block__small-text--sqr">м<sup>2</sup></span>
-            </p>
+            <div class="title-block__discount-info">
+                <div class="title-block__discount-title">СКИДКИ</div>
+                <div class="title-block__discount-subtitle">на квартиры от 80<span class="title-block__meter">м<sup>2</sup></span></div>
+                <div class="title-block__discount-sizes">
+                    <div class="title-block__discount-col-1">
+                        <div class="title-block__discount-size">1 500 000<span class="title-block__tenge">d</span></div>
+                        <div class="title-block__discount-col1-descr">от</div>
+                    </div>
+                    <div class="title-block__discount-col-2">
+                        <div class="title-block__discount-size">3 000 000<span class="title-block__tenge">d</span></div>
+                        <div class="title-block__discount-col2-descr">до</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="title-block__pros">
             <div class="title-block__pros-item">
@@ -39,11 +48,11 @@
                 <p class="title-block__pros-medium-text">в подарок</p>
                 <p class="title-block__pros-small-text">ПОДРОБНАЯ ИНФОРМАЦИЯ <br> ОБ АКЦИИ В ОТДЕЛЕ ПРОДАЖ</p>
             </div>
-            <div class="title-block__pros-item title-block__pros-item--design">
+            <div class="title-block__pros-item">
                 <img src="/img/61,6.png" alt="61,6 Квартира в ЖК Центральный" class="title-block__pros-img">
                 <p class="title-block__pros-big-text">Квартира</p>
                 <p class="title-block__pros-medium-text">с ремонтом</p>
-                <a href="/3d-tour" target="_blank" class="title-block__button">Смотреть планировку</a>
+                <a href="#layout" class="title-block__button js_open_layout_61">Смотреть планировку</a>
             </div>
             <div class="title-block__pros-item">
                 <img src="/img/7-25.png" alt="Ипотека" class="title-block__pros-img">
@@ -280,7 +289,7 @@
             <div class="flats__layout-choice layout-choice">
                 <h2 class="layout-choice__title">{{ $flats->block_title }}</h2>
                 <div class="layout-choice__wrap">
-                    <div class="layout-choice__nav">
+                    <div class="layout-choice__nav" id="layout">
                         <div class="layout-choice__section">
                             <p class="layout-choice__section-title">ВЫБЕРИТЕ КОЛИЧЕСТВО КОМНАТ</p>
                             <ul class="layout-choice__list">
@@ -294,7 +303,15 @@
                             <ul class="layout-choice__list">
                                 @foreach($flats->dom_flat_group as $item)
                                     @foreach($item->layout_group as $layout_item)
-                                        <li class="layout-choice__item"><button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id}}" data-img="{{$layout_item->layout_scheme->link}}?{{$layout_item->layout_scheme->cache_index}}" data-area="{{$layout_item->area}}" data-cost="{{$layout_item->meter_cost}}" data-cost-in-tg="{{$layout_item->meter_in_tg}}" data-discount="{{$layout_item->discount}}" data-info="{{$layout_item->info}}">{{$layout_item->area}} м<sup class="layout-choice__btn-sup">2</sup></button></li>
+                                        <li class="layout-choice__item">
+                                            <button class="layout-choice__button js_area_btn layout-choice__button--area flat{{$layout_item->superior_item->id}}"
+                                                    data-img="{{$layout_item->layout_scheme->link}}?{{$layout_item->layout_scheme->cache_index}}"
+                                                    data-area="{{$layout_item->area}}" data-cost="{{$layout_item->meter_cost}}"
+                                                    data-cost-in-tg="{{$layout_item->meter_in_tg}}"
+                                                    data-discount="{{$layout_item->discount}}"
+                                                    data-info="{{$layout_item->info}}">{{$layout_item->area}} м<sup class="layout-choice__btn-sup">2</sup>
+                                            </button>
+                                        </li>
                                     @endforeach
                                 @endforeach
                             </ul>

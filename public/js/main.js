@@ -89,6 +89,26 @@ $(document).ready(function () {
         }
     });
 
+
+    $('.js_open_layout_61').on('click', function (e) {
+        e.preventDefault();
+
+        var additionalOffset = 0;
+
+        if ($window.width() > 820) {
+            additionalOffset = 100
+        }
+
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr('href')).offset().top - additionalOffset
+        }, 1000);
+
+        $('.layout-choice__item:first-child .js_rooms_btn').trigger('click');
+
+        $('.js_area_btn[data-area="61.6"]').trigger('click');
+    });
+
+
     $window.on('load resize', function () {
         if ($window.width() > 810) {
             $('.title-header__nav-wrap').attr('style', '');
@@ -140,11 +160,10 @@ $(document).ready(function () {
         $(this).addClass('is-active');
     });
 
-    var state = false;
-    $('.js_area_btn').on('click', function () {
-        if ($window.width() <= 820 && state) {
+    $('.js_area_btn').on('click', function (e) {
+        if (!e.isTrigger && ($window.width() <= 820)) {
             setTimeout(function () {
-                $('body,html').animate({
+                $('body,html').stop().animate({
                     scrollTop: $('.layout-choice__layout-view').offset().top - 70
                 }, 500);
             }, 200);
@@ -184,8 +203,6 @@ $(document).ready(function () {
         $('.layout-choice__price').text(price);
         $('.js_area_btn').removeClass('is-active');
         $(this).addClass('is-active');
-
-        state = true;
     });
 
 
