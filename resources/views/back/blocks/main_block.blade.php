@@ -24,6 +24,26 @@
                           data-block="main_block"
                           data-id="0">{{$main_block->text_field}}</textarea>
             </div>
+            <div class="form-group">
+                <label>Скидка "ОТ"</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$main_block->price_from_field}}"
+                       data-name="price_from"
+                       data-type="string"
+                       data-block="main_block"
+                       data-id="0">
+            </div>
+            <div class="form-group">
+                <label>Скидка "ДО"</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$main_block->price_up_field}}"
+                       data-name="price_up"
+                       data-type="string"
+                       data-block="main_block"
+                       data-id="0">
+            </div>
         </div>
     </div>
 @endsection

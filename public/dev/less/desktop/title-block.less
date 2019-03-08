@@ -7,6 +7,43 @@
   overflow: hidden;
   position: relative;
 
+  &::before{
+    content: '';
+    position: absolute;
+    width: 1500px;
+    height: 1500px;
+    left: ~'calc(50% - 750px)';
+    top: -206px;
+    background: url("/img/title_elipses.png") no-repeat;
+    background-size: cover;
+    animation: wave 4s ease-in infinite;
+    -webkit-animation: wave 4s ease-in infinite;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    left: ~'calc(50% - 9.5px)';
+    top: 531px;
+    box-shadow: 0 0 25px 3px #f7ec99;
+    background: rgba(247,236,153,1);
+    background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
+    background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+    animation: flash 1.5s ease-in infinite;
+    -webkit-animation: flash 4s ease-in infinite;
+    pointer-events: none;
+  }
+
   &__menu-button{
     display: none;
     width: 38px;
@@ -29,56 +66,16 @@
     margin: 0 auto;
   }
 
-  &__text-wrap{
-    position: relative;
-
-    &::before{
-      content: '';
-      position: absolute;
-      width: 1500px;
-      height: 1500px;
-      left: -202px;
-      top: -486px;
-      background: url("/img/title_elipses.png") no-repeat;
-      background-size: cover;
-      animation: wave 4s ease-in infinite;
-      -webkit-animation: wave 4s ease-in infinite;
-      opacity: 0;
-    }
-
-    &::after{
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      width: 19px;
-      height: 19px;
-      left: 538px;
-      top: 251px;
-      box-shadow: 0 0 25px 3px #f7ec99;
-      background: rgba(247,236,153,1);
-      background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
-      background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
-      animation: flash 1.5s ease-in infinite;
-      -webkit-animation: flash 4s ease-in infinite;
-    }
-  }
-
   &__discount-info{
     position: relative;
     z-index: 1;
     margin: 45px auto 0;
     max-width: 615px;
     width: 100%;
-    padding: 30px 25px;
+    padding: 35px 25px 20px;
     box-sizing: border-box;
     border-radius: 30px;
     background-color: rgba(243, 7, 62, 0.6);
-    font-family: "Gilroy";
 
     &::before{
       content: '';
@@ -96,54 +93,95 @@
     line-height: 1;
     letter-spacing: 9px;
     color: #ffffff;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
+    font-family: "Gilroy";
   }
 
   &__discount-subtitle{
+    margin-top: 3px;
     font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
     letter-spacing: 2px;
     color: #e4cb7e;
-    font-weight: 600;
     white-space: nowrap;
     text-align: center;
+    font-family: "Gilroy";
   }
 
   &__meter{
     position: relative;
     font-size: inherit;
     font-weight: inherit;
+    font-family: inherit;
 
     sup{
       position: relative;
-      top: 1px;
-      font-weight: 800;
+      top: 0;
+      font-size: 20px;
+      font-family: inherit;
     }
   }
 
   &__discount-sizes{
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
   }
 
   &__discount-col-1{
     position: relative;
-    width: 50%;
+    width: 49%;
+    padding-top: 5px;
     box-sizing: border-box;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: -13px;
+      right: 0;
+      width: ~'calc(100% - 36px)';
+      height: 60px;
+      border-top: 1px solid #e3cb7e;
+      border-right: 1px solid #e3cb7e;
+      pointer-events: none;
+    }
   }
 
   &__discount-col-2{
     position: relative;
-    width: 50%;
-    padding-left: 10px;
+    width: 51%;
+    padding-top: 5px;
+    padding-left: 20px;
     box-sizing: border-box;
+
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      top: -13px;
+    }
+
+    &::before{
+      right: 0;
+      width: ~'calc(100% - 52px)';
+      border-top: 1px solid #e3cb7e;
+      pointer-events: none;
+    }
+
+    &::after{
+      left: 0;
+      width: 12px;
+      border-top: 1px solid #e3cb7e;
+      pointer-events: none;
+    }
   }
 
   &__discount-size{
     font-size: 50px;
     letter-spacing: 1px;
-    line-height: 50px;
+    line-height: 1;
     color: #ffffff;
+    font-family: "Gilroy";
   }
 
   &__discount-col1-descr{
@@ -153,15 +191,17 @@
     font-size: 16px;
     font-weight: 800;
     color: #fff;
+    font-family: "Gilroy";
   }
 
   &__discount-col2-descr{
     position: absolute;
     top: -23px;
-    left: 10px;
+    left: 20px;
     font-size: 16px;
     font-weight: 800;
     color: #fff;
+    font-family: "Gilroy";
   }
 
   &__tenge{
@@ -171,6 +211,7 @@
 
   &__pros{
     position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     margin-top: 80px;

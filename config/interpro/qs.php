@@ -3,7 +3,7 @@
 return [
 
     'main_block' => [
-        'string' => ['block_title'],
+        'string' => ['block_title', 'price_from', 'price_up'],
         'text' => ['text']
     ],
 

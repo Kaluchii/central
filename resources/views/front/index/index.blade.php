@@ -25,19 +25,17 @@
                 <a href="#call" class="title-header__order-call button order_call_btn button"><span class="title-header__btn-text">Заказать звонок</span></a>
             </div>
         </header>
-        <div class="title-block__text-wrap">
-            <div class="title-block__discount-info">
-                <div class="title-block__discount-title">СКИДКИ</div>
-                <div class="title-block__discount-subtitle">на квартиры от 80<span class="title-block__meter">м<sup>2</sup></span></div>
-                <div class="title-block__discount-sizes">
-                    <div class="title-block__discount-col-1">
-                        <div class="title-block__discount-size">1 500 000<span class="title-block__tenge">d</span></div>
-                        <div class="title-block__discount-col1-descr">от</div>
-                    </div>
-                    <div class="title-block__discount-col-2">
-                        <div class="title-block__discount-size">3 000 000<span class="title-block__tenge">d</span></div>
-                        <div class="title-block__discount-col2-descr">до</div>
-                    </div>
+        <div class="title-block__discount-info">
+            <div class="title-block__discount-title">СКИДКИ</div>
+            <div class="title-block__discount-subtitle">на квартиры от 80<span class="title-block__meter">м<sup>2</sup></span></div>
+            <div class="title-block__discount-sizes">
+                <div class="title-block__discount-col-1">
+                    <div class="title-block__discount-size">{{ $main_block->price_from }}<span class="title-block__tenge">d</span></div>
+                    <div class="title-block__discount-col1-descr">ОТ</div>
+                </div>
+                <div class="title-block__discount-col-2">
+                    <div class="title-block__discount-size">{{ $main_block->price_up }}<span class="title-block__tenge">d</span></div>
+                    <div class="title-block__discount-col2-descr">ДО</div>
                 </div>
             </div>
         </div>
