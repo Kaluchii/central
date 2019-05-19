@@ -25,20 +25,89 @@
                 <a href="#call" class="title-header__order-call button order_call_btn button"><span class="title-header__btn-text">Заказать звонок</span></a>
             </div>
         </header>
-        <div class="title-block__discount-info">
-            <div class="title-block__discount-title">СКИДКИ</div>
-            <div class="title-block__discount-subtitle">на квартиры от 80<span class="title-block__meter">м<sup>2</sup></span></div>
-            <div class="title-block__discount-sizes">
-                <div class="title-block__discount-col-1">
-                    <div class="title-block__discount-size">{{ $main_block->price_from }}<span class="title-block__tenge">d</span></div>
-                    <div class="title-block__discount-col1-descr">ОТ</div>
+        <div class="title-block__box">
+            <h1 class="title-block__box-title">{!! $main_block->block_title !!}</h1>
+            <div class="title-block__box-prices-wrap title-block__box-prices-wrap--desktop">
+                <div class="title-block__box-prices-slider js_prices_slider">
+                    <div class="flat-price">
+                        <div class="flat-price__name">1-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_1 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
+                    <div class="flat-price">
+                        <div class="flat-price__name">2-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_2 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
+                    <div class="flat-price">
+                        <div class="flat-price__name">3-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_3 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
+                    <div class="flat-price">
+                        <div class="flat-price__name">4-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_4 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="title-block__discount-col-2">
-                    <div class="title-block__discount-size">{{ $main_block->price_up }}<span class="title-block__tenge">d</span></div>
-                    <div class="title-block__discount-col2-descr">ДО</div>
+            </div>
+
+            <div class="title-block__box-prices-wrap title-block__box-prices-wrap--mobile">
+                <div class="title-block__box-price-item">
+                    <div class="flat-price">
+                        <div class="flat-price__name">1-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_1 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-block__box-price-item">
+                    <div class="flat-price">
+                        <div class="flat-price__name">2-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_2 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-block__box-price-item">
+                    <div class="flat-price">
+                        <div class="flat-price__name">3-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_3 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-block__box-price-item">
+                    <div class="flat-price">
+                        <div class="flat-price__name">4-комнатные квартиры</div>
+                        <div class="flat-price__sum-wrap">
+                            <span class="flat-price__pretext">ОТ</span>
+                            <span class="flat-price__sum">{!! $main_block->price_4 !!}</span>
+                            <span class="flat-price__tenge">d</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="title-block__pros">
             <div class="title-block__pros-item">
                 <img src="/img/parking.png" alt="Парковка ЖК Центральный" class="title-block__pros-img">
@@ -46,11 +115,10 @@
                 <p class="title-block__pros-medium-text">в подарок</p>
                 <p class="title-block__pros-small-text">ПОДРОБНАЯ ИНФОРМАЦИЯ <br> ОБ АКЦИИ В ОТДЕЛЕ ПРОДАЖ</p>
             </div>
-            <div class="title-block__pros-item">
-                <img src="/img/61,6.png" alt="61,6 Квартира в ЖК Центральный" class="title-block__pros-img">
-                <p class="title-block__pros-big-text">Квартира</p>
-                <p class="title-block__pros-medium-text">с ремонтом</p>
-                <a href="#layout" class="title-block__button js_open_layout_61">Смотреть планировку</a>
+            <div class="title-block__pros-item title-block__pros-item--discount">
+                <img src="/img/5percent.png" alt="Скидка 5% в ЖК Центральный" class="title-block__pros-img">
+                <p class="title-block__pros-big-text">Скидка</p>
+                <p class="title-block__pros-medium-text">на 2-3-4-комнатные квартиры</p>
             </div>
             <div class="title-block__pros-item">
                 <img src="/img/7-25.png" alt="Ипотека" class="title-block__pros-img">

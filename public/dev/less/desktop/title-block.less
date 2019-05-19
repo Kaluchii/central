@@ -66,16 +66,14 @@
     margin: 0 auto;
   }
 
-  &__discount-info{
+  &__box{
     position: relative;
     z-index: 1;
     margin: 45px auto 0;
-    max-width: 615px;
+    max-width: 560px;
     width: 100%;
-    padding: 35px 25px 20px;
+    padding-top: 15px;
     box-sizing: border-box;
-    border-radius: 30px;
-    background-color: rgba(243, 7, 62, 0.6);
 
     &::before{
       content: '';
@@ -88,126 +86,70 @@
     }
   }
 
-  &__discount-title{
-    font-size: 117px;
-    line-height: 1;
-    letter-spacing: 9px;
-    color: #ffffff;
-    font-weight: 200;
+  &__box-title{
+    font-size: 48px;
+    line-height: 1.25;
     text-align: center;
-    font-family: "Gilroy";
-  }
-
-  &__discount-subtitle{
-    margin-top: 3px;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 2px;
-    color: #e4cb7e;
-    white-space: nowrap;
-    text-align: center;
-    font-family: "Gilroy";
-  }
-
-  &__meter{
-    position: relative;
-    font-size: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-
-    sup{
-      position: relative;
-      top: 0;
-      font-size: 20px;
-      font-family: inherit;
-    }
-  }
-
-  &__discount-sizes{
-    margin-top: 50px;
-    display: flex;
-  }
-
-  &__discount-col-1{
-    position: relative;
-    width: 49%;
-    padding-top: 5px;
-    box-sizing: border-box;
-
-    &::after{
-      content: '';
-      position: absolute;
-      top: -13px;
-      right: 0;
-      width: ~'calc(100% - 36px)';
-      height: 60px;
-      border-top: 1px solid #e3cb7e;
-      border-right: 1px solid #e3cb7e;
-      pointer-events: none;
-    }
-  }
-
-  &__discount-col-2{
-    position: relative;
-    width: 51%;
-    padding-top: 5px;
-    padding-left: 20px;
-    box-sizing: border-box;
-
-    &::before, &::after{
-      content: '';
-      position: absolute;
-      top: -13px;
-    }
-
-    &::before{
-      right: 0;
-      width: ~'calc(100% - 52px)';
-      border-top: 1px solid #e3cb7e;
-      pointer-events: none;
-    }
-
-    &::after{
-      left: 0;
-      width: 12px;
-      border-top: 1px solid #e3cb7e;
-      pointer-events: none;
-    }
-  }
-
-  &__discount-size{
-    font-size: 50px;
-    letter-spacing: 1px;
-    line-height: 1;
     color: #ffffff;
-    font-family: "Gilroy";
   }
 
-  &__discount-col1-descr{
-    position: absolute;
-    top: -23px;
-    left: 0;
-    font-size: 16px;
-    font-weight: 800;
-    color: #fff;
-    font-family: "Gilroy";
+  &__box-prices-wrap{
+    padding: 30px 20px 50px;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: rgba(243, 7, 62, 0.6);
+
+    &--desktop{}
+
+    &--mobile{
+      display: none;
+    }
   }
 
-  &__discount-col2-descr{
-    position: absolute;
-    top: -23px;
-    left: 20px;
-    font-size: 16px;
-    font-weight: 800;
-    color: #fff;
-    font-family: "Gilroy";
+  &__box-prices-slider{
+    .flat-price{
+      &:nth-child(n + 2){
+        display: none;
+      }
+    }
+
+    .slick-dots{
+      bottom: -30px;
+
+      li{
+        &.slick-active{
+          button{
+            &:before{
+              opacity: 1;
+            }
+          }
+        }
+
+        button{
+          &:before{
+            content: '';
+            top: 6px;
+            left: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            opacity: .4;
+            transition: .1s;
+          }
+
+          &:hover{
+            &:before{
+              opacity: .75;
+            }
+          }
+        }
+      }
+    }
   }
 
-  &__tenge{
-    font-family: "tenge";
-    font-size: 24px;
-  }
+  &__box-price-item{}
+
 
   &__pros{
     position: relative;
@@ -225,7 +167,7 @@
     width: 100%;
     text-align: center;
     border-radius: 4px;
-    background-color: rgba(234, 198, 95, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     box-sizing: border-box;
     padding: 25px 10px 20px;
 
@@ -235,6 +177,10 @@
 
     &:last-child{
       margin-left: 20px;
+    }
+
+    &--discount{
+      background-color: rgba(234, 198, 95, 0.9);
     }
   }
 
@@ -279,9 +225,47 @@
     color: #2f2013;
     border-radius: 20px;
     font-family: "AvenirNext";
-    background-color: #fff;
+    background-color: #e9d485;
   }
 }
+
+
+.flat-price{
+  font-family: 'Gilroy';
+  color: #ffffff;
+  text-align: center;
+
+  &__name{
+    font-size: 24px;
+    font-family: inherit;
+  }
+
+  &__sum-wrap{
+    margin-top: 8px;
+    font-family: inherit;
+  }
+
+  &__pretext{
+    font-size: 24px;
+    font-family: inherit;
+  }
+
+  &__sum{
+    padding: 0 3px 0 5px;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    color: #ffdb77;
+    font-family: inherit;
+  }
+
+  &__tenge{
+    font-family: "tenge";
+    font-size: 36px;
+    color: #ffdb77;
+  }
+}
+
 
 @keyframes wave {
   0% {

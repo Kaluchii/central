@@ -52,6 +52,14 @@ $(document).ready(function () {
     });
 
 
+    $('.js_prices_slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
+
+
     $('.js_menu').on('click', function () {
         $(this).toggleClass('is-open');
         $('.title-header__nav-wrap').toggleClass('is-open').slideToggle();
