@@ -29,82 +29,32 @@
             <h1 class="title-block__box-title">{!! $main_block->block_title !!}</h1>
             <div class="title-block__box-prices-wrap title-block__box-prices-wrap--desktop">
                 <div class="title-block__box-prices-slider js_prices_slider">
-                    <div class="flat-price">
-                        <div class="flat-price__name">1-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_1 !!}</span>
-                            <span class="flat-price__tenge">d</span>
+                    @foreach($main_block_flats as $item)
+                        <div class="flat-price">
+                            <div class="flat-price__name">{{ $item['name'] }} квартиры</div>
+                            <div class="flat-price__sum-wrap">
+                                <span class="flat-price__pretext">ОТ</span>
+                                <span class="flat-price__sum">{{ number_format($item['min_price'], 0, ',', ' ') }}</span>
+                                <span class="flat-price__tenge">d</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flat-price">
-                        <div class="flat-price__name">2-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_2 !!}</span>
-                            <span class="flat-price__tenge">d</span>
-                        </div>
-                    </div>
-                    <div class="flat-price">
-                        <div class="flat-price__name">3-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_3 !!}</span>
-                            <span class="flat-price__tenge">d</span>
-                        </div>
-                    </div>
-                    <div class="flat-price">
-                        <div class="flat-price__name">4-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_4 !!}</span>
-                            <span class="flat-price__tenge">d</span>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
             <div class="title-block__box-prices-wrap title-block__box-prices-wrap--mobile">
-                <div class="title-block__box-price-item">
-                    <div class="flat-price">
-                        <div class="flat-price__name">1-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_1 !!}</span>
-                            <span class="flat-price__tenge">d</span>
+                @foreach($main_block_flats as $item)
+                    <div class="title-block__box-price-item">
+                        <div class="flat-price">
+                            <div class="flat-price__name">{{ $item['name'] }} квартиры</div>
+                            <div class="flat-price__sum-wrap">
+                                <span class="flat-price__pretext">ОТ</span>
+                                <span class="flat-price__sum">{{ number_format($item['min_price'], 0, ',', ' ') }}</span>
+                                <span class="flat-price__tenge">d</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="title-block__box-price-item">
-                    <div class="flat-price">
-                        <div class="flat-price__name">2-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_2 !!}</span>
-                            <span class="flat-price__tenge">d</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="title-block__box-price-item">
-                    <div class="flat-price">
-                        <div class="flat-price__name">3-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_3 !!}</span>
-                            <span class="flat-price__tenge">d</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="title-block__box-price-item">
-                    <div class="flat-price">
-                        <div class="flat-price__name">4-комнатные квартиры</div>
-                        <div class="flat-price__sum-wrap">
-                            <span class="flat-price__pretext">ОТ</span>
-                            <span class="flat-price__sum">{!! $main_block->price_4 !!}</span>
-                            <span class="flat-price__tenge">d</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 

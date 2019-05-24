@@ -43,7 +43,7 @@
                        data-type="string"
                        data-block="main_block"
                        data-id="0">
-            </div>--}}
+            </div>
 
             <div class="form-group">
                 <label>Минимальная цена 1-комнатной квартиры</label>
@@ -87,7 +87,7 @@
                        data-type="string"
                        data-block="main_block"
                        data-id="0">
-            </div>
+            </div>--}}
         </div>
     </div>
 @endsection

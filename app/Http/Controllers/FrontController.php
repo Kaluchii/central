@@ -15,16 +15,19 @@ use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 class FrontController extends Controller
 {
     private $extract;
-    public function __construct(ExtractAgent $ext){
+
+    public function __construct(ExtractAgent $ext)
+    {
         $this->extract = $ext;
-        $this->extract->tuneSelection('dom_flat')->sortBy('sorter','ASC');
-        $this->extract->tuneSelection('layout')->sortBy('sorter','ASC');
-        $this->extract->tuneSelection('slider')->sortBy('sorter','DESC');
-        $this->extract->tuneSelection('dom_stages')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('dom_flat')->sortBy('sorter', 'ASC');
+        $this->extract->tuneSelection('layout')->sortBy('sorter', 'ASC');
+        $this->extract->tuneSelection('slider')->sortBy('sorter', 'DESC');
+        $this->extract->tuneSelection('dom_stages')->sortBy('sorter', 'DESC');
     }
 
 
-    public function getIndex(){
+    public function getIndex()
+    {
         $main_block = $this->extract->getBlock('main_block');
         $about = $this->extract->getBlock('about');
         $gallery = $this->extract->getBlock('gallery');
@@ -33,8 +36,35 @@ class FrontController extends Controller
         $contacts = $this->extract->getBlock('contacts');
         $prices = $this->extract->getBlock('prices');
         $scripts = $this->extract->getBlock('scripts');
+
+        $main_block_flats = [];
+        foreach ($flats->dom_flat_group as $item) {
+            $min = null;
+            $i = 1;
+            foreach ($item->layout_group as $layout_item) {
+                if ($layout_item->meter_in_tg > 0) {
+                    $price = round($layout_item->meter_in_tg * $layout_item->area);
+                    $price = $price - $price / 100 * $layout_item->discount;
+                } else {
+                    $price = round($layout_item->meter_cost * $layout_item->area * $prices->dollar);
+                    $price = $price - $price / 100 * $layout_item->discount;
+                }
+                if ($i === 1) {
+                    $min = $price;
+                } else {
+                    $min = $price < $min ? $price : $min;
+                }
+                $i++;
+            }
+            if ($min === null) {
+                continue;
+            }
+            $main_block_flats[] = ['name' => $item->dom_flat_name, 'min_price' => $min];
+        }
+
         return view('front.index.index', [
             'main_block' => $main_block,
+            'main_block_flats' => $main_block_flats,
             'about' => $about,
             'gallery' => $gallery,
             'stages' => $stages,
@@ -45,7 +75,8 @@ class FrontController extends Controller
         ]);
     }
 
-    public function getThanks(){
+    public function getThanks()
+    {
         $scripts = $this->extract->getBlock('scripts');
         return view('front.index.thanks', [
             'scripts' => $scripts
