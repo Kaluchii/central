@@ -183,16 +183,14 @@ $(document).ready(function () {
         var price,
             discountPrice,
             meterInTg = $(this).data('costInTg'),
-            discountPercent = +$(this).data('discount');
+            discountMeterInUsd = +$(this).data('discountCost');
 
         if (+meterInTg > 0) {
-            price = Math.round(meterInTg * $(this).data('area'));
-            discountPrice = number_format(price - price / 100 * discountPercent, 0, ',', ' ');
-            price = number_format(price, 0, ',', ' ');
+            price = number_format(Math.round(meterInTg * $(this).data('area')), 0, ',', ' ');
+            discountPrice = number_format(discountMeterInUsd * $(this).data('area') * EXCHANGE_COST, 0, ',', ' ');
         } else {
-            price = Math.round($(this).data('cost') * $(this).data('area') * EXCHANGE_COST);
-            discountPrice = number_format(price - price / 100 * discountPercent, 0, ',', ' ');
-            price = number_format(price, 0, ',', ' ');
+            price = number_format(Math.round($(this).data('cost') * $(this).data('area') * EXCHANGE_COST), 0, ',', ' ');
+            discountPrice = number_format(discountMeterInUsd * $(this).data('area') * EXCHANGE_COST, 0, ',', ' ');
         }
 
         if (+$(this).data('area') === 61.6) {
@@ -201,13 +199,15 @@ $(document).ready(function () {
             $('.js_3d_tour_btn').hide();
         }
 
-        if (discountPercent) {
+        if (discountMeterInUsd) {
             $('.layout-choice__price').addClass('layout-choice__price--crossed-out');
             $('.js_discount_price').removeClass('hide');
             $('.layout-choice__discount-price').text(discountPrice);
+            $('.js_base_price_title').text('СТАРАЯ ЦЕНА:');
         } else {
             $('.layout-choice__price').removeClass('layout-choice__price--crossed-out');
             $('.js_discount_price').addClass('hide');
+            $('.js_base_price_title').text('СТОИМОСТЬ КВАРТИРЫ ОТ:');
         }
 
         $('.layout-choice__price').text(price);

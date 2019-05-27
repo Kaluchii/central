@@ -324,7 +324,7 @@
                                                     data-img="{{$layout_item->layout_scheme->link}}?{{$layout_item->layout_scheme->cache_index}}"
                                                     data-area="{{$layout_item->area}}" data-cost="{{$layout_item->meter_cost}}"
                                                     data-cost-in-tg="{{$layout_item->meter_in_tg}}"
-                                                    data-discount="{{$layout_item->discount}}"
+                                                    data-discount-cost="{{$layout_item->discount}}"
                                                     data-info="{{$layout_item->info}}">{{$layout_item->area}} м<sup class="layout-choice__btn-sup">2</sup>
                                             </button>
                                         </li>
@@ -333,11 +333,11 @@
                             </ul>
                         </div>
                         <div class="layout-choice__section layout-choice__section--hide-on-mob">
-                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
+                            <p class="layout-choice__section-title js_base_price_title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
                             <p class="layout-choice__price"></p>
                         </div>
                         <div class="layout-choice__section layout-choice__section--hide-on-mob js_discount_price">
-                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ СО&nbsp;СКИДКОЙ&nbsp;ОТ:</p>
+                            <p class="layout-choice__section-title">НОВАЯ ЦЕНА:</p>
                             <p class="layout-choice__discount-price"></p>
                         </div>
                         <div class="layout-choice__section layout-choice__section--hide-on-mob layout-choice__section--price-descr">
@@ -359,11 +359,11 @@
                     </div>
                     <div class="layout-choice__mobile-prices">
                         <div class="layout-choice__section">
-                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
+                            <p class="layout-choice__section-title js_base_price_title">СТОИМОСТЬ КВАРТИРЫ ОТ:</p>
                             <p class="layout-choice__price"></p>
                         </div>
                         <div class="layout-choice__section js_discount_price">
-                            <p class="layout-choice__section-title">СТОИМОСТЬ КВАРТИРЫ СО&nbsp;СКИДКОЙ&nbsp;ОТ:</p>
+                            <p class="layout-choice__section-title">НОВАЯ ЦЕНА:</p>
                             <p class="layout-choice__discount-price"></p>
                         </div>
                         <div class="layout-choice__section layout-choice__section--price-descr">
