@@ -59,15 +59,15 @@
         </div>
 
         <div class="title-block__pros">
-            <div class="title-block__pros-item">
+            <div class="title-block__pros-item title-block__pros-item--parking">
                 <img src="/img/parking.png" alt="Парковка ЖК Центральный" class="title-block__pros-img">
                 <p class="title-block__pros-big-text">Паркинг</p>
-                <p class="title-block__pros-medium-text">в подарок</p>
-                <p class="title-block__pros-small-text">ПОДРОБНАЯ ИНФОРМАЦИЯ <br> ОБ АКЦИИ В ОТДЕЛЕ ПРОДАЖ</p>
+                <p class="title-block__pros-medium-text">от 3 млн тенге</p>
+{{--                <p class="title-block__pros-small-text">ПОДРОБНАЯ ИНФОРМАЦИЯ <br> ОБ АКЦИИ В ОТДЕЛЕ ПРОДАЖ</p>--}}
             </div>
             <div class="title-block__pros-item title-block__pros-item--discount">
-                <img src="/img/5percent.png" alt="Скидка 5% в ЖК Центральный" class="title-block__pros-img">
-                <p class="title-block__pros-big-text">Скидка</p>
+                <p class="title-block__pros-title">до&nbsp;18%</p>
+                <p class="title-block__pros-big-text">Скидки</p>
                 <p class="title-block__pros-medium-text">на 2-3-4-комнатные квартиры</p>
             </div>
             <div class="title-block__pros-item">

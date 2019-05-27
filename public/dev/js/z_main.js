@@ -202,9 +202,11 @@ $(document).ready(function () {
         }
 
         if (discountPercent) {
+            $('.layout-choice__price').addClass('layout-choice__price--crossed-out');
             $('.js_discount_price').removeClass('hide');
             $('.layout-choice__discount-price').text(discountPrice);
         } else {
+            $('.layout-choice__price').removeClass('layout-choice__price--crossed-out');
             $('.js_discount_price').addClass('hide');
         }
 

@@ -35,7 +35,7 @@
   }
 
   &__nav{
-    max-width: 305px;
+    max-width: 315px;
     width: 100%;
   }
 
@@ -124,6 +124,20 @@
       font-size: 30px;
       font-weight: 400;
     }
+
+    &--crossed-out{
+      &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -4%;
+        height: 5px;
+        width: 100%;
+        transform: rotate(-6deg);
+        background-color: #e60c39;
+        border-radius: 1px;
+      }
+    }
   }
 
   &__discount-price{
@@ -164,7 +178,7 @@
   &__mobile-prices{
     display: none;
     margin-top: 30px;
-    max-width: 305px;
+    max-width: 315px;
     width: 100%;
   }
 
