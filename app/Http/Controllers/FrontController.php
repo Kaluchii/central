@@ -43,11 +43,17 @@ class FrontController extends Controller
             $i = 1;
             foreach ($item->layout_group as $layout_item) {
                 if ($layout_item->meter_in_tg > 0) {
-                    $price = round($layout_item->meter_in_tg * $layout_item->area);
-                    $price = $price - $price / 100 * $layout_item->discount;
+                    if ($layout_item->discount) {
+                        $price = round($layout_item->discount * $layout_item->area * $prices->dollar);
+                    } else {
+                        $price = round($layout_item->meter_in_tg * $layout_item->area);
+                    }
                 } else {
-                    $price = round($layout_item->meter_cost * $layout_item->area * $prices->dollar);
-                    $price = $price - $price / 100 * $layout_item->discount;
+                    if ($layout_item->discount) {
+                        $price = round($layout_item->discount * $layout_item->area * $prices->dollar);
+                    } else {
+                        $price = round($layout_item->meter_cost * $layout_item->area * $prices->dollar);
+                    }
                 }
                 if ($i === 1) {
                     $min = $price;
