@@ -71,7 +71,7 @@
                 <p class="title-block__pros-medium-text">на 2-3-4-комнатные квартиры</p>
             </div>
             <div class="title-block__pros-item">
-                <img src="/img/7-25.png" alt="Ипотека" class="title-block__pros-img">
+                <img src="/img/mortgage.png" alt="Ипотека" class="title-block__pros-img">
                 <p class="title-block__pros-big-text">Ипотека</p>
                 <p class="title-block__pros-medium-text">от банка</p>
                 <a href="#call" class="title-block__button order_call_btn">Узнать подробнее</a>
