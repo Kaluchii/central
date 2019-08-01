@@ -68,7 +68,7 @@
             <div class="title-block__pros-item title-block__pros-item--discount">
                 <p class="title-block__pros-title">до&nbsp;18%</p>
                 <p class="title-block__pros-big-text">Скидки</p>
-                <p class="title-block__pros-medium-text">на 2-3-4-комнатные квартиры</p>
+                <p class="title-block__pros-medium-text">на 3- и 4-комнатные квартиры</p>
             </div>
             <div class="title-block__pros-item">
                 <img src="/img/mortgage.png" alt="Ипотека" class="title-block__pros-img">
