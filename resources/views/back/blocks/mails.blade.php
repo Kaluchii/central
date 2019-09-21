@@ -19,4 +19,24 @@
         </div>
     </div>
 
+    <div class="box box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Выгрузка заявок</h3>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label>Курс доллара на сегодня</label>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask="">
+                </div>
+                <!-- /.input group -->
+            </div>
+        </div>
+    </div>
+
 @endsection
