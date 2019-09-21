@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
@@ -98,6 +100,35 @@ class AdminController extends Controller
         return view('back.blocks.mails', [
             'call' => $call
         ]);
+    }
+
+
+    public function getRequestsExcel(Request $request){
+        $date_start = date('Y-m-d', strtotime($request->date_start));
+        $date_end = date('Y-m-d', strtotime($request->date_end));
+
+        $requests = DB::table('fbmails')
+            ->select('id', 'body', 'mailed', 'created_at')
+            ->whereBetween('created_at', [$date_start, $date_end])
+            ->get();
+
+        Excel::create('Заявки', function($excel) use ($requests) {
+            $excel->sheet('таблица', function($sheet) use ($requests) {
+                $sheet->fromArray($requests, null, 'A1', true);
+                $sheet->cell('A1', function($cell) {
+                    $cell->setValue('Номер заявки');
+                });
+                $sheet->cell('B1', function($cell) {
+                    $cell->setValue('Текст');
+                });
+                $sheet->cell('C1', function($cell) {
+                    $cell->setValue('Доставлено');
+                });
+                $sheet->cell('D1', function($cell) {
+                    $cell->setValue('Время отправки');
+                });
+            });
+        })->export('xls');
     }
 
 }
