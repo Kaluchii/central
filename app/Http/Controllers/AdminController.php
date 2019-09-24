@@ -114,19 +114,12 @@ class AdminController extends Controller
 
         Excel::create('Заявки', function($excel) use ($requests) {
             $excel->sheet('таблица', function($sheet) use ($requests) {
-                $sheet->fromArray($requests, null, 'A1', true);
-                $sheet->cell('A1', function($cell) {
-                    $cell->setValue('Номер заявки');
-                });
-                $sheet->cell('B1', function($cell) {
-                    $cell->setValue('Текст');
-                });
-                $sheet->cell('C1', function($cell) {
-                    $cell->setValue('Доставлено');
-                });
-                $sheet->cell('D1', function($cell) {
-                    $cell->setValue('Время отправки');
-                });
+                $sheet->appendRow(['Номер заявки', 'Имя', 'Телефон', 'Доставлено', 'Время отправки']);
+                foreach ($requests as $request) {
+                    $request_name = substr($request['body'], strrpos($request['body'], '<p>Имя: ') + 11, -60);
+                    $request_phone = substr($request['body'], strrpos($request['body'], '<p>Телефонный номер: ') + 36, 15);
+                    $sheet->appendRow([$request['id'], $request_name, $request_phone, $request['mailed'], $request['created_at']]);
+                }
             });
         })->export('xls');
     }
