@@ -12,7 +12,7 @@
                 <ul class="fixed-header__nav-list">
                     <li class="fixed-header__nav-item"><a href="#about" class="js_goto_anchor fixed-header__nav-link">О КОМПЛЕКСЕ</a></li>
                     <li class="fixed-header__nav-item"><a href="#gallery" class="js_goto_anchor fixed-header__nav-link">ГАЛЕРЕЯ</a></li>
-                    <li class="fixed-header__nav-item"><a href="#flats" class="js_goto_anchor fixed-header__nav-link">КВАРТИРЫ</a></li>
+                    {{--<li class="fixed-header__nav-item"><a href="#flats" class="js_goto_anchor fixed-header__nav-link">КВАРТИРЫ</a></li>--}}
                     <li class="fixed-header__nav-item"><a href="#contacts" class="js_goto_anchor fixed-header__nav-link">КОНТАКТЫ</a></li>
                 </ul>
             </div>

@@ -13,7 +13,7 @@
                 <ul class="title-header__nav-list">
                     <li class="title-header__nav-item"><a href="#about" class="js_goto_anchor title-header__nav-link">О КОМПЛЕКСЕ</a></li>
                     <li class="title-header__nav-item"><a href="#gallery" class="js_goto_anchor title-header__nav-link">ГАЛЕРЕЯ</a></li>
-                    <li class="title-header__nav-item"><a href="#flats" class="js_goto_anchor title-header__nav-link">КВАРТИРЫ</a></li>
+                    {{--<li class="title-header__nav-item"><a href="#flats" class="js_goto_anchor title-header__nav-link">КВАРТИРЫ</a></li>--}}
                     <li class="title-header__nav-item"><a href="#contacts" class="js_goto_anchor title-header__nav-link">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
@@ -26,7 +26,7 @@
             </div>
         </header>
         <div class="title-block__box">
-            <h1 class="title-block__box-title">{!! $main_block->block_title !!}</h1>
+            {{--<h1 class="title-block__box-title">{!! $main_block->block_title !!}</h1>
             <div class="title-block__box-prices-wrap title-block__box-prices-wrap--desktop">
                 <div class="title-block__box-prices-slider js_prices_slider">
                     @foreach($main_block_flats as $item)
@@ -55,25 +55,25 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </div>--}}
         </div>
 
         <div class="title-block__pros">
             <div class="title-block__pros-item title-block__pros-item--parking">
-                <img src="/img/parking.png" alt="Парковка ЖК Центральный" class="title-block__pros-img">
-                <p class="title-block__pros-big-text">Паркинг</p>
-                <p class="title-block__pros-medium-text">от 3 млн тенге</p>
+                {{--<img src="/img/parking.png" alt="Парковка ЖК Центральный" class="title-block__pros-img">--}}
+                <p class="title-block__pros-big-text">{{ $main_block->block_1_title }}</p>
+                <p class="title-block__pros-medium-text">{{ $main_block->block_1_subtitle }}</p>
 {{--                <p class="title-block__pros-small-text">ПОДРОБНАЯ ИНФОРМАЦИЯ <br> ОБ АКЦИИ В ОТДЕЛЕ ПРОДАЖ</p>--}}
             </div>
-            <div class="title-block__pros-item title-block__pros-item--discount">
+            {{--<div class="title-block__pros-item title-block__pros-item--discount">
                 <p class="title-block__pros-title">до&nbsp;18%</p>
                 <p class="title-block__pros-big-text">Скидки</p>
                 <p class="title-block__pros-medium-text">на 3- и 4-комнатные квартиры</p>
-            </div>
+            </div>--}}
             <div class="title-block__pros-item">
-                <img src="/img/mortgage.png" alt="Ипотека" class="title-block__pros-img">
-                <p class="title-block__pros-big-text">Ипотека</p>
-                <p class="title-block__pros-medium-text">от банка</p>
+                {{--<img src="/img/mortgage.png" alt="Ипотека" class="title-block__pros-img">--}}
+                <p class="title-block__pros-big-text">{{ $main_block->block_2_title }}</p>
+                <p class="title-block__pros-medium-text">{{ $main_block->block_2_subtitle }}</p>
                 <a href="#call" class="title-block__button order_call_btn">Узнать подробнее</a>
             </div>
         </div>
@@ -84,10 +84,10 @@
             <div class="about__text-col text-col js_revealOnScroll" data-viewport-offset="30" data-animation="display">
                 <h2 class="text-col__title">{{ $about->block_title }}</h2>
                 <div class="text-col__text text-block">{!! $about->text !!}</div>
-                <address class="text-col__address">{!! $about->address !!}</address>
+                {{--<address class="text-col__address">{!! $about->address !!}</address>
                 <a href="https://www.bcc.kz/product/ipoteka-7-20-25/" target="_blank" class="text-col__bank-link">
                     <img src="/img/centercredit.png" alt="Банк centercredit" class="text-col__bank-img">
-                </a>
+                </a>--}}
             </div>
             <div class="about__tagline js_revealOnScroll" data-viewport-offset="30" data-animation="display">
                 <p class="about__tagline-text-wrap"><span class="about__tagline-text">Когда<br>все дороги<br>ведут<br>в центр!</span></p>
@@ -300,7 +300,7 @@
         </div>
     </section>
 
-    <section class="flats" id="flats" data-exchange="{{$prices->dollar}}">
+    {{--<section class="flats" id="flats" data-exchange="{{$prices->dollar}}">
         <div class="flats__wrapper">
             <div class="flats__layout-choice layout-choice">
                 <h2 class="layout-choice__title">{{ $flats->block_title }}</h2>
@@ -400,7 +400,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
